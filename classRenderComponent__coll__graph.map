@@ -1,0 +1,5 @@
+<map id="RenderComponent" name="RenderComponent">
+<area shape="rect" id="Node000001" title="This Component is used to render a mesh in the ogl::Window. It stores the render call that will be ca..." alt="" coords="5,79,134,105"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="26,5,113,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,46,72,79,67,79,67,46"/>
+</map>

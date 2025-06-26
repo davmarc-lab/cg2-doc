@@ -1,0 +1,7 @@
+<map id="MaterialComponent" name="MaterialComponent">
+<area shape="rect" id="Node000001" title="Component to store the mesh Material data." alt="" coords="33,102,166,128"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,93,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,43,95,100,91,103,60,46"/>
+<area shape="rect" id="Node000003" href="$classMaterial.html" title="Basic class to store material information for texturing and light computation." alt="" coords="117,5,184,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,46,109,103,104,100,134,43"/>
+</map>

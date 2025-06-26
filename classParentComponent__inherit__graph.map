@@ -1,0 +1,5 @@
+<map id="ParentComponent" name="ParentComponent">
+<area shape="rect" id="Node000001" title="This Component is used like MultiMesh, but it create a sort of tree structure where each mesh has chi..." alt="" coords="5,79,131,105"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="24,5,112,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,46,71,79,65,79,65,46"/>
+</map>

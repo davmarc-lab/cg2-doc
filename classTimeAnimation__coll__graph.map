@@ -1,0 +1,5 @@
+<map id="TimeAnimation" name="TimeAnimation">
+<area shape="rect" id="Node000001" title="This Component allow to execute an action at every frame for a specified time." alt="" coords="5,79,114,105"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="16,5,103,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,46,62,79,57,79,57,46"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ogl::WindowSettings" name="ogl::WindowSettings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="91,102,229,128"/>
+<area shape="rect" id="Node000002" href="$structPair.html" title=" " alt="" coords="5,5,96,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,39,147,99,144,103,74,43"/>
+<area shape="rect" id="Node000003" href="$structPair.html" title=" " alt="" coords="120,5,200,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,46,162,101,157,101,157,46"/>
+<area shape="rect" id="Node000004" href="$structColor.html" title=" " alt="" coords="224,5,275,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="242,47,220,80,188,103,185,99,217,76,237,44"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SkyboxComponent" name="SkyboxComponent">
+<area shape="rect" id="Node000001" title="Component to store SkyBox texture data." alt="" coords="5,79,135,105"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="26,5,114,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,46,73,79,67,79,67,46"/>
+</map>

@@ -1,0 +1,45 @@
+<map id="Component" name="Component">
+<area shape="rect" id="Node000001" title="Base class for every entity component." alt="" coords="5,499,93,524"/>
+<area shape="rect" id="Node000002" href="$classBehaviourComponent.html" title="This Component is very similar to TimeAnimation, the only difference is that this &quot;animation&quot; has not..." alt="" coords="145,5,290,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,483,58,385,74,253,86,186,100,126,118,75,139,40,152,29,156,34,143,44,123,78,105,127,91,187,79,254,63,386,55,484"/>
+<area shape="rect" id="Node000003" href="$classBufferComponent.html" title="Component to store ogl::Buffer data." alt="" coords="157,55,278,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="50,483,60,394,77,277,103,165,120,120,139,90,155,77,158,82,143,93,124,123,108,166,82,278,65,395,55,483"/>
+<area shape="rect" id="Node000004" href="$classCameraComponent.html" title="Component to store data of a ogl::Camera." alt="" coords="152,104,284,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="51,483,62,403,81,301,106,204,121,166,139,139,153,128,156,132,143,143,126,168,111,205,86,302,67,404,56,483"/>
+<area shape="rect" id="Node000005" href="$classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld." alt="" coords="153,153,283,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="47,483,50,422,63,344,74,302,90,261,112,222,139,188,153,177,157,182,143,192,116,225,95,263,79,304,68,345,56,423,53,483"/>
+<area shape="rect" id="Node000006" href="$classHideTreeComponent.html" title="This Component allow to hide some entity while rendering the ImGuiEntityTree panel." alt="" coords="148,203,288,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="49,483,55,431,69,366,96,297,115,266,139,238,154,227,157,231,142,241,119,269,101,300,74,367,60,432,54,484"/>
+<area shape="rect" id="Node000007" href="$classImportedMeshTextures.html" title="Component to store assimp imported mesh data." alt="" coords="141,252,295,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="51,483,60,440,76,387,102,334,119,309,139,287,155,276,158,280,142,291,123,312,106,336,81,389,65,441,57,484"/>
+<area shape="rect" id="Node000008" href="$classInputComponent.html" title="This Component stores one callback for each input key pressed. When a key is pressed if there are cal..." alt="" coords="160,301,276,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="55,483,66,450,83,410,108,370,139,336,158,325,161,329,142,340,112,374,88,413,71,452,60,485"/>
+<area shape="rect" id="Node000009" href="$classInstancedComponent.html" title="This component is used to query the ECS for all primitives that are rendered using instanced renderin..." alt="" coords="146,351,290,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="61,483,92,434,114,408,139,385,159,375,161,379,142,390,118,411,96,437,66,486"/>
+<area shape="rect" id="Node000010" href="$classLightComponent.html" title="Component to store light data. A light is an emitting mesh, rendered or not, that for each ogl::Shade..." alt="" coords="160,400,276,426"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="72,486,103,459,139,434,164,424,166,429,142,439,106,463,76,490"/>
+<area shape="rect" id="Node000011" href="$classMaterialComponent.html" title="Component to store the mesh Material data." alt="" coords="151,449,284,475"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="107,492,171,473,172,478,109,497"/>
+<area shape="rect" id="Node000012" href="$classMultiMesh.html" title="Component to store multiple mesh data. This can be used to define an anchor and all the meshes linked..." alt="" coords="177,499,258,524"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="108,509,177,509,177,514,108,514"/>
+<area shape="rect" id="Node000013" href="$classOutlined.html" title="Component used to query all meshes that needs to be outlined using a simple stencil buffer." alt="" coords="183,548,252,574"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="109,526,184,548,182,553,107,531"/>
+<area shape="rect" id="Node000014" href="$classParentComponent.html" title="This Component is used like MultiMesh, but it create a sort of tree structure where each mesh has chi..." alt="" coords="155,597,280,623"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="76,533,106,560,142,584,166,594,164,599,139,589,103,564,72,537"/>
+<area shape="rect" id="Node000015" href="$classPhysicComponent.html" title="This Component stores all the mesh data regarding basic physics like velocity, force,..." alt="" coords="155,647,281,672"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="66,537,96,586,118,612,142,633,161,644,159,648,139,638,114,615,92,589,61,540"/>
+<area shape="rect" id="Node000016" href="$classRenderComponent.html" title="This Component is used to render a mesh in the ogl::Window. It stores the render call that will be ca..." alt="" coords="154,696,282,722"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="60,538,71,571,88,610,112,649,142,683,159,693,156,698,139,687,108,653,83,613,66,573,55,540"/>
+<area shape="rect" id="Node000017" href="$classShaderComponent.html" title="Component to store mesh shader data and some mesh information like light computation and the capabili..." alt="" coords="154,745,282,771"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="57,539,65,582,81,634,106,687,123,711,142,732,158,743,155,747,139,736,119,714,102,689,76,636,60,583,51,540"/>
+<area shape="rect" id="Node000018" href="$classSkyboxComponent.html" title="Component to store SkyBox texture data." alt="" coords="153,795,282,820"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="54,539,60,591,74,656,101,723,119,754,142,782,157,792,154,796,139,785,115,757,96,726,69,657,55,592,49,540"/>
+<area shape="rect" id="Node000019" href="$classTextureComponent.html" title="Component to store mesh ogl::Texture data." alt="" coords="153,844,283,870"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="53,540,56,600,68,678,79,719,95,760,116,798,143,831,157,841,153,846,139,835,112,801,90,762,74,721,63,679,50,601,47,540"/>
+<area shape="rect" id="Node000020" href="$classTimeAnimation.html" title="This Component allow to execute an action at every frame for a specified time." alt="" coords="164,893,272,919"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="56,540,67,619,86,721,111,818,126,855,143,880,165,895,162,899,139,884,121,857,106,819,81,722,62,620,51,540"/>
+<area shape="rect" id="Node000021" href="$classTransform.html" title="Component to store mesh position, rotation, scale data." alt="" coords="178,943,258,968"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="55,540,65,628,82,745,108,857,124,900,143,930,159,942,178,949,176,954,156,946,139,933,120,903,103,858,77,746,60,629,50,540"/>
+<area shape="rect" id="Node000022" href="$classVertexComponent.html" title="Component to store vertices coords data." alt="" coords="156,992,280,1018"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="55,539,63,637,79,769,91,836,105,896,123,945,143,979,157,990,154,994,139,983,118,948,100,897,86,837,74,770,58,638,49,540"/>
+</map>
