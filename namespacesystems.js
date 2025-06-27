@@ -61,10 +61,19 @@ var namespacesystems =
       [ "addChild", "namespacesystems_1_1parent.html#a1dfa3966bb89a844daa4a9a7014c1a04", null ],
       [ "removeChild", "namespacesystems_1_1parent.html#ad0f1e153a5bdc7597d2b98c1cfc58e37", null ]
     ] ],
+    [ "physic", "namespacesystems_1_1physic.html", null ],
     [ "render", "namespacesystems_1_1render.html", [
+      [ "getBoxLines", "namespacesystems_1_1render.html#a3f2b48a98c5fb17fb54eb711f2a1d5c0", null ],
+      [ "getOtherLightData", "namespacesystems_1_1render.html#a2642f6e40b7d410af97fdb2075d332cb", null ],
       [ "initStencilShader", "namespacesystems_1_1render.html#a763b578b5b0e9eb885f000d73277fee6", null ],
       [ "prepareInstancedMesh", "namespacesystems_1_1render.html#a51bc3887db1d7865c122dd1a38765f09", null ],
-      [ "renderSkybox", "namespacesystems_1_1render.html#a02b76bcb58cb950af3b258cd0a612e62", null ]
+      [ "prepareLightData", "namespacesystems_1_1render.html#a35df4c5de0a538dcfdee1ec3c502e25d", null ],
+      [ "renderAllMeshes", "namespacesystems_1_1render.html#af9b41d1e4ea1c387289d88666af6ef6c", null ],
+      [ "renderBoundingBox", "namespacesystems_1_1render.html#ad489d3b4fb1b241d9b82aa0db4a9942b", null ],
+      [ "renderInstancedMeshes", "namespacesystems_1_1render.html#a5004e4e144e9a0aa486528bff560ecb6", null ],
+      [ "renderSkybox", "namespacesystems_1_1render.html#a02b76bcb58cb950af3b258cd0a612e62", null ],
+      [ "sendLightDataShader", "namespacesystems_1_1render.html#afec088bc41fe84af14b509b58906ea8d", null ],
+      [ "sendOtherLightData", "namespacesystems_1_1render.html#ae5829f2b4d3e17702f01411e84a6bd2e", null ]
     ] ],
     [ "texture", "namespacesystems_1_1texture.html", [
       [ "getTexture", "namespacesystems_1_1texture.html#addc70646072581fc222f2863f2d6dadd", null ],

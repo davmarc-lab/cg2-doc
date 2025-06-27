@@ -7,7 +7,7 @@ var searchData=
   ['imguipanel_4',['ImGuiPanel',['../classogl_1_1ImGuiPanel.html',1,'ogl']]],
   ['importedmeshtextures_5',['ImportedMeshTextures',['../classImportedMeshTextures.html',1,'ImportedMeshTextures'],['../classImportedMeshTextures.html#aebe4ae90658aa687d7fff2bb098ac4c8',1,'ImportedMeshTextures::ImportedMeshTextures()']]],
   ['importedtexture_6',['ImportedTexture',['../structImportedTexture.html',1,'']]],
-  ['init_7',['init',['../classBasicScene.html#ad02c958177d1d4a74e38cd4ea2bf7ec9',1,'BasicScene']]],
+  ['init_7',['init',['../structBoundingBox.html#a8b26956850b13c41b1fea983d16f89b6',1,'BoundingBox::init'],['../classBasicScene.html#ad02c958177d1d4a74e38cd4ea2bf7ec9',1,'BasicScene::init()']]],
   ['initstencilshader_8',['initStencilShader',['../namespacesystems_1_1render.html#a763b578b5b0e9eb885f000d73277fee6',1,'systems::render']]],
   ['inputcomponent_9',['InputComponent',['../classInputComponent.html',1,'InputComponent'],['../classInputComponent.html#a34990984475d562c0fd2b4b822711dea',1,'InputComponent::InputComponent()']]],
   ['inputmanager_10',['InputManager',['../classogl_1_1InputManager.html',1,'ogl']]],

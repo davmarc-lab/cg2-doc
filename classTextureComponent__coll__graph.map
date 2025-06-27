@@ -1,7 +1,7 @@
 <map id="TextureComponent" name="TextureComponent">
-<area shape="rect" id="Node000001" title="Component to store mesh ogl::Texture data." alt="" coords="41,106,186,134"/>
-<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,102,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,45,108,104,103,107,67,48"/>
-<area shape="rect" id="Node000003" href="$classogl_1_1Texture.html" title=" " alt="" coords="126,5,224,33"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,47,124,107,119,104,157,44"/>
+<area shape="rect" id="Node000001" title="Component to store mesh ogl::Texture data." alt="" coords="40,102,170,128"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,93,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,43,100,100,95,103,61,45"/>
+<area shape="rect" id="Node000003" href="$classogl_1_1Texture.html" title=" " alt="" coords="117,5,205,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,45,115,103,110,100,144,43"/>
 </map>

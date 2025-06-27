@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="5,32,61,60"/>
-<area shape="rect" id="Node000001" href="$classBootstrapState.html" title="This State allows to load one State in an ImGui window from cached states in the StateManager." alt="" coords="117,5,236,33"/>
-<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="75,35,116,28,117,33,76,41"/>
-<area shape="rect" id="Node000002" href="$classNormalViewState.html" title="This State render an interactive scene with rendered meshes and lights. The user can modify their int..." alt="" coords="109,57,244,85"/>
-<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="76,51,109,57,108,62,75,56"/>
+<area shape="rect" id="Node000000" href="$classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="5,31,58,56"/>
+<area shape="rect" id="Node000001" href="$classBootstrapState.html" title="This State allows to load one State in an ImGui window from cached states in the StateManager." alt="" coords="113,5,222,31"/>
+<area shape="poly" id="edge41_Node000000_Node000001" title=" " alt="" coords="72,33,112,26,113,31,73,39"/>
+<area shape="rect" id="Node000002" href="$classNormalViewState.html" title="This State render an interactive scene with rendered meshes and lights. The user can modify their int..." alt="" coords="106,55,229,80"/>
+<area shape="poly" id="edge42_Node000000_Node000002" title=" " alt="" coords="73,48,106,54,105,59,72,53"/>
 </map>

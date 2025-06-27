@@ -102,27 +102,91 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initStencilShader</b>
 <tr class="memdesc:a763b578b5b0e9eb885f000d73277fee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the stencil shader. <br /></td></tr>
 <tr class="memitem:a51bc3887db1d7865c122dd1a38765f09" id="r_a51bc3887db1d7865c122dd1a38765f09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51bc3887db1d7865c122dd1a38765f09">prepareInstancedMesh</a> (const std::vector&lt; glm::mat4 &gt; &amp;models, const std::vector&lt; glm::vec4 &gt; &amp;colors)</td></tr>
 <tr class="memdesc:a51bc3887db1d7865c122dd1a38765f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods calls the renderer and prepares the buffers with the model matrixes and colors.  <br /></td></tr>
+<tr class="memitem:a2642f6e40b7d410af97fdb2075d332cb" id="r_a2642f6e40b7d410af97fdb2075d332cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2642f6e40b7d410af97fdb2075d332cb">getOtherLightData</a> (<a class="el" href="structLightShaderBlock.html">LightShaderBlock</a> &amp;block, const Shared&lt; <a class="el" href="classLightComponent.html">LightComponent</a> &gt; &amp;light)</td></tr>
+<tr class="memdesc:a2642f6e40b7d410af97fdb2075d332cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all the light data and stores them in a shader block.  <br /></td></tr>
+<tr class="memitem:a35df4c5de0a538dcfdee1ec3c502e25d" id="r_a35df4c5de0a538dcfdee1ec3c502e25d"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a>, SHADER_MAX_LIGHTS &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35df4c5de0a538dcfdee1ec3c502e25d">prepareLightData</a> ()</td></tr>
+<tr class="memdesc:a35df4c5de0a538dcfdee1ec3c502e25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares data of all lights in the scene and put them in an array with defined size.  <br /></td></tr>
+<tr class="memitem:ae5829f2b4d3e17702f01411e84a6bd2e" id="r_ae5829f2b4d3e17702f01411e84a6bd2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5829f2b4d3e17702f01411e84a6bd2e">sendOtherLightData</a> (const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;shader, <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a> &amp;data, size_t &amp;index)</td></tr>
+<tr class="memdesc:ae5829f2b4d3e17702f01411e84a6bd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method sends to the used shader program the specific data for that light caster.  <br /></td></tr>
+<tr class="memitem:afec088bc41fe84af14b509b58906ea8d" id="r_afec088bc41fe84af14b509b58906ea8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec088bc41fe84af14b509b58906ea8d">sendLightDataShader</a> (const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;shader, std::array&lt; <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a>, SHADER_MAX_LIGHTS &gt; data)</td></tr>
+<tr class="memdesc:afec088bc41fe84af14b509b58906ea8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method sends to the used shader program the common lights data.  <br /></td></tr>
 <tr class="memitem:a02b76bcb58cb950af3b258cd0a612e62" id="r_a02b76bcb58cb950af3b258cd0a612e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b76bcb58cb950af3b258cd0a612e62">renderSkybox</a> (const unsigned int &amp;id, const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;shader)</td></tr>
-<tr class="memitem:af9b41d1e4ea1c387289d88666af6ef6c" id="r_af9b41d1e4ea1c387289d88666af6ef6c"><td class="memItemLeft" align="right" valign="top"><a id="af9b41d1e4ea1c387289d88666af6ef6c" name="af9b41d1e4ea1c387289d88666af6ef6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>renderAllMeshes</b> ()</td></tr>
+<tr class="memdesc:a02b76bcb58cb950af3b258cd0a612e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method draws the Skybox of the scene.  <br /></td></tr>
+<tr class="memitem:af9b41d1e4ea1c387289d88666af6ef6c" id="r_af9b41d1e4ea1c387289d88666af6ef6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b41d1e4ea1c387289d88666af6ef6c">renderAllMeshes</a> ()</td></tr>
+<tr class="memdesc:af9b41d1e4ea1c387289d88666af6ef6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders all the entities in the scene.  <br /></td></tr>
 <tr class="memitem:a5004e4e144e9a0aa486528bff560ecb6" id="r_a5004e4e144e9a0aa486528bff560ecb6"><td class="memItemLeft" align="right" valign="top"><a id="a5004e4e144e9a0aa486528bff560ecb6" name="a5004e4e144e9a0aa486528bff560ecb6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>renderInstancedMeshes</b> ()</td></tr>
+<tr class="memdesc:a5004e4e144e9a0aa486528bff560ecb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders all entities with instanced rendering available. <br /></td></tr>
+<tr class="memitem:a3f2b48a98c5fb17fb54eb711f2a1d5c0" id="r_a3f2b48a98c5fb17fb54eb711f2a1d5c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; glm::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f2b48a98c5fb17fb54eb711f2a1d5c0">getBoxLines</a> (glm::vec3 &amp;botLeft, glm::vec3 &amp;topRight)</td></tr>
+<tr class="memdesc:a3f2b48a98c5fb17fb54eb711f2a1d5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method calculates the lines to be drawn from two corners of a <a class="el" href="classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld.">ColliderComponent</a>.  <br /></td></tr>
 <tr class="memitem:ad489d3b4fb1b241d9b82aa0db4a9942b" id="r_ad489d3b4fb1b241d9b82aa0db4a9942b"><td class="memItemLeft" align="right" valign="top"><a id="ad489d3b4fb1b241d9b82aa0db4a9942b" name="ad489d3b4fb1b241d9b82aa0db4a9942b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>renderBoundingBox</b> ()</td></tr>
-<tr class="memitem:a2642f6e40b7d410af97fdb2075d332cb" id="r_a2642f6e40b7d410af97fdb2075d332cb"><td class="memItemLeft" align="right" valign="top"><a id="a2642f6e40b7d410af97fdb2075d332cb" name="a2642f6e40b7d410af97fdb2075d332cb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getOtherLightData</b> (<a class="el" href="structLightShaderBlock.html">LightShaderBlock</a> &amp;block, const Shared&lt; <a class="el" href="classLightComponent.html">LightComponent</a> &gt; &amp;light)</td></tr>
-<tr class="memitem:a35df4c5de0a538dcfdee1ec3c502e25d" id="r_a35df4c5de0a538dcfdee1ec3c502e25d"><td class="memItemLeft" align="right" valign="top"><a id="a35df4c5de0a538dcfdee1ec3c502e25d" name="a35df4c5de0a538dcfdee1ec3c502e25d"></a>
-std::array&lt; <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a>, SHADER_MAX_LIGHTS &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>prepareLightData</b> ()</td></tr>
-<tr class="memitem:ae5829f2b4d3e17702f01411e84a6bd2e" id="r_ae5829f2b4d3e17702f01411e84a6bd2e"><td class="memItemLeft" align="right" valign="top"><a id="ae5829f2b4d3e17702f01411e84a6bd2e" name="ae5829f2b4d3e17702f01411e84a6bd2e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendOtherLightData</b> (const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;shader, <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a> &amp;data, size_t &amp;index)</td></tr>
-<tr class="memitem:afec088bc41fe84af14b509b58906ea8d" id="r_afec088bc41fe84af14b509b58906ea8d"><td class="memItemLeft" align="right" valign="top"><a id="afec088bc41fe84af14b509b58906ea8d" name="afec088bc41fe84af14b509b58906ea8d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sendLightDataShader</b> (const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;shader, std::array&lt; <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a>, SHADER_MAX_LIGHTS &gt; data)</td></tr>
-<tr class="memitem:a3f2b48a98c5fb17fb54eb711f2a1d5c0" id="r_a3f2b48a98c5fb17fb54eb711f2a1d5c0"><td class="memItemLeft" align="right" valign="top"><a id="a3f2b48a98c5fb17fb54eb711f2a1d5c0" name="a3f2b48a98c5fb17fb54eb711f2a1d5c0"></a>
-std::vector&lt; glm::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getBoxLines</b> (glm::vec3 &amp;botLeft, glm::vec3 &amp;topRight)</td></tr>
+<tr class="memdesc:ad489d3b4fb1b241d9b82aa0db4a9942b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders all bounding box of the entities with a <a class="el" href="classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld.">ColliderComponent</a>. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This namespace contains utilities for rendering entities. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a3f2b48a98c5fb17fb54eb711f2a1d5c0" name="a3f2b48a98c5fb17fb54eb711f2a1d5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2b48a98c5fb17fb54eb711f2a1d5c0">&#9670;&#160;</a></span>getBoxLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; glm::vec3 &gt; systems::render::getBoxLines </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>botLeft</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>topRight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method calculates the lines to be drawn from two corners of a <a class="el" href="classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld.">ColliderComponent</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">botLeft</td><td>the bot left corner position </td></tr>
+    <tr><td class="paramname">topRight</td><td>the top right corner position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2642f6e40b7d410af97fdb2075d332cb" name="a2642f6e40b7d410af97fdb2075d332cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2642f6e40b7d410af97fdb2075d332cb">&#9670;&#160;</a></span>getOtherLightData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void systems::render::getOtherLightData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structLightShaderBlock.html">LightShaderBlock</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>block</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Shared&lt; <a class="el" href="classLightComponent.html">LightComponent</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves all the light data and stores them in a shader block. </p>
+<p>It prepares a single light data for sending to the shader program.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">block</td><td>the shader light block </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">light</td><td>the light in the scene </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a51bc3887db1d7865c122dd1a38765f09" name="a51bc3887db1d7865c122dd1a38765f09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51bc3887db1d7865c122dd1a38765f09">&#9670;&#160;</a></span>prepareInstancedMesh()</h2>
 
@@ -143,7 +207,54 @@ std::vector&lt; glm::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom
 </div><div class="memdoc">
 
 <p>This methods calls the renderer and prepares the buffers with the model matrixes and colors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">models</td><td>a list of model matrixes </td></tr>
+    <tr><td class="paramname">colors</td><td>a list of colors</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>TODO implement proper instancing rendering for every mesh </p><dl class="section warning"><dt>Warning</dt><dd>This currently works only for instanced rendering with spheres. </dd></dl>
+
+</div>
+</div>
+<a id="a35df4c5de0a538dcfdee1ec3c502e25d" name="a35df4c5de0a538dcfdee1ec3c502e25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35df4c5de0a538dcfdee1ec3c502e25d">&#9670;&#160;</a></span>prepareLightData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a>, SHADER_MAX_LIGHTS &gt; systems::render::prepareLightData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepares data of all lights in the scene and put them in an array with defined size. </p>
+<dl class="section return"><dt>Returns</dt><dd>an array containing all the lights data prepared to be sent to shader programs. </dd></dl>
+
+</div>
+</div>
+<a id="af9b41d1e4ea1c387289d88666af6ef6c" name="af9b41d1e4ea1c387289d88666af6ef6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b41d1e4ea1c387289d88666af6ef6c">&#9670;&#160;</a></span>renderAllMeshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void systems::render::renderAllMeshes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders all the entities in the scene. </p>
+<p>It renderes all the entities with <a class="el" href="classRenderComponent.html" title="This Component is used to render a mesh in the ogl::Window. It stores the render call that will be ca...">RenderComponent</a>. </p>
 
 </div>
 </div>
@@ -165,12 +276,85 @@ std::vector&lt; glm::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method draws the Skybox of the scene. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the entity id </td></tr>
+    <tr><td class="paramname">shader</td><td>the skybox shader program </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afec088bc41fe84af14b509b58906ea8d" name="afec088bc41fe84af14b509b58906ea8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec088bc41fe84af14b509b58906ea8d">&#9670;&#160;</a></span>sendLightDataShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void systems::render::sendLightDataShader </td>
+          <td>(</td>
+          <td class="paramtype">const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; <a class="el" href="structLightShaderBlock.html">LightShaderBlock</a>, SHADER_MAX_LIGHTS &gt;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method sends to the used shader program the common lights data. </p>
+<dl class="section warning"><dt>Warning</dt><dd>It doesn't send data for specific casters. The method <a class="el" href="#ae5829f2b4d3e17702f01411e84a6bd2e" title="This method sends to the used shader program the specific data for that light caster.">systems::render::sendOtherLightData()</a> should be called anyway.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>the shader program shared pointer </td></tr>
+    <tr><td class="paramname">data</td><td>the array processed with systems::render::preparedLightData()</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>systems::render::preparedLightData() </dd></dl>
+
+</div>
+</div>
+<a id="ae5829f2b4d3e17702f01411e84a6bd2e" name="ae5829f2b4d3e17702f01411e84a6bd2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5829f2b4d3e17702f01411e84a6bd2e">&#9670;&#160;</a></span>sendOtherLightData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void systems::render::sendOtherLightData </td>
+          <td>(</td>
+          <td class="paramtype">const Shared&lt; <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structLightShaderBlock.html">LightShaderBlock</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method sends to the used shader program the specific data for that light caster. </p>
+<dl class="section warning"><dt>Warning</dt><dd>It doesn't send common light data. The method <a class="el" href="#ae5829f2b4d3e17702f01411e84a6bd2e" title="This method sends to the used shader program the specific data for that light caster.">systems::render::sendOtherLightData()</a> should be called anyway.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>the shader program shared pointer </td></tr>
+    <tr><td class="paramname">data</td><td>the array processed with <a class="el" href="#a35df4c5de0a538dcfdee1ec3c502e25d" title="Prepares data of all lights in the scene and put them in an array with defined size.">systems::render::prepareLightData()</a> </td></tr>
+    <tr><td class="paramname">index</td><td>the current light index in the array from <a class="el" href="#a35df4c5de0a538dcfdee1ec3c502e25d" title="Prepares data of all lights in the scene and put them in an array with defined size.">systems::render::prepareLightData()</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>systems::render::preparedLightData() </dd></dl>
 
 </div>
 </div>

@@ -102,9 +102,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae74c83f7fc22193aed5580c04b72e486" id="r_ae74c83f7fc22193aed5580c04b72e486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae74c83f7fc22193aed5580c04b72e486">updateColor</a> (const unsigned int &amp;id, const glm::vec3 &amp;color)</td></tr>
 <tr class="memdesc:ae74c83f7fc22193aed5580c04b72e486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the light color vector.  <br /></td></tr>
 <tr class="memitem:a58fcf05f5db15db1321e0f6b388de421" id="r_a58fcf05f5db15db1321e0f6b388de421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58fcf05f5db15db1321e0f6b388de421">updateIntensity</a> (const unsigned int &amp;id, const float &amp;intensity)</td></tr>
-<tr class="memdesc:a58fcf05f5db15db1321e0f6b388de421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the light color vector.  <br /></td></tr>
+<tr class="memdesc:a58fcf05f5db15db1321e0f6b388de421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the light intensity value.  <br /></td></tr>
 <tr class="memitem:a2558e6df8bb0df8491b9fb36b927afd8" id="r_a2558e6df8bb0df8491b9fb36b927afd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2558e6df8bb0df8491b9fb36b927afd8">updateAmbient</a> (const unsigned int &amp;id, const glm::vec3 &amp;ambient)</td></tr>
-<tr class="memdesc:a2558e6df8bb0df8491b9fb36b927afd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the light color vector.  <br /></td></tr>
+<tr class="memdesc:a2558e6df8bb0df8491b9fb36b927afd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the light ambient vector.  <br /></td></tr>
 <tr class="memitem:ada63cd675fa4a4e20eeedb38927b301b" id="r_ada63cd675fa4a4e20eeedb38927b301b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada63cd675fa4a4e20eeedb38927b301b">updateDiffuse</a> (const unsigned int &amp;id, const glm::vec3 &amp;diffuse)</td></tr>
 <tr class="memdesc:ada63cd675fa4a4e20eeedb38927b301b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the light diffuse vector.  <br /></td></tr>
 <tr class="memitem:a72f77c009eda90a2e6162bc393fd072a" id="r_a72f77c009eda90a2e6162bc393fd072a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72f77c009eda90a2e6162bc393fd072a">updateSpecular</a> (const unsigned int &amp;id, const glm::vec3 &amp;specular)</td></tr>
@@ -206,7 +206,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">color</td><td>the light color </td></tr>
+    <tr><td class="paramname">comp</td><td>the new entity light computation </td></tr>
   </table>
   </dd>
 </dl>
@@ -232,11 +232,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the light color vector. </p>
+<p>Updates the light ambient vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">color</td><td>the light color </td></tr>
+    <tr><td class="paramname">ambient</td><td>the light new ambient </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +266,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">color</td><td>the light color </td></tr>
+    <tr><td class="paramname">color</td><td>the light new color </td></tr>
   </table>
   </dd>
 </dl>
@@ -296,7 +296,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">constant</td><td>the light constant </td></tr>
+    <tr><td class="paramname">constant</td><td>the light new constant </td></tr>
   </table>
   </dd>
 </dl>
@@ -326,7 +326,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">cutoff</td><td>the light cutoff </td></tr>
+    <tr><td class="paramname">cutoff</td><td>the light new cutoff </td></tr>
   </table>
   </dd>
 </dl>
@@ -356,7 +356,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">diffuse</td><td>the light diffuse </td></tr>
+    <tr><td class="paramname">diffuse</td><td>the light new diffuse </td></tr>
   </table>
   </dd>
 </dl>
@@ -386,7 +386,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">direction</td><td>the light direction </td></tr>
+    <tr><td class="paramname">direction</td><td>the light new direction </td></tr>
   </table>
   </dd>
 </dl>
@@ -412,11 +412,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the light color vector. </p>
+<p>Updates the light intensity value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">color</td><td>the light color </td></tr>
+    <tr><td class="paramname">intensity</td><td>the light new intensity </td></tr>
   </table>
   </dd>
 </dl>
@@ -446,7 +446,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">linear</td><td>the light linear </td></tr>
+    <tr><td class="paramname">linear</td><td>the light new linear </td></tr>
   </table>
   </dd>
 </dl>
@@ -476,7 +476,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">outerCutoff</td><td>the light outer cutoff </td></tr>
+    <tr><td class="paramname">outerCutoff</td><td>the light new outer cutoff </td></tr>
   </table>
   </dd>
 </dl>
@@ -506,7 +506,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">position</td><td>the light position </td></tr>
+    <tr><td class="paramname">position</td><td>the light new position </td></tr>
   </table>
   </dd>
 </dl>
@@ -536,7 +536,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">quadratic</td><td>the light quadratic </td></tr>
+    <tr><td class="paramname">quadratic</td><td>the light new quadratic </td></tr>
   </table>
   </dd>
 </dl>
@@ -566,7 +566,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the light id </td></tr>
-    <tr><td class="paramname">specular</td><td>the light specular </td></tr>
+    <tr><td class="paramname">specular</td><td>the light new specular </td></tr>
   </table>
   </dd>
 </dl>

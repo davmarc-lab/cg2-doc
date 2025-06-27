@@ -91,21 +91,24 @@ $(function(){initNavTree('structBoundingBox.html','','structBoundingBox-members'
   <div class="headertitle"><div class="title">BoundingBox Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Data structure to store bounding box information for rendering purpose.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for BoundingBox:</div>
 <div class="dyncontent">
 <div class="center"><img src="structBoundingBox__coll__graph.png" border="0" usemap="#aBoundingBox_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aBoundingBox_coll__map" id="aBoundingBox_coll__map">
-<area shape="rect" title=" " alt="" coords="188,205,295,233"/>
-<area shape="rect" href="classogl_1_1ShaderProgram.html" title=" " alt="" coords="5,82,155,110"/>
-<area shape="poly" title=" " alt="" coords="105,119,137,149,175,179,215,202,212,207,171,184,133,153,101,123"/>
-<area shape="rect" href="classogl_1_1VertexArray.html" title=" " alt="" coords="178,82,304,110"/>
-<area shape="poly" title=" " alt="" coords="244,126,244,205,239,205,239,126"/>
-<area shape="rect" href="classogl_1_1Buffer.html" title=" " alt="" coords="272,5,360,33"/>
-<area shape="poly" title=" " alt="" coords="294,46,256,84,252,80,290,42"/>
-<area shape="rect" href="classogl_1_1VertexBuffer.html" title=" " alt="" coords="328,82,458,110"/>
-<area shape="poly" title=" " alt="" coords="342,42,382,80,378,84,338,46"/>
-<area shape="poly" title=" " alt="" coords="367,122,260,207,256,203,364,118"/>
+<area shape="rect" title="Data structure to store bounding box information for rendering purpose." alt="" coords="170,197,268,223"/>
+<area shape="rect" href="classogl_1_1ShaderProgram.html" title=" " alt="" coords="5,80,140,106"/>
+<area shape="poly" title=" " alt="" coords="97,115,160,171,198,194,195,199,157,175,93,119"/>
+<area shape="rect" href="classogl_1_1VertexArray.html" title=" " alt="" coords="164,80,275,106"/>
+<area shape="poly" title=" " alt="" coords="222,122,222,197,216,197,216,122"/>
+<area shape="rect" href="classogl_1_1Buffer.html" title=" " alt="" coords="248,5,326,31"/>
+<area shape="poly" title=" " alt="" coords="268,44,232,82,228,78,264,41"/>
+<area shape="rect" href="classogl_1_1VertexBuffer.html" title=" " alt="" coords="299,80,414,106"/>
+<area shape="poly" title=" " alt="" coords="311,41,347,78,343,82,307,44"/>
+<area shape="poly" title=" " alt="" coords="332,118,235,199,232,195,329,114"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -113,20 +116,29 @@ Collaboration diagram for BoundingBox:</div>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac76598ce5943a0c4b1527e0a0883153b" id="r_ac76598ce5943a0c4b1527e0a0883153b"><td class="memItemLeft" align="right" valign="top"><a id="ac76598ce5943a0c4b1527e0a0883153b" name="ac76598ce5943a0c4b1527e0a0883153b"></a>
 <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><b>program</b> = <a class="el" href="classogl_1_1ShaderProgram.html">ogl::ShaderProgram</a>(&quot;vertexShader.glsl&quot;, &quot;fragmentShader.glsl&quot;)</td></tr>
+<tr class="memdesc:ac76598ce5943a0c4b1527e0a0883153b"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box shader program <br /></td></tr>
 <tr class="memitem:afe5f42127db1df1cac1ca7fcc5aeb4e2" id="r_afe5f42127db1df1cac1ca7fcc5aeb4e2"><td class="memItemLeft" align="right" valign="top"><a id="afe5f42127db1df1cac1ca7fcc5aeb4e2" name="afe5f42127db1df1cac1ca7fcc5aeb4e2"></a>
 <a class="el" href="classogl_1_1VertexArray.html">ogl::VertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vao</b> {}</td></tr>
+<tr class="memdesc:afe5f42127db1df1cac1ca7fcc5aeb4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box vao <br /></td></tr>
 <tr class="memitem:a936895a989672d5cf0fbdfeae641dcca" id="r_a936895a989672d5cf0fbdfeae641dcca"><td class="memItemLeft" align="right" valign="top"><a id="a936895a989672d5cf0fbdfeae641dcca" name="a936895a989672d5cf0fbdfeae641dcca"></a>
 <a class="el" href="classogl_1_1VertexBuffer.html">ogl::VertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vbog</b> {}</td></tr>
+<tr class="memdesc:a936895a989672d5cf0fbdfeae641dcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box geometry vbo <br /></td></tr>
 <tr class="memitem:aa7fbe6a072a16b3d2bd5917ae85488c1" id="r_aa7fbe6a072a16b3d2bd5917ae85488c1"><td class="memItemLeft" align="right" valign="top"><a id="aa7fbe6a072a16b3d2bd5917ae85488c1" name="aa7fbe6a072a16b3d2bd5917ae85488c1"></a>
 <a class="el" href="classogl_1_1VertexBuffer.html">ogl::VertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>vboc</b> {}</td></tr>
+<tr class="memdesc:aa7fbe6a072a16b3d2bd5917ae85488c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box colors vbo <br /></td></tr>
 <tr class="memitem:a23a8af15851e3d9ad8f94d122ea094ed" id="r_a23a8af15851e3d9ad8f94d122ea094ed"><td class="memItemLeft" align="right" valign="top"><a id="a23a8af15851e3d9ad8f94d122ea094ed" name="a23a8af15851e3d9ad8f94d122ea094ed"></a>
 std::vector&lt; glm::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>coords</b> {}</td></tr>
+<tr class="memdesc:a23a8af15851e3d9ad8f94d122ea094ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box vertex coords <br /></td></tr>
 <tr class="memitem:a4c4d9d4aa4abf39ff703f22e26fd3478" id="r_a4c4d9d4aa4abf39ff703f22e26fd3478"><td class="memItemLeft" align="right" valign="top"><a id="a4c4d9d4aa4abf39ff703f22e26fd3478" name="a4c4d9d4aa4abf39ff703f22e26fd3478"></a>
 std::vector&lt; glm::vec4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>colors</b> {}</td></tr>
+<tr class="memdesc:a4c4d9d4aa4abf39ff703f22e26fd3478"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounding box colors <br /></td></tr>
 <tr class="memitem:a8b26956850b13c41b1fea983d16f89b6" id="r_a8b26956850b13c41b1fea983d16f89b6"><td class="memItemLeft" align="right" valign="top"><a id="a8b26956850b13c41b1fea983d16f89b6" name="a8b26956850b13c41b1fea983d16f89b6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> = false</td></tr>
+<tr class="memdesc:a8b26956850b13c41b1fea983d16f89b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">tells if the bounding box shaders is created <br /></td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Data structure to store bounding box information for rendering purpose. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>App/src/ECS/<b>System.cpp</b></li>
 </ul>
 </div><!-- contents -->
