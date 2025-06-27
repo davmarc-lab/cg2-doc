@@ -91,6 +91,11 @@ $(function(){initNavTree('classEntityManager.html','','classEntityManager-member
   <div class="headertitle"><div class="title">EntityManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class manages all the entities and the components instanced.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="EntityManager_8hpp_source.html">EntityManager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -99,37 +104,38 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> = unsigned
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adbf8789f3fe0d3e2af21d42cac24f600" id="r_adbf8789f3fe0d3e2af21d42cac24f600"><td class="memItemLeft" align="right" valign="top"><a id="adbf8789f3fe0d3e2af21d42cac24f600" name="adbf8789f3fe0d3e2af21d42cac24f600"></a>
-Index&#160;</td><td class="memItemRight" valign="bottom"><b>createEntity</b> ()</td></tr>
+<tr class="memitem:adbf8789f3fe0d3e2af21d42cac24f600" id="r_adbf8789f3fe0d3e2af21d42cac24f600"><td class="memItemLeft" align="right" valign="top">Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbf8789f3fe0d3e2af21d42cac24f600">createEntity</a> ()</td></tr>
+<tr class="memdesc:adbf8789f3fe0d3e2af21d42cac24f600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an entity and increment the current index.  <br /></td></tr>
 <tr class="memitem:a1b7b98e7ba1a2bd881e5660c3ed78ce2" id="r_a1b7b98e7ba1a2bd881e5660c3ed78ce2"><td class="memItemLeft" align="right" valign="top"><a id="a1b7b98e7ba1a2bd881e5660c3ed78ce2" name="a1b7b98e7ba1a2bd881e5660c3ed78ce2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>resetIndex</b> ()</td></tr>
-<tr class="memitem:a8ad0f947ff6dad2c9da73a38c1b71d4a" id="r_a8ad0f947ff6dad2c9da73a38c1b71d4a"><td class="memItemLeft" align="right" valign="top"><a id="a8ad0f947ff6dad2c9da73a38c1b71d4a" name="a8ad0f947ff6dad2c9da73a38c1b71d4a"></a>
-std::vector&lt; Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> () const</td></tr>
-<tr class="memitem:a9cf2c87afd6115bb0cbbb985619a6635" id="r_a9cf2c87afd6115bb0cbbb985619a6635"><td class="memItemLeft" align="right" valign="top"><a id="a9cf2c87afd6115bb0cbbb985619a6635" name="a9cf2c87afd6115bb0cbbb985619a6635"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getEntityName</b> (const Index &amp;id) const</td></tr>
-<tr class="memitem:a3b1412ff4f051685f3471fda1118b9ec" id="r_a3b1412ff4f051685f3471fda1118b9ec"><td class="memItemLeft" align="right" valign="top"><a id="a3b1412ff4f051685f3471fda1118b9ec" name="a3b1412ff4f051685f3471fda1118b9ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEntityName</b> (const Index &amp;id, const std::string &amp;name)</td></tr>
-<tr class="memitem:a11b4fbf1a47f3b84e569116ea2033f37" id="r_a11b4fbf1a47f3b84e569116ea2033f37"><td class="memItemLeft" align="right" valign="top"><a id="a11b4fbf1a47f3b84e569116ea2033f37" name="a11b4fbf1a47f3b84e569116ea2033f37"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (const Index &amp;id)</td></tr>
-<tr class="memitem:aec5c2f2128cef0b685f2e240ffc0cf93" id="r_aec5c2f2128cef0b685f2e240ffc0cf93"><td class="memItemLeft" align="right" valign="top"><a id="aec5c2f2128cef0b685f2e240ffc0cf93" name="aec5c2f2128cef0b685f2e240ffc0cf93"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEntityValid</b> (const Index &amp;id)</td></tr>
-<tr class="memitem:abbfdc7a0bfc92cc8adbce669d596f157" id="r_abbfdc7a0bfc92cc8adbce669d596f157"><td class="memItemLeft" align="right" valign="top"><a id="abbfdc7a0bfc92cc8adbce669d596f157" name="abbfdc7a0bfc92cc8adbce669d596f157"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getEntitiesCount</b> () const</td></tr>
-<tr class="memitem:a0a81edee0faedf89022e38ee0e42f539" id="r_a0a81edee0faedf89022e38ee0e42f539"><td class="memTemplParams" colspan="2"><a id="a0a81edee0faedf89022e38ee0e42f539" name="a0a81edee0faedf89022e38ee0e42f539"></a>
-template&lt;typename T, typename... Args&gt; </td></tr>
-<tr class="memitem:a0a81edee0faedf89022e38ee0e42f539 template"><td class="memItemLeft" align="right" valign="top">Shared&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>addComponent</b> (const Index &amp;id, Args &amp;&amp;...args)</td></tr>
-<tr class="memitem:ab7c8bb91e955795ea077c34c5b4ddace" id="r_ab7c8bb91e955795ea077c34c5b4ddace"><td class="memTemplParams" colspan="2"><a id="ab7c8bb91e955795ea077c34c5b4ddace" name="ab7c8bb91e955795ea077c34c5b4ddace"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ab7c8bb91e955795ea077c34c5b4ddace template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><b>removeComponent</b> (const Index &amp;id)</td></tr>
-<tr class="memitem:a76c20b4023f8fd869a610a34c45d8b54" id="r_a76c20b4023f8fd869a610a34c45d8b54"><td class="memTemplParams" colspan="2"><a id="a76c20b4023f8fd869a610a34c45d8b54" name="a76c20b4023f8fd869a610a34c45d8b54"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a76c20b4023f8fd869a610a34c45d8b54 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><b>entityHasComponent</b> (const Index &amp;id)</td></tr>
-<tr class="memitem:a615c30aff035d959b23454271b790c3f" id="r_a615c30aff035d959b23454271b790c3f"><td class="memTemplParams" colspan="2"><a id="a615c30aff035d959b23454271b790c3f" name="a615c30aff035d959b23454271b790c3f"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a615c30aff035d959b23454271b790c3f template"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntitiesFromComponent</b> () const</td></tr>
-<tr class="memitem:a4707e4b14aad4555ef28f35f7307fbd9" id="r_a4707e4b14aad4555ef28f35f7307fbd9"><td class="memTemplParams" colspan="2"><a id="a4707e4b14aad4555ef28f35f7307fbd9" name="a4707e4b14aad4555ef28f35f7307fbd9"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a4707e4b14aad4555ef28f35f7307fbd9 template"><td class="memItemLeft" align="right" valign="top">Shared&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponentFromId</b> (const Index &amp;id)</td></tr>
+<tr class="memdesc:a1b7b98e7ba1a2bd881e5660c3ed78ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the ECS id, it is usually used when entities are cleaned. <br /></td></tr>
+<tr class="memitem:a8ad0f947ff6dad2c9da73a38c1b71d4a" id="r_a8ad0f947ff6dad2c9da73a38c1b71d4a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ad0f947ff6dad2c9da73a38c1b71d4a">getEntities</a> () const</td></tr>
+<tr class="memdesc:a8ad0f947ff6dad2c9da73a38c1b71d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a vector containing all entities in the ECS.  <br /></td></tr>
+<tr class="memitem:a9cf2c87afd6115bb0cbbb985619a6635" id="r_a9cf2c87afd6115bb0cbbb985619a6635"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cf2c87afd6115bb0cbbb985619a6635">getEntityName</a> (const Index &amp;id) const</td></tr>
+<tr class="memdesc:a9cf2c87afd6115bb0cbbb985619a6635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the entity name.  <br /></td></tr>
+<tr class="memitem:a3b1412ff4f051685f3471fda1118b9ec" id="r_a3b1412ff4f051685f3471fda1118b9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b1412ff4f051685f3471fda1118b9ec">setEntityName</a> (const Index &amp;id, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a3b1412ff4f051685f3471fda1118b9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of the entity given.  <br /></td></tr>
+<tr class="memitem:a11b4fbf1a47f3b84e569116ea2033f37" id="r_a11b4fbf1a47f3b84e569116ea2033f37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11b4fbf1a47f3b84e569116ea2033f37">removeEntity</a> (const Index &amp;id)</td></tr>
+<tr class="memdesc:a11b4fbf1a47f3b84e569116ea2033f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the entity given from the ECS.  <br /></td></tr>
+<tr class="memitem:aec5c2f2128cef0b685f2e240ffc0cf93" id="r_aec5c2f2128cef0b685f2e240ffc0cf93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec5c2f2128cef0b685f2e240ffc0cf93">isEntityValid</a> (const Index &amp;id)</td></tr>
+<tr class="memdesc:aec5c2f2128cef0b685f2e240ffc0cf93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the entity given has components.  <br /></td></tr>
+<tr class="memitem:abbfdc7a0bfc92cc8adbce669d596f157" id="r_abbfdc7a0bfc92cc8adbce669d596f157"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbfdc7a0bfc92cc8adbce669d596f157">getEntitiesCount</a> () const</td></tr>
+<tr class="memdesc:abbfdc7a0bfc92cc8adbce669d596f157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the number of entities in the ECS.  <br /></td></tr>
+<tr class="memitem:a0a81edee0faedf89022e38ee0e42f539" id="r_a0a81edee0faedf89022e38ee0e42f539"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
+<tr class="memitem:a0a81edee0faedf89022e38ee0e42f539 template"><td class="memItemLeft" align="right" valign="top">Shared&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a81edee0faedf89022e38ee0e42f539">addComponent</a> (const Index &amp;id, Args &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a0a81edee0faedf89022e38ee0e42f539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component to the given entity. It instances a shared pointer of that component and calls the component constructor with the arguments given.  <br /></td></tr>
+<tr class="memitem:ab7c8bb91e955795ea077c34c5b4ddace" id="r_ab7c8bb91e955795ea077c34c5b4ddace"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ab7c8bb91e955795ea077c34c5b4ddace template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7c8bb91e955795ea077c34c5b4ddace">removeComponent</a> (const Index &amp;id)</td></tr>
+<tr class="memdesc:ab7c8bb91e955795ea077c34c5b4ddace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a component from the given entity.  <br /></td></tr>
+<tr class="memitem:a76c20b4023f8fd869a610a34c45d8b54" id="r_a76c20b4023f8fd869a610a34c45d8b54"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a76c20b4023f8fd869a610a34c45d8b54 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76c20b4023f8fd869a610a34c45d8b54">entityHasComponent</a> (const Index &amp;id)</td></tr>
+<tr class="memdesc:a76c20b4023f8fd869a610a34c45d8b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given entity has the component.  <br /></td></tr>
+<tr class="memitem:a615c30aff035d959b23454271b790c3f" id="r_a615c30aff035d959b23454271b790c3f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a615c30aff035d959b23454271b790c3f template"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a615c30aff035d959b23454271b790c3f">getEntitiesFromComponent</a> () const</td></tr>
+<tr class="memdesc:a615c30aff035d959b23454271b790c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all the entities that have the given component.  <br /></td></tr>
+<tr class="memitem:a4707e4b14aad4555ef28f35f7307fbd9" id="r_a4707e4b14aad4555ef28f35f7307fbd9"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a4707e4b14aad4555ef28f35f7307fbd9 template"><td class="memItemLeft" align="right" valign="top">Shared&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4707e4b14aad4555ef28f35f7307fbd9">getComponentFromId</a> (const Index &amp;id)</td></tr>
+<tr class="memdesc:a4707e4b14aad4555ef28f35f7307fbd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a shared pointer to the component of an entity.  <br /></td></tr>
 <tr class="memitem:a063294dc3e0c075947cf5364696ee8ed" id="r_a063294dc3e0c075947cf5364696ee8ed"><td class="memItemLeft" align="right" valign="top"><a id="a063294dc3e0c075947cf5364696ee8ed" name="a063294dc3e0c075947cf5364696ee8ed"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EntityManager</b> (<a class="el" href="classEntityManager.html">EntityManager</a> &amp;other)=delete</td></tr>
 <tr class="memitem:a683e108499872c0ae2fc0c6dfa13d6ff" id="r_a683e108499872c0ae2fc0c6dfa13d6ff"><td class="memItemLeft" align="right" valign="top"><a id="a683e108499872c0ae2fc0c6dfa13d6ff" name="a683e108499872c0ae2fc0c6dfa13d6ff"></a>
@@ -137,9 +143,476 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa9911c22b11fe4bbf8c044dfc998e9f" id="r_aaa9911c22b11fe4bbf8c044dfc998e9f"><td class="memItemLeft" align="right" valign="top"><a id="aaa9911c22b11fe4bbf8c044dfc998e9f" name="aaa9911c22b11fe4bbf8c044dfc998e9f"></a>
-static Shared&lt; <a class="el" href="classEntityManager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> ()</td></tr>
+<tr class="memitem:aaa9911c22b11fe4bbf8c044dfc998e9f" id="r_aaa9911c22b11fe4bbf8c044dfc998e9f"><td class="memItemLeft" align="right" valign="top">static Shared&lt; <a class="el" href="classEntityManager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa9911c22b11fe4bbf8c044dfc998e9f">instance</a> ()</td></tr>
+<tr class="memdesc:aaa9911c22b11fe4bbf8c044dfc998e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the instance of the <a class="el" href="classEntityManager.html" title="This class manages all the entities and the components instanced.">EntityManager</a>. If it's not instanced, it will be instanced automatically.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class manages all the entities and the components instanced. </p>
+<p>It allows to add entities, add and remove components from entitites, query all entities with a specific component, etc.</p>
+<p>It's implemented with singleton so there only be one instance of this class. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0a81edee0faedf89022e38ee0e42f539" name="a0a81edee0faedf89022e38ee0e42f539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a81edee0faedf89022e38ee0e42f539">&#9670;&#160;</a></span>addComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shared&lt; T &gt; EntityManager::addComponent </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a component to the given entity. It instances a shared pointer of that component and calls the component constructor with the arguments given. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>class of the component </td></tr>
+    <tr><td class="paramname">Args</td><td>list of arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">args</td><td>arguments list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a shared pointer to that component of type T </dd></dl>
+
+</div>
+</div>
+<a id="adbf8789f3fe0d3e2af21d42cac24f600" name="adbf8789f3fe0d3e2af21d42cac24f600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf8789f3fe0d3e2af21d42cac24f600">&#9670;&#160;</a></span>createEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Index EntityManager::createEntity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an entity and increment the current index. </p>
+<dl class="section return"><dt>Returns</dt><dd>the id of the new entity </dd></dl>
+
+</div>
+</div>
+<a id="a76c20b4023f8fd869a610a34c45d8b54" name="a76c20b4023f8fd869a610a34c45d8b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c20b4023f8fd869a610a34c45d8b54">&#9670;&#160;</a></span>entityHasComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EntityManager::entityHasComponent </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the given entity has the component. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>class of the component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the entity has that component </dd></dl>
+
+</div>
+</div>
+<a id="a4707e4b14aad4555ef28f35f7307fbd9" name="a4707e4b14aad4555ef28f35f7307fbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4707e4b14aad4555ef28f35f7307fbd9">&#9670;&#160;</a></span>getComponentFromId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shared&lt; T &gt; EntityManager::getComponentFromId </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a shared pointer to the component of an entity. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>class of the component </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a shared pointer to the component if the entity has one, if not it returns <span class="tt">nullptr</span> </dd></dl>
+
+</div>
+</div>
+<a id="a8ad0f947ff6dad2c9da73a38c1b71d4a" name="a8ad0f947ff6dad2c9da73a38c1b71d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad0f947ff6dad2c9da73a38c1b71d4a">&#9670;&#160;</a></span>getEntities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Index &gt; EntityManager::getEntities </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves a vector containing all entities in the ECS. </p>
+<dl class="section return"><dt>Returns</dt><dd>a vector of entities id. </dd></dl>
+
+</div>
+</div>
+<a id="abbfdc7a0bfc92cc8adbce669d596f157" name="abbfdc7a0bfc92cc8adbce669d596f157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbfdc7a0bfc92cc8adbce669d596f157">&#9670;&#160;</a></span>getEntitiesCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int EntityManager::getEntitiesCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the number of entities in the ECS. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of entities </dd></dl>
+
+</div>
+</div>
+<a id="a615c30aff035d959b23454271b790c3f" name="a615c30aff035d959b23454271b790c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615c30aff035d959b23454271b790c3f">&#9670;&#160;</a></span>getEntitiesFromComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Index &gt; EntityManager::getEntitiesFromComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves all the entities that have the given component. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>class of the component</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a vector containing entities id. </dd></dl>
+
+</div>
+</div>
+<a id="a9cf2c87afd6115bb0cbbb985619a6635" name="a9cf2c87afd6115bb0cbbb985619a6635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf2c87afd6115bb0cbbb985619a6635">&#9670;&#160;</a></span>getEntityName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string EntityManager::getEntityName </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the entity name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the entity name </dd></dl>
+
+</div>
+</div>
+<a id="aaa9911c22b11fe4bbf8c044dfc998e9f" name="aaa9911c22b11fe4bbf8c044dfc998e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9911c22b11fe4bbf8c044dfc998e9f">&#9670;&#160;</a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shared&lt; <a class="el" href="classEntityManager.html">EntityManager</a> &gt; EntityManager::instance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the instance of the <a class="el" href="classEntityManager.html" title="This class manages all the entities and the components instanced.">EntityManager</a>. If it's not instanced, it will be instanced automatically. </p>
+<dl class="section return"><dt>Returns</dt><dd>a Shared&lt;EntityManager&gt; object </dd></dl>
+
+</div>
+</div>
+<a id="aec5c2f2128cef0b685f2e240ffc0cf93" name="aec5c2f2128cef0b685f2e240ffc0cf93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5c2f2128cef0b685f2e240ffc0cf93">&#9670;&#160;</a></span>isEntityValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EntityManager::isEntityValid </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the entity given has components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the entity has components </dd></dl>
+
+</div>
+</div>
+<a id="ab7c8bb91e955795ea077c34c5b4ddace" name="ab7c8bb91e955795ea077c34c5b4ddace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c8bb91e955795ea077c34c5b4ddace">&#9670;&#160;</a></span>removeComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EntityManager::removeComponent </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes a component from the given entity. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>class of the component that will be removed</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the component is removed </dd></dl>
+
+</div>
+</div>
+<a id="a11b4fbf1a47f3b84e569116ea2033f37" name="a11b4fbf1a47f3b84e569116ea2033f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b4fbf1a47f3b84e569116ea2033f37">&#9670;&#160;</a></span>removeEntity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EntityManager::removeEntity </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes the entity given from the ECS. </p>
+<p>If the entity is present in the ECS, his component will be cleared.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the entity is removed </dd></dl>
+
+</div>
+</div>
+<a id="a3b1412ff4f051685f3471fda1118b9ec" name="a3b1412ff4f051685f3471fda1118b9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1412ff4f051685f3471fda1118b9ec">&#9670;&#160;</a></span>setEntityName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EntityManager::setEntityName </td>
+          <td>(</td>
+          <td class="paramtype">const Index &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the name of the entity given. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>entity id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>App/include/ECS/<a class="el" href="EntityManager_8hpp_source.html">EntityManager.hpp</a></li>
 </ul>

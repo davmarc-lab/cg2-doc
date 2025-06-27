@@ -92,7 +92,7 @@ $(function(){initNavTree('classState.html','','classState-members'); });
 </div><!--header-->
 <div class="contents">
 
-<p>This class allow to create a state to be attached to the <a class="el" href="classStateManager.html">StateManager</a>. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> works like a scene: defines all the meshes that will be rendered or not, defines custom behaviour while updating mesh data or while rendering meshes.  
+<p>This class allow to create a state to be attached to the <a class="el" href="classStateManager.html" title="This class manages the current State running in the application and also provides a simple cache syst...">StateManager</a>. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> works like a scene: defines all the meshes that will be rendered or not, defines custom behaviour while updating mesh data or while rendering meshes.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="State_8hpp_source.html">State.hpp</a>&gt;</code></p>
@@ -138,7 +138,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
 <tr class="memdesc:a4c7d61a5341721eddfba297b458a0886"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the state is attached <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class allow to create a state to be attached to the <a class="el" href="classStateManager.html">StateManager</a>. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> works like a scene: defines all the meshes that will be rendered or not, defines custom behaviour while updating mesh data or while rendering meshes. </p>
+<div class="textblock"><p>This class allow to create a state to be attached to the <a class="el" href="classStateManager.html" title="This class manages the current State running in the application and also provides a simple cache syst...">StateManager</a>. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> works like a scene: defines all the meshes that will be rendered or not, defines custom behaviour while updating mesh data or while rendering meshes. </p>
 <p>This is an abstract class it needs to be extended and override the methods that the child <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> will use.</p>
 <p>It can be used to create scenes with meshes, lights, skybox etc. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> can have custom behaviour while updating and rendering, every "static" mesh must be initialized in <a class="el" href="#ab20d9535987084cb556ad572d46205e4" title="This method is called after using StateManager::sync() (read StateMnaager::sync() documentation for m...">State::onAttach()</a> implementation.</p>
 <dl class="section note"><dt>Note</dt><dd>This application when executed will load a state loader (scene picker), where the user choose which state (scene) will be loaded. </dd></dl>
@@ -167,7 +167,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
 </div><div class="memdoc">
 
 <p>Instances a state with the given name. </p>
-<dl class="section note"><dt>Note</dt><dd>Each state need a name to be cached in the <a class="el" href="classStateManager.html">StateManager</a>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Each state need a name to be cached in the <a class="el" href="classStateManager.html" title="This class manages the current State running in the application and also provides a simple cache syst...">StateManager</a>.</dd></dl>
 <p>@params name the state's name </p>
 
 </div>

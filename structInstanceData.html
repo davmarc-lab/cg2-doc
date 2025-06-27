@@ -91,19 +91,30 @@ $(function(){initNavTree('structInstanceData.html','','structInstanceData-member
   <div class="headertitle"><div class="title">InstanceData Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Data structure for instanced mesh rendering. It stores for each primitive its color and model matrix.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="System_8hpp_source.html">System.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac0db67de528664282969fc9b8275e00a" id="r_ac0db67de528664282969fc9b8275e00a"><td class="memItemLeft" align="right" valign="top"><a id="ac0db67de528664282969fc9b8275e00a" name="ac0db67de528664282969fc9b8275e00a"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>nspheres</b> = 0</td></tr>
+<tr class="memdesc:ac0db67de528664282969fc9b8275e00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">spheres counter <br /></td></tr>
 <tr class="memitem:a5df04943d9654afa451b0f98e1805fa9" id="r_a5df04943d9654afa451b0f98e1805fa9"><td class="memItemLeft" align="right" valign="top"><a id="a5df04943d9654afa451b0f98e1805fa9" name="a5df04943d9654afa451b0f98e1805fa9"></a>
 std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>spheresIds</b> {}</td></tr>
+<tr class="memdesc:a5df04943d9654afa451b0f98e1805fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">spheres id <br /></td></tr>
 <tr class="memitem:a787c0d6dacf81a34c154618aa1997f4a" id="r_a787c0d6dacf81a34c154618aa1997f4a"><td class="memItemLeft" align="right" valign="top"><a id="a787c0d6dacf81a34c154618aa1997f4a" name="a787c0d6dacf81a34c154618aa1997f4a"></a>
 std::vector&lt; glm::vec4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>spheresColor</b> {}</td></tr>
+<tr class="memdesc:a787c0d6dacf81a34c154618aa1997f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">spheres color <br /></td></tr>
 <tr class="memitem:a60c9796254d012b21d97994adab44584" id="r_a60c9796254d012b21d97994adab44584"><td class="memItemLeft" align="right" valign="top"><a id="a60c9796254d012b21d97994adab44584" name="a60c9796254d012b21d97994adab44584"></a>
 std::vector&lt; glm::mat4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>spheresModel</b> {}</td></tr>
+<tr class="memdesc:a60c9796254d012b21d97994adab44584"><td class="mdescLeft">&#160;</td><td class="mdescRight">spheres model matrix <br /></td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Data structure for instanced mesh rendering. It stores for each primitive its color and model matrix. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>App/include/ECS/<a class="el" href="System_8hpp_source.html">System.hpp</a></li>
 </ul>
 </div><!-- contents -->

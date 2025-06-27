@@ -91,7 +91,8 @@ $(function(){initNavTree('functions_func.html','',''); });
 <div class="textblock">Here is a list of all documented functions with links to the class documentation for each member:</div>
 
 <h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>addEntity()&#160;:&#160;<a class="el" href="classPhysicWorld.html#af4a2d699698d4dfef08eb32820426c67">PhysicWorld</a></li>
+<li>addComponent()&#160;:&#160;<a class="el" href="classEntityManager.html#a0a81edee0faedf89022e38ee0e42f539">EntityManager</a></li>
+<li>addEntity()&#160;:&#160;<a class="el" href="classBasicScene.html#a99416f8d340cecbca4c7d452cd35346d">BasicScene</a>, <a class="el" href="classPhysicWorld.html#af4a2d699698d4dfef08eb32820426c67">PhysicWorld</a></li>
 <li>addPosition()&#160;:&#160;<a class="el" href="classTransform.html#acc67ffc148db1cd189c745005fc29629">Transform</a></li>
 <li>addRotation()&#160;:&#160;<a class="el" href="classTransform.html#a579eeebb1458771429f6b478a3f1946a">Transform</a></li>
 <li>addScale()&#160;:&#160;<a class="el" href="classTransform.html#a66fbf31d513b1f9b1d0583fd401aa440">Transform</a></li>
@@ -117,11 +118,13 @@ $(function(){initNavTree('functions_func.html','',''); });
 <li>changeState()&#160;:&#160;<a class="el" href="classStateManager.html#aaed8344bcdf2430aa821faa0b185d053">StateManager</a></li>
 <li>clean()&#160;:&#160;<a class="el" href="classStateManager.html#a05684f338241238875cb4a0ed65a06bd">StateManager</a></li>
 <li>ColliderComponent()&#160;:&#160;<a class="el" href="classColliderComponent.html#a6e21e17f300546392268cf01c068d1ab">ColliderComponent</a></li>
+<li>createEntity()&#160;:&#160;<a class="el" href="classEntityManager.html#adbf8789f3fe0d3e2af21d42cac24f600">EntityManager</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>enableModelMatrix()&#160;:&#160;<a class="el" href="classTransform.html#a5ab8915eff3e619e050d1d2fbca75054">Transform</a></li>
+<li>entityHasComponent()&#160;:&#160;<a class="el" href="classEntityManager.html#a76c20b4023f8fd869a610a34c45d8b54">EntityManager</a></li>
 <li>execRender()&#160;:&#160;<a class="el" href="classStateManager.html#a82a7900fa88e268a3fff6502d02cd4b1">StateManager</a></li>
 <li>execUpdate()&#160;:&#160;<a class="el" href="classStateManager.html#ad8db36a3f403f1732b682a774caa56cd">StateManager</a></li>
 </ul>
@@ -130,13 +133,19 @@ $(function(){initNavTree('functions_func.html','',''); });
 <h3 class="doxsection"><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>getAllKeys()&#160;:&#160;<a class="el" href="classInputComponent.html#a7e6bc99fada7f24135cb70647a003254">InputComponent</a></li>
 <li>getCachedStates()&#160;:&#160;<a class="el" href="classStateManager.html#a049c5c113127a1847ee80c6fd0a9e08d">StateManager</a></li>
+<li>getCamera()&#160;:&#160;<a class="el" href="classBasicScene.html#a579b782beba7a9d409f7da4ca7480f72">BasicScene</a></li>
 <li>getColorsCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#a5fdf6da8fcad403c52a412ebcf69444b">VertexComponent</a></li>
-<li>getEntities()&#160;:&#160;<a class="el" href="classPhysicWorld.html#a3fb154a9f560f561cfa982bc74be2e1d">PhysicWorld</a></li>
+<li>getComponentFromId()&#160;:&#160;<a class="el" href="classEntityManager.html#a4707e4b14aad4555ef28f35f7307fbd9">EntityManager</a></li>
+<li>getEntities()&#160;:&#160;<a class="el" href="classEntityManager.html#a8ad0f947ff6dad2c9da73a38c1b71d4a">EntityManager</a>, <a class="el" href="classPhysicWorld.html#a3fb154a9f560f561cfa982bc74be2e1d">PhysicWorld</a></li>
+<li>getEntitiesCount()&#160;:&#160;<a class="el" href="classEntityManager.html#abbfdc7a0bfc92cc8adbce669d596f157">EntityManager</a></li>
+<li>getEntitiesFromComponent()&#160;:&#160;<a class="el" href="classEntityManager.html#a615c30aff035d959b23454271b790c3f">EntityManager</a></li>
+<li>getEntityName()&#160;:&#160;<a class="el" href="classEntityManager.html#a9cf2c87afd6115bb0cbbb985619a6635">EntityManager</a></li>
 <li>getIndexCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#aa8a45f264528b1aa9d198bc2638e7e6a">VertexComponent</a></li>
 <li>getNormalsCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#a57b995f36f507e6e8e97af313875466c">VertexComponent</a></li>
 <li>getPosition()&#160;:&#160;<a class="el" href="classTransform.html#a97db7b6f766cd48ebd0e708894652527">Transform</a></li>
 <li>getRotation()&#160;:&#160;<a class="el" href="classTransform.html#a2f80079351ea169d90d59f248bcfe741">Transform</a></li>
 <li>getScale()&#160;:&#160;<a class="el" href="classTransform.html#ae1ccab585f6fba9fe6c2641b55118e85">Transform</a></li>
+<li>getShaderEntityMap()&#160;:&#160;<a class="el" href="classBasicScene.html#a0d2dae456c8b5e4e9d110c4dba0a594d">BasicScene</a></li>
 <li>getTexCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#ab2f17890f0afd68811610c85c55f59ae">VertexComponent</a></li>
 <li>getVertexCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#a83f6df50ea9c5207156a271304ccdd7f">VertexComponent</a></li>
 <li>getWorldDeltaTime()&#160;:&#160;<a class="el" href="classPhysicWorld.html#a26cbae3193ed29db32a0ddcf77b00740">PhysicWorld</a></li>
@@ -150,13 +159,15 @@ $(function(){initNavTree('functions_func.html','',''); });
 
 <h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>ImportedMeshTextures()&#160;:&#160;<a class="el" href="classImportedMeshTextures.html#aebe4ae90658aa687d7fff2bb098ac4c8">ImportedMeshTextures</a></li>
+<li>init()&#160;:&#160;<a class="el" href="classBasicScene.html#ad02c958177d1d4a74e38cd4ea2bf7ec9">BasicScene</a></li>
 <li>InputComponent()&#160;:&#160;<a class="el" href="classInputComponent.html#a34990984475d562c0fd2b4b822711dea">InputComponent</a></li>
-<li>instance()&#160;:&#160;<a class="el" href="classStateManager.html#a230d0133553b265647576edaf63bc8d1">StateManager</a></li>
+<li>instance()&#160;:&#160;<a class="el" href="classBasicScene.html#aeafb438e7cbe1e2a71e5c521c78717cb">BasicScene</a>, <a class="el" href="classEntityManager.html#aaa9911c22b11fe4bbf8c044dfc998e9f">EntityManager</a>, <a class="el" href="classStateManager.html#a230d0133553b265647576edaf63bc8d1">StateManager</a></li>
 <li>InstancedComponent()&#160;:&#160;<a class="el" href="classInstancedComponent.html#acaf4fce1c84d7c40a5407aa464a0a7ca">InstancedComponent</a></li>
 <li>isColliding()&#160;:&#160;<a class="el" href="classColliderComponent.html#ac48e4669de3b5dc46e36d32a35264b8b">ColliderComponent</a></li>
 <li>isCurrentStateDefined()&#160;:&#160;<a class="el" href="classStateManager.html#a144c32e1bf89abdbfd0d2a35cd242479">StateManager</a></li>
 <li>isCurrentStateEnd()&#160;:&#160;<a class="el" href="classBootstrapState.html#ade3b69251af5e4ad70e704e51f80efc9">BootstrapState</a>, <a class="el" href="classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6">NormalViewState</a>, <a class="el" href="classState.html#a785c28599f368d0e221958188b978fc5">State</a></li>
 <li>isDirty()&#160;:&#160;<a class="el" href="classTransform.html#a60f1a0bca87372df84e761cf3274e98d">Transform</a></li>
+<li>isEntityValid()&#160;:&#160;<a class="el" href="classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93">EntityManager</a></li>
 <li>isModelMatrixEnable()&#160;:&#160;<a class="el" href="classTransform.html#a23d870470f4f5ef2c2580b6cd2381c82">Transform</a></li>
 </ul>
 
@@ -196,14 +207,17 @@ $(function(){initNavTree('functions_func.html','',''); });
 
 <h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>registerAction()&#160;:&#160;<a class="el" href="classInputComponent.html#a833c892f324275b7459f1266a8064ede">InputComponent</a></li>
-<li>removeEntity()&#160;:&#160;<a class="el" href="classPhysicWorld.html#a08bb18433253815353bb5e271de3317e">PhysicWorld</a></li>
+<li>removeComponent()&#160;:&#160;<a class="el" href="classEntityManager.html#ab7c8bb91e955795ea077c34c5b4ddace">EntityManager</a></li>
+<li>removeEntity()&#160;:&#160;<a class="el" href="classBasicScene.html#aa1c1bf75037cddec09f57cd1cff18d19">BasicScene</a>, <a class="el" href="classEntityManager.html#a11b4fbf1a47f3b84e569116ea2033f37">EntityManager</a>, <a class="el" href="classPhysicWorld.html#a08bb18433253815353bb5e271de3317e">PhysicWorld</a></li>
 <li>RenderComponent()&#160;:&#160;<a class="el" href="classRenderComponent.html#a1bfbe186278dc7528788aea84f976b6c">RenderComponent</a></li>
+<li>resetIndex()&#160;:&#160;<a class="el" href="classEntityManager.html#a1b7b98e7ba1a2bd881e5660c3ed78ce2">EntityManager</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>setColorsCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#acd39764ccdc2f93e47f87f4b004d3fb8">VertexComponent</a></li>
 <li>setDirty()&#160;:&#160;<a class="el" href="classTransform.html#ae6864a2971b5c6f46e096cc1379a0bab">Transform</a></li>
+<li>setEntityName()&#160;:&#160;<a class="el" href="classEntityManager.html#a3b1412ff4f051685f3471fda1118b9ec">EntityManager</a></li>
 <li>setIndexCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#ab3a82e4280102188499f77e746728324">VertexComponent</a></li>
 <li>setNormalsCoords()&#160;:&#160;<a class="el" href="classVertexComponent.html#adfa4f7046adba2e9ca0dc8fedd25f597">VertexComponent</a></li>
 <li>setPosition()&#160;:&#160;<a class="el" href="classTransform.html#a975c896e403e057b54047e8055598ff9">Transform</a></li>

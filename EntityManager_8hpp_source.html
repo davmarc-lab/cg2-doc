@@ -102,150 +102,185 @@ $(function(){initNavTree('EntityManager_8hpp_source.html','',''); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classEntityManager.html">   13</a></span><span class="keyword">class </span>EntityManager {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using </span>Index = <span class="keywordtype">unsigned</span> int;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">inline</span> Index createEntity() {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">auto</span> <span class="keywordtype">id</span> = this-&gt;m_currentId;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        this-&gt;m_currentId++;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        this-&gt;m_entities.emplace(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Entity &quot;</span> + std::to_string(<span class="keywordtype">id</span>));</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        this-&gt;m_ettComponent.emplace(<span class="keywordtype">id</span>, std::vector&lt;Shared&lt;Component&gt;&gt;{});</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> id;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> resetIndex() {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        this-&gt;m_currentId = 0;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">inline</span> std::vector&lt;Index&gt; getEntities()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::vector&lt;Index&gt; res{};</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> [<span class="keywordtype">id</span>, _] : this-&gt;m_ettComponent) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            res.push_back(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> res;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">inline</span> std::string getEntityName(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;m_entities.at(<span class="keywordtype">id</span>); }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> setEntityName(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> std::string &amp;name) { this-&gt;m_entities.at(<span class="keywordtype">id</span>) = std::move(name); }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> removeEntity(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        this-&gt;m_entities.erase(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>)) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            c.reset();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        this-&gt;m_ettComponent.erase(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = this-&gt;m_compEntity.begin(); it != this-&gt;m_compEntity.end();) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keyword">auto</span> &amp;ids = it-&gt;second;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            ids.erase(std::remove(ALL(ids), <span class="keywordtype">id</span>), ids.end());</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (ids.empty())</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                it = this-&gt;m_compEntity.erase(it);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                ++it;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> isEntityValid(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) { <span class="keywordflow">return</span> this-&gt;m_ettComponent.count(<span class="keywordtype">id</span>); }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getEntitiesCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;m_entities.size(); }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">inline</span> Shared&lt;T&gt; addComponent(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>, Args &amp;&amp;...args) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!this-&gt;isEntityValid(<span class="keywordtype">id</span>))</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">auto</span> comp = CreateShared&lt;T&gt;(std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>).emplace_back(comp);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">auto</span> name = CLASSNAME(T);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span> (this-&gt;m_compEntity.count(name)) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            this-&gt;m_compEntity.at(name).push_back(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            this-&gt;m_compEntity.emplace(name, std::vector&lt;Index&gt;{});</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            this-&gt;m_compEntity.at(name).push_back(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> comp;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> removeComponent(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (!this-&gt;entityHasComponent&lt;T&gt;(<span class="keywordtype">id</span>))</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        this-&gt;m_compEntity.at(CLASSNAME(T)).erase(std::find(ALL(this-&gt;m_compEntity.at(CLASSNAME(T))), <span class="keywordtype">id</span>));</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">auto</span> c = this-&gt;getComponentFromId&lt;T&gt;(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">if</span> (c != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>).erase(std::find(ALL(this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>)), c));</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> this-&gt;entityHasComponent&lt;T&gt;(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> entityHasComponent(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> this-&gt;m_compEntity.count(CLASSNAME(T)) &gt; 0 &amp;&amp;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            std::find(ALL(this-&gt;m_compEntity.at(CLASSNAME(T))), <span class="keywordtype">id</span>) != this-&gt;m_compEntity.at(CLASSNAME(T)).end();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">inline</span> std::vector&lt;Index&gt; getEntitiesFromComponent()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">if</span> (!this-&gt;m_compEntity.count(CLASSNAME(T)))</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> this-&gt;m_compEntity.at(CLASSNAME(T));</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">inline</span> Shared&lt;T&gt; getComponentFromId(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">if</span> (!this-&gt;m_compEntity.count(CLASSNAME(T)))</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="comment">// the entity with id hasn&#39;t this component.</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (std::find(ALL(this-&gt;m_compEntity.at(CLASSNAME(T))), <span class="keywordtype">id</span>) == this-&gt;m_compEntity.at(CLASSNAME(T)).end()) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="comment">// std::cerr &lt;&lt; &quot;The entity with id (&quot; &lt;&lt; id &lt;&lt; &quot;) doesn&#39;t have this component (&quot; &lt;&lt; CLASSNAME(T) &lt;&lt; &quot;).\n&quot;;</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="comment">// finds T component by using dynamic cast.</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;T&gt;(*std::find_if(ALL(this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>)), [](<span class="keyword">auto</span> e) {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            return std::dynamic_pointer_cast&lt;T&gt;(e) != nullptr;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }));</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    EntityManager(EntityManager &amp;other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> EntityManager &amp;other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">inline</span> <span class="keyword">static</span> Shared&lt;EntityManager&gt; instance() {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (s_pointer == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            Shared&lt;EntityManager&gt; copy(<span class="keyword">new</span> EntityManager());</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            copy.swap(s_pointer);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> s_pointer;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    Index m_currentId = 0;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    std::map&lt;Index, std::string&gt; m_entities{};</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    std::map&lt;Index, std::vector&lt;Shared&lt;Component&gt;&gt;&gt; m_ettComponent{};</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    std::map&lt;std::string, std::vector&lt;Index&gt;&gt; m_compEntity{};</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">inline</span> <span class="keyword">static</span> Shared&lt;EntityManager&gt; s_pointer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    EntityManager() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>};</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classEntityManager.html">   21</a></span><span class="keyword">class </span>EntityManager {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using </span>Index = <span class="keywordtype">unsigned</span> int;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classEntityManager.html#adbf8789f3fe0d3e2af21d42cac24f600">   30</a></span>    <span class="keyword">inline</span> Index <a class="code hl_function" href="classEntityManager.html#adbf8789f3fe0d3e2af21d42cac24f600">createEntity</a>() {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">auto</span> <span class="keywordtype">id</span> = this-&gt;m_currentId;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        this-&gt;m_currentId++;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        this-&gt;m_entities.emplace(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;Entity &quot;</span> + std::to_string(<span class="keywordtype">id</span>));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        this-&gt;m_ettComponent.emplace(<span class="keywordtype">id</span>, std::vector&lt;Shared&lt;Component&gt;&gt;{});</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> id;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#include &quot;../../../Opengl-Core/include/Core.hpp&quot;</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">const</span> <span class="keyword">auto</span> PLAYER_DEAD_EVENT = <a class="code hl_class" href="classogl_1_1Event.html">ogl::Event</a>(<span class="stringliteral">&quot;Player Dead&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classEntityManager.html#a1b7b98e7ba1a2bd881e5660c3ed78ce2">   43</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classEntityManager.html#a1b7b98e7ba1a2bd881e5660c3ed78ce2">resetIndex</a>() {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        this-&gt;m_currentId = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classEntityManager.html#a8ad0f947ff6dad2c9da73a38c1b71d4a">   52</a></span>    <span class="keyword">inline</span> std::vector&lt;Index&gt; <a class="code hl_function" href="classEntityManager.html#a8ad0f947ff6dad2c9da73a38c1b71d4a">getEntities</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::vector&lt;Index&gt; res{};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> [<span class="keywordtype">id</span>, _] : this-&gt;m_ettComponent) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            res.push_back(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classEntityManager.html#a9cf2c87afd6115bb0cbbb985619a6635">   66</a></span>    <span class="keyword">inline</span> std::string <a class="code hl_function" href="classEntityManager.html#a9cf2c87afd6115bb0cbbb985619a6635">getEntityName</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;m_entities.at(<span class="keywordtype">id</span>); }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classEntityManager.html#a3b1412ff4f051685f3471fda1118b9ec">   73</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classEntityManager.html#a3b1412ff4f051685f3471fda1118b9ec">setEntityName</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> std::string &amp;name) { this-&gt;m_entities.at(<span class="keywordtype">id</span>) = std::move(name); }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classEntityManager.html#a11b4fbf1a47f3b84e569116ea2033f37">   83</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classEntityManager.html#a11b4fbf1a47f3b84e569116ea2033f37">removeEntity</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">bool</span> removed = this-&gt;m_entities.erase(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>)) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            c.reset();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        this-&gt;m_ettComponent.erase(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = this-&gt;m_compEntity.begin(); it != this-&gt;m_compEntity.end();) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keyword">auto</span> &amp;ids = it-&gt;second;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            ids.erase(std::remove(ALL(ids), <span class="keywordtype">id</span>), ids.end());</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">if</span> (ids.empty())</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                it = this-&gt;m_compEntity.erase(it);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                ++it;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> removed;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93">  108</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93">isEntityValid</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) { <span class="keywordflow">return</span> this-&gt;m_ettComponent.count(<span class="keywordtype">id</span>); }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classEntityManager.html#abbfdc7a0bfc92cc8adbce669d596f157">  115</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classEntityManager.html#abbfdc7a0bfc92cc8adbce669d596f157">getEntitiesCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;m_entities.size(); }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="}">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classEntityManager.html#a0a81edee0faedf89022e38ee0e42f539">  129</a></span>    <span class="keyword">inline</span> Shared&lt;T&gt; <a class="code hl_function" href="classEntityManager.html#a0a81edee0faedf89022e38ee0e42f539">addComponent</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>, Args &amp;&amp;...args) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span> (!this-&gt;<a class="code hl_function" href="classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93">isEntityValid</a>(<span class="keywordtype">id</span>))</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">auto</span> comp = CreateShared&lt;T&gt;(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>).emplace_back(comp);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keyword">auto</span> name = CLASSNAME(T);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">if</span> (this-&gt;m_compEntity.count(name)) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            this-&gt;m_compEntity.at(name).push_back(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            this-&gt;m_compEntity.emplace(name, std::vector&lt;Index&gt;{});</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            this-&gt;m_compEntity.at(name).push_back(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> comp;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="}">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classEntityManager.html#ab7c8bb91e955795ea077c34c5b4ddace">  155</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classEntityManager.html#ab7c8bb91e955795ea077c34c5b4ddace">removeComponent</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (!this-&gt;<a class="code hl_function" href="classEntityManager.html#a76c20b4023f8fd869a610a34c45d8b54">entityHasComponent&lt;T&gt;</a>(<span class="keywordtype">id</span>))</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        this-&gt;m_compEntity.at(CLASSNAME(T)).erase(std::find(ALL(this-&gt;m_compEntity.at(CLASSNAME(T))), <span class="keywordtype">id</span>));</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keyword">auto</span> c = this-&gt;<a class="code hl_function" href="classEntityManager.html#a4707e4b14aad4555ef28f35f7307fbd9">getComponentFromId&lt;T&gt;</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (c != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>).erase(std::find(ALL(this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>)), c));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classEntityManager.html#a76c20b4023f8fd869a610a34c45d8b54">entityHasComponent&lt;T&gt;</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00174" data-start="{" data-end="}">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classEntityManager.html#a76c20b4023f8fd869a610a34c45d8b54">  174</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classEntityManager.html#a76c20b4023f8fd869a610a34c45d8b54">entityHasComponent</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">return</span> this-&gt;m_compEntity.count(CLASSNAME(T)) &gt; 0 &amp;&amp;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            std::find(ALL(this-&gt;m_compEntity.at(CLASSNAME(T))), <span class="keywordtype">id</span>) != this-&gt;m_compEntity.at(CLASSNAME(T)).end();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classEntityManager.html#a615c30aff035d959b23454271b790c3f">  187</a></span>    <span class="keyword">inline</span> std::vector&lt;Index&gt; <a class="code hl_function" href="classEntityManager.html#a615c30aff035d959b23454271b790c3f">getEntitiesFromComponent</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">if</span> (!this-&gt;m_compEntity.count(CLASSNAME(T)))</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">return</span> this-&gt;m_compEntity.at(CLASSNAME(T));</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classEntityManager.html#a4707e4b14aad4555ef28f35f7307fbd9">  203</a></span>    <span class="keyword">inline</span> Shared&lt;T&gt; <a class="code hl_function" href="classEntityManager.html#a4707e4b14aad4555ef28f35f7307fbd9">getComponentFromId</a>(<span class="keyword">const</span> Index &amp;<span class="keywordtype">id</span>) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">if</span> (!this-&gt;m_compEntity.count(CLASSNAME(T)))</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="comment">// the entity with id hasn&#39;t this component.</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">if</span> (std::find(ALL(this-&gt;m_compEntity.at(CLASSNAME(T))), <span class="keywordtype">id</span>) == this-&gt;m_compEntity.at(CLASSNAME(T)).end()) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="comment">// std::cerr &lt;&lt; &quot;The entity with id (&quot; &lt;&lt; id &lt;&lt; &quot;) doesn&#39;t have this component (&quot; &lt;&lt; CLASSNAME(T) &lt;&lt; &quot;).\n&quot;;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="comment">// finds T component by using dynamic cast.</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;T&gt;(*std::find_if(ALL(this-&gt;m_ettComponent.at(<span class="keywordtype">id</span>)), [](<span class="keyword">auto</span> e) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            return std::dynamic_pointer_cast&lt;T&gt;(e) != nullptr;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        }));</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_class" href="classEntityManager.html">EntityManager</a>(<a class="code hl_class" href="classEntityManager.html">EntityManager</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code hl_class" href="classEntityManager.html">EntityManager</a> &amp;other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
+<div class="foldopen" id="foldopen00229" data-start="{" data-end="}">
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classEntityManager.html#aaa9911c22b11fe4bbf8c044dfc998e9f">  229</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> Shared&lt;EntityManager&gt; <a class="code hl_function" href="classEntityManager.html#aaa9911c22b11fe4bbf8c044dfc998e9f">instance</a>() {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">if</span> (s_pointer == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            Shared&lt;EntityManager&gt; copy(<span class="keyword">new</span> EntityManager());</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            copy.swap(s_pointer);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">return</span> s_pointer;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    Index m_currentId = 0;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    std::map&lt;Index, std::string&gt; m_entities{};</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    std::map&lt;Index, std::vector&lt;Shared&lt;Component&gt;&gt;&gt; m_ettComponent{};</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    std::map&lt;std::string, std::vector&lt;Index&gt;&gt; m_compEntity{};</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keyword">inline</span> <span class="keyword">static</span> Shared&lt;EntityManager&gt; s_pointer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    EntityManager() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>};</div>
+</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">#include &quot;../../../Opengl-Core/include/Core.hpp&quot;</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keyword">const</span> <span class="keyword">auto</span> PLAYER_DEAD_EVENT = <a class="code hl_class" href="classogl_1_1Event.html">ogl::Event</a>(<span class="stringliteral">&quot;Player Dead&quot;</span>);</div>
+<div class="ttc" id="aclassEntityManager_html"><div class="ttname"><a href="classEntityManager.html">EntityManager</a></div><div class="ttdoc">This class manages all the entities and the components instanced.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:21</div></div>
+<div class="ttc" id="aclassEntityManager_html_a0a81edee0faedf89022e38ee0e42f539"><div class="ttname"><a href="classEntityManager.html#a0a81edee0faedf89022e38ee0e42f539">EntityManager::addComponent</a></div><div class="ttdeci">Shared&lt; T &gt; addComponent(const Index &amp;id, Args &amp;&amp;...args)</div><div class="ttdoc">Adds a component to the given entity. It instances a shared pointer of that component and calls the c...</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:129</div></div>
+<div class="ttc" id="aclassEntityManager_html_a11b4fbf1a47f3b84e569116ea2033f37"><div class="ttname"><a href="classEntityManager.html#a11b4fbf1a47f3b84e569116ea2033f37">EntityManager::removeEntity</a></div><div class="ttdeci">bool removeEntity(const Index &amp;id)</div><div class="ttdoc">Removes the entity given from the ECS.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:83</div></div>
+<div class="ttc" id="aclassEntityManager_html_a1b7b98e7ba1a2bd881e5660c3ed78ce2"><div class="ttname"><a href="classEntityManager.html#a1b7b98e7ba1a2bd881e5660c3ed78ce2">EntityManager::resetIndex</a></div><div class="ttdeci">void resetIndex()</div><div class="ttdoc">Reset the ECS id, it is usually used when entities are cleaned.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:43</div></div>
+<div class="ttc" id="aclassEntityManager_html_a3b1412ff4f051685f3471fda1118b9ec"><div class="ttname"><a href="classEntityManager.html#a3b1412ff4f051685f3471fda1118b9ec">EntityManager::setEntityName</a></div><div class="ttdeci">void setEntityName(const Index &amp;id, const std::string &amp;name)</div><div class="ttdoc">Sets the name of the entity given.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:73</div></div>
+<div class="ttc" id="aclassEntityManager_html_a4707e4b14aad4555ef28f35f7307fbd9"><div class="ttname"><a href="classEntityManager.html#a4707e4b14aad4555ef28f35f7307fbd9">EntityManager::getComponentFromId</a></div><div class="ttdeci">Shared&lt; T &gt; getComponentFromId(const Index &amp;id)</div><div class="ttdoc">Retrieves a shared pointer to the component of an entity.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:203</div></div>
+<div class="ttc" id="aclassEntityManager_html_a615c30aff035d959b23454271b790c3f"><div class="ttname"><a href="classEntityManager.html#a615c30aff035d959b23454271b790c3f">EntityManager::getEntitiesFromComponent</a></div><div class="ttdeci">std::vector&lt; Index &gt; getEntitiesFromComponent() const</div><div class="ttdoc">Retrieves all the entities that have the given component.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:187</div></div>
+<div class="ttc" id="aclassEntityManager_html_a76c20b4023f8fd869a610a34c45d8b54"><div class="ttname"><a href="classEntityManager.html#a76c20b4023f8fd869a610a34c45d8b54">EntityManager::entityHasComponent</a></div><div class="ttdeci">bool entityHasComponent(const Index &amp;id)</div><div class="ttdoc">Checks if the given entity has the component.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:174</div></div>
+<div class="ttc" id="aclassEntityManager_html_a8ad0f947ff6dad2c9da73a38c1b71d4a"><div class="ttname"><a href="classEntityManager.html#a8ad0f947ff6dad2c9da73a38c1b71d4a">EntityManager::getEntities</a></div><div class="ttdeci">std::vector&lt; Index &gt; getEntities() const</div><div class="ttdoc">Retrieves a vector containing all entities in the ECS.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:52</div></div>
+<div class="ttc" id="aclassEntityManager_html_a9cf2c87afd6115bb0cbbb985619a6635"><div class="ttname"><a href="classEntityManager.html#a9cf2c87afd6115bb0cbbb985619a6635">EntityManager::getEntityName</a></div><div class="ttdeci">std::string getEntityName(const Index &amp;id) const</div><div class="ttdoc">Retrieves the entity name.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:66</div></div>
+<div class="ttc" id="aclassEntityManager_html_aaa9911c22b11fe4bbf8c044dfc998e9f"><div class="ttname"><a href="classEntityManager.html#aaa9911c22b11fe4bbf8c044dfc998e9f">EntityManager::instance</a></div><div class="ttdeci">static Shared&lt; EntityManager &gt; instance()</div><div class="ttdoc">Retrieves the instance of the EntityManager. If it&#39;s not instanced, it will be instanced automaticall...</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:229</div></div>
+<div class="ttc" id="aclassEntityManager_html_ab7c8bb91e955795ea077c34c5b4ddace"><div class="ttname"><a href="classEntityManager.html#ab7c8bb91e955795ea077c34c5b4ddace">EntityManager::removeComponent</a></div><div class="ttdeci">bool removeComponent(const Index &amp;id)</div><div class="ttdoc">Removes a component from the given entity.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:155</div></div>
+<div class="ttc" id="aclassEntityManager_html_abbfdc7a0bfc92cc8adbce669d596f157"><div class="ttname"><a href="classEntityManager.html#abbfdc7a0bfc92cc8adbce669d596f157">EntityManager::getEntitiesCount</a></div><div class="ttdeci">unsigned int getEntitiesCount() const</div><div class="ttdoc">Retrieves the number of entities in the ECS.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:115</div></div>
+<div class="ttc" id="aclassEntityManager_html_adbf8789f3fe0d3e2af21d42cac24f600"><div class="ttname"><a href="classEntityManager.html#adbf8789f3fe0d3e2af21d42cac24f600">EntityManager::createEntity</a></div><div class="ttdeci">Index createEntity()</div><div class="ttdoc">Create an entity and increment the current index.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:30</div></div>
+<div class="ttc" id="aclassEntityManager_html_aec5c2f2128cef0b685f2e240ffc0cf93"><div class="ttname"><a href="classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93">EntityManager::isEntityValid</a></div><div class="ttdeci">bool isEntityValid(const Index &amp;id)</div><div class="ttdoc">Checks if the entity given has components.</div><div class="ttdef"><b>Definition</b> EntityManager.hpp:108</div></div>
 <div class="ttc" id="aclassogl_1_1Event_html"><div class="ttname"><a href="classogl_1_1Event.html">ogl::Event</a></div><div class="ttdef"><b>Definition</b> Event.hpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

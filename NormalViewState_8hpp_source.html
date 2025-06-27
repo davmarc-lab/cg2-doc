@@ -149,26 +149,26 @@ $(function(){initNavTree('NormalViewState_8hpp_source.html','',''); });
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> ettSelected = -1;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> renderBB = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    Unique&lt;UniformBuffer&gt; ub;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// methods</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> enableDefaultCameraMovement();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    glm::vec3 getTrackballPoint(<span class="keyword">const</span> Pair&lt;float&gt; &amp;viewpSize, <span class="keyword">const</span> glm::vec2 &amp;pos);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    glm::vec3 getRayFromMouse(<span class="keyword">const</span> Pair&lt;float&gt; &amp;size, <span class="keywordtype">int</span> mouse_x, <span class="keywordtype">int</span> mouse_y);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> isRayInSphere(<span class="keyword">const</span> glm::vec3 &amp;ray, <span class="keyword">const</span> glm::vec3 &amp;sphere_pos, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;sphere_radius, <span class="keywordtype">float</span> *<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">enum</span> InputState {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        MOUSE_PASSIVE,</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        MOUSE_ACTIVE</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    };</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> changeInputState(Window *w, <span class="keyword">const</span> InputState &amp;state);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> defaultKeyCallback(Window *w);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    Unique&lt;UniformBuffer&gt; ub;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> enableDefaultCameraMovement();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    glm::vec3 getTrackballPoint(<span class="keyword">const</span> Pair&lt;float&gt; &amp;viewpSize, <span class="keyword">const</span> glm::vec2 &amp;pos);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    glm::vec3 getRayFromMouse(<span class="keyword">const</span> Pair&lt;float&gt; &amp;size, <span class="keywordtype">int</span> mouse_x, <span class="keywordtype">int</span> mouse_y);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">bool</span> isRayInSphere(<span class="keyword">const</span> glm::vec3 &amp;ray, <span class="keyword">const</span> glm::vec3 &amp;sphere_pos, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;sphere_radius, <span class="keywordtype">float</span> *dist);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">enum</span> InputState {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        MOUSE_PASSIVE,</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        MOUSE_ACTIVE</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    };</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> changeInputState(Window *w, <span class="keyword">const</span> InputState &amp;state);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordtype">void</span> defaultKeyCallback(Window *w);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>};</div>
 </div>
 <div class="ttc" id="aclassNormalViewState_html"><div class="ttname"><a href="classNormalViewState.html">NormalViewState</a></div><div class="ttdoc">This State render an interactive scene with rendered meshes and lights. The user can modify their int...</div><div class="ttdef"><b>Definition</b> NormalViewState.hpp:15</div></div>
 <div class="ttc" id="aclassNormalViewState_html_a0b10e2b59c5b1d0d4d191c55de0896e0"><div class="ttname"><a href="classNormalViewState.html#a0b10e2b59c5b1d0d4d191c55de0896e0">NormalViewState::onUpdate</a></div><div class="ttdeci">virtual void onUpdate() override</div><div class="ttdoc">This methods contains all the operations executed at every event::loop::LOOP_UPDATE if there are any.</div><div class="ttdef"><b>Definition</b> NormalViewState.cpp:530</div></div>
