@@ -91,12 +91,17 @@ $(function(){initNavTree('classBootstrapState.html','','classBootstrapState-memb
   <div class="headertitle"><div class="title">BootstrapState Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> allows to load one <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> in an ImGui window from cached states in the <a class="el" href="classStateManager.html">StateManager</a>.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="BootstrapState_8hpp_source.html">BootstrapState.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BootstrapState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBootstrapState__inherit__graph.png" border="0" usemap="#aBootstrapState_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aBootstrapState_inherit__map" id="aBootstrapState_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,81,124,109"/>
+<area shape="rect" title="This State allows to load one State in an ImGui window from cached states in the StateManager." alt="" coords="5,81,124,109"/>
 <area shape="rect" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="37,5,92,33"/>
 <area shape="poly" title=" " alt="" coords="67,49,67,81,62,81,62,49"/>
 </map>
@@ -106,7 +111,7 @@ Collaboration diagram for BootstrapState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBootstrapState__coll__graph.png" border="0" usemap="#aBootstrapState_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aBootstrapState_coll__map" id="aBootstrapState_coll__map">
-<area shape="rect" title=" " alt="" coords="5,81,124,109"/>
+<area shape="rect" title="This State allows to load one State in an ImGui window from cached states in the StateManager." alt="" coords="5,81,124,109"/>
 <area shape="rect" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="37,5,92,33"/>
 <area shape="poly" title=" " alt="" coords="67,49,67,81,62,81,62,49"/>
 </map>
@@ -124,8 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7439fdc533e8f7e5fe20adae9b62a4b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any.  <br /></td></tr>
 <tr class="memitem:ade3b69251af5e4ad70e704e51f80efc9" id="r_ade3b69251af5e4ad70e704e51f80efc9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade3b69251af5e4ad70e704e51f80efc9">isCurrentStateEnd</a> () override</td></tr>
 <tr class="memdesc:ade3b69251af5e4ad70e704e51f80efc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>  <br /></td></tr>
-<tr class="memitem:af37fe5d56d032733dd994f4bce904e52" id="r_af37fe5d56d032733dd994f4bce904e52"><td class="memItemLeft" align="right" valign="top"><a id="af37fe5d56d032733dd994f4bce904e52" name="af37fe5d56d032733dd994f4bce904e52"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BootstrapState</b> (const std::string &amp;name=&quot;Bootstrap State&quot;)</td></tr>
+<tr class="memitem:af37fe5d56d032733dd994f4bce904e52" id="r_af37fe5d56d032733dd994f4bce904e52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af37fe5d56d032733dd994f4bce904e52">BootstrapState</a> (const std::string &amp;name=&quot;Bootstrap State&quot;)</td></tr>
+<tr class="memdesc:af37fe5d56d032733dd994f4bce904e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances basic state with the given name.  <br /></td></tr>
 <tr class="inherit_header pub_methods_classState"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classState')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classState.html">State</a></td></tr>
 <tr class="memitem:a7aec8a3796220945cd69224d6980cfe4 inherit pub_methods_classState" id="r_a7aec8a3796220945cd69224d6980cfe4"><td class="memItemLeft" align="right" valign="top">
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
@@ -144,6 +149,42 @@ const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = false</td></tr>
 <tr class="memdesc:a4c7d61a5341721eddfba297b458a0886 inherit pro_attribs_classState"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the state is attached <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> allows to load one <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> in an ImGui window from cached states in the <a class="el" href="classStateManager.html">StateManager</a>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af37fe5d56d032733dd994f4bce904e52" name="af37fe5d56d032733dd994f4bce904e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37fe5d56d032733dd994f4bce904e52">&#9670;&#160;</a></span>BootstrapState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BootstrapState::BootstrapState </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;Bootstrap&#160;State&quot;</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instances basic state with the given name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>state name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ade3b69251af5e4ad70e704e51f80efc9" name="ade3b69251af5e4ad70e704e51f80efc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade3b69251af5e4ad70e704e51f80efc9">&#9670;&#160;</a></span>isCurrentStateEnd()</h2>

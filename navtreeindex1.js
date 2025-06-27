@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"classogl_1_1Camera.html":[1,0,0,1],
+"classogl_1_1ElementBuffer.html":[1,0,0,5],
+"classogl_1_1Event.html":[1,0,0,6],
 "classogl_1_1EventManager.html":[1,0,0,7],
 "classogl_1_1FrameBuffer.html":[1,0,0,8],
 "classogl_1_1ImGuiManager.html":[1,0,0,9],

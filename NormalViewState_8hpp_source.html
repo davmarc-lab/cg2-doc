@@ -95,86 +95,89 @@ $(function(){initNavTree('NormalViewState_8hpp_source.html','',''); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../../include/AppGui.hpp&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../../include/State/State.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classNormalViewState.html">    6</a></span><span class="keyword">class </span>NormalViewState : <span class="keyword">public</span> <a class="code hl_function" href="classState.html#a2abc4950481fbaa59931010dabddffe8">State</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#a993fb17ae1f4ec9a6700c1c3017d308d">onAttach</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#aa07c28815c224c2cfb99919dfd3492c3">onDetach</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#a0b10e2b59c5b1d0d4d191c55de0896e0">onUpdate</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#ab37fee2653a818df9bc2ab373334d866">onRender</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6">isCurrentStateEnd</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    NormalViewState() :</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_function" href="classState.html#a2abc4950481fbaa59931010dabddffe8">State</a>(<span class="stringliteral">&quot;Default State&quot;</span>) {}</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">virtual</span> ~NormalViewState() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">struct </span>WorldCamera {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cameraId;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        Shared&lt;Camera&gt; camera;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        glm::vec3 cameraSize = glm::vec3(1);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">int</span> tbBorderTolerance = 20;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">float</span> tbRadius = 1.f;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    } world;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">struct </span>Mouse {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        glm::vec2 pos{};</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">bool</span> trackState = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">bool</span> skipCursorPos = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    } mouse;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">double</span> inputWalltime{}, inputCputime{};</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">double</span> updateWalltime{}, updateCputime{};</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">double</span> renderWalltime{}, renderCputime{};</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::array&lt;std::reference_wrapper&lt;double&gt;, 3&gt; walltimes{inputWalltime, updateWalltime, renderWalltime};</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::array&lt;std::reference_wrapper&lt;double&gt;, 3&gt; cputimes{inputCputime, updateCputime, renderCputime};</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    std::array&lt;std::string, 3&gt; names{<span class="stringliteral">&quot;Input&quot;</span>, <span class="stringliteral">&quot;Update&quot;</span>, <span class="stringliteral">&quot;Render&quot;</span>};</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> <a class="code hl_class" href="classogl_1_1Event.html">Event</a> INPUT_NORMAL_VIEW_OPEN = <a class="code hl_class" href="classogl_1_1Event.html">Event</a>(<span class="stringliteral">&quot;Input in Normal View Start&quot;</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> <a class="code hl_class" href="classogl_1_1Event.html">Event</a> INPUT_NORMAL_VIEW_CLOSE = <a class="code hl_class" href="classogl_1_1Event.html">Event</a>(<span class="stringliteral">&quot;Input in Normal View Stop&quot;</span>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> <a class="code hl_class" href="classogl_1_1Event.html">Event</a> ENTITY_ELECTED_CHANGED = <a class="code hl_class" href="classogl_1_1Event.html">Event</a>(<span class="stringliteral">&quot;Entity Selected Changed&quot;</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> glm::vec3 CAMERA_START_POSITION = glm::vec3{0, 1, 12};</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">float</span> lastTime = 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> plane;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span> ettSelected = -1;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> renderBB = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    Unique&lt;UniformBuffer&gt; ub;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// methods</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> enableDefaultCameraMovement();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    glm::vec3 getTrackballPoint(<span class="keyword">const</span> <a class="code hl_struct" href="structPair.html">Pair&lt;float&gt;</a> &amp;viewpSize, <span class="keyword">const</span> glm::vec2 &amp;pos);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    glm::vec3 getRayFromMouse(<span class="keyword">const</span> <a class="code hl_struct" href="structPair.html">Pair&lt;float&gt;</a> &amp;size, <span class="keywordtype">int</span> mouse_x, <span class="keywordtype">int</span> mouse_y);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">bool</span> isRayInSphere(<span class="keyword">const</span> glm::vec3 &amp;ray, <span class="keyword">const</span> glm::vec3 &amp;sphere_pos, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;sphere_radius, <span class="keywordtype">float</span> *<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">enum</span> InputState {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        MOUSE_PASSIVE,</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        MOUSE_ACTIVE</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> changeInputState(<a class="code hl_class" href="classogl_1_1Window.html">Window</a> *w, <span class="keyword">const</span> InputState &amp;state);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> defaultKeyCallback(<a class="code hl_class" href="classogl_1_1Window.html">Window</a> *w);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classNormalViewState.html">   15</a></span><span class="keyword">class </span><a class="code hl_function" href="classNormalViewState.html#ab21014f0e779cc5e0494fb10ba582afe">NormalViewState</a> : <span class="keyword">public</span> <a class="code hl_function" href="classState.html#a2abc4950481fbaa59931010dabddffe8">State</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#a993fb17ae1f4ec9a6700c1c3017d308d">onAttach</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#aa07c28815c224c2cfb99919dfd3492c3">onDetach</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#a0b10e2b59c5b1d0d4d191c55de0896e0">onUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNormalViewState.html#ab37fee2653a818df9bc2ab373334d866">onRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6">isCurrentStateEnd</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classNormalViewState.html#ab21014f0e779cc5e0494fb10ba582afe">   28</a></span>    <a class="code hl_function" href="classNormalViewState.html#ab21014f0e779cc5e0494fb10ba582afe">NormalViewState</a>() :</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_function" href="classState.html#a2abc4950481fbaa59931010dabddffe8">State</a>(<span class="stringliteral">&quot;Normal View State&quot;</span>) {}</div>
 </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classNormalViewState.html">~NormalViewState</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">struct </span>WorldCamera {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cameraId;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Shared&lt;Camera&gt; camera;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        glm::vec3 cameraSize = glm::vec3(1);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">int</span> tbBorderTolerance = 20;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">float</span> tbRadius = 1.f;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    } world;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">struct </span>Mouse {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        glm::vec2 pos{};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">bool</span> trackState = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">bool</span> skipCursorPos = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    } mouse;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">double</span> inputWalltime{};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">double</span> inputCputime{};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">double</span> updateWalltime{};</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">double</span> updateCputime{};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">double</span> renderWalltime{};</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">double</span> renderCputime{};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::array&lt;std::reference_wrapper&lt;double&gt;, 3&gt; walltimes{inputWalltime, updateWalltime, renderWalltime};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::array&lt;std::reference_wrapper&lt;double&gt;, 3&gt; cputimes{inputCputime, updateCputime, renderCputime};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    std::array&lt;std::string, 3&gt; names{<span class="stringliteral">&quot;Input&quot;</span>, <span class="stringliteral">&quot;Update&quot;</span>, <span class="stringliteral">&quot;Render&quot;</span>};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">const</span> Event INPUT_NORMAL_VIEW_OPEN = Event(<span class="stringliteral">&quot;Input in Normal View Start&quot;</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> Event INPUT_NORMAL_VIEW_CLOSE = Event(<span class="stringliteral">&quot;Input in Normal View Stop&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> Event ENTITY_SELECTED_CHANGED = Event(<span class="stringliteral">&quot;Entity Selected Changed&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">const</span> glm::vec3 CAMERA_START_POSITION = glm::vec3{0, 1, 12};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> plane;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> ettSelected = -1;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> renderBB = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    Unique&lt;UniformBuffer&gt; ub;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// methods</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> enableDefaultCameraMovement();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    glm::vec3 getTrackballPoint(<span class="keyword">const</span> Pair&lt;float&gt; &amp;viewpSize, <span class="keyword">const</span> glm::vec2 &amp;pos);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    glm::vec3 getRayFromMouse(<span class="keyword">const</span> Pair&lt;float&gt; &amp;size, <span class="keywordtype">int</span> mouse_x, <span class="keywordtype">int</span> mouse_y);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> isRayInSphere(<span class="keyword">const</span> glm::vec3 &amp;ray, <span class="keyword">const</span> glm::vec3 &amp;sphere_pos, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;sphere_radius, <span class="keywordtype">float</span> *<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">enum</span> InputState {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        MOUSE_PASSIVE,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        MOUSE_ACTIVE</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    };</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> changeInputState(Window *w, <span class="keyword">const</span> InputState &amp;state);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> defaultKeyCallback(Window *w);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
+</div>
+<div class="ttc" id="aclassNormalViewState_html"><div class="ttname"><a href="classNormalViewState.html">NormalViewState</a></div><div class="ttdoc">This State render an interactive scene with rendered meshes and lights. The user can modify their int...</div><div class="ttdef"><b>Definition</b> NormalViewState.hpp:15</div></div>
 <div class="ttc" id="aclassNormalViewState_html_a0b10e2b59c5b1d0d4d191c55de0896e0"><div class="ttname"><a href="classNormalViewState.html#a0b10e2b59c5b1d0d4d191c55de0896e0">NormalViewState::onUpdate</a></div><div class="ttdeci">virtual void onUpdate() override</div><div class="ttdoc">This methods contains all the operations executed at every event::loop::LOOP_UPDATE if there are any.</div><div class="ttdef"><b>Definition</b> NormalViewState.cpp:530</div></div>
 <div class="ttc" id="aclassNormalViewState_html_a1b9dd2ce9779d6f03133d0007bceb1c6"><div class="ttname"><a href="classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6">NormalViewState::isCurrentStateEnd</a></div><div class="ttdeci">virtual bool isCurrentStateEnd() override</div><div class="ttdoc">Retrieves the current binary state of the current State</div><div class="ttdef"><b>Definition</b> NormalViewState.cpp:536</div></div>
 <div class="ttc" id="aclassNormalViewState_html_a993fb17ae1f4ec9a6700c1c3017d308d"><div class="ttname"><a href="classNormalViewState.html#a993fb17ae1f4ec9a6700c1c3017d308d">NormalViewState::onAttach</a></div><div class="ttdeci">virtual void onAttach() override</div><div class="ttdoc">This method is called after using StateManager::sync() (read StateMnaager::sync() documentation for m...</div><div class="ttdef"><b>Definition</b> NormalViewState.cpp:338</div></div>
 <div class="ttc" id="aclassNormalViewState_html_aa07c28815c224c2cfb99919dfd3492c3"><div class="ttname"><a href="classNormalViewState.html#aa07c28815c224c2cfb99919dfd3492c3">NormalViewState::onDetach</a></div><div class="ttdeci">virtual void onDetach() override</div><div class="ttdoc">This method is called while using sync() (read sync() documentation for more info)....</div><div class="ttdef"><b>Definition</b> NormalViewState.cpp:518</div></div>
+<div class="ttc" id="aclassNormalViewState_html_ab21014f0e779cc5e0494fb10ba582afe"><div class="ttname"><a href="classNormalViewState.html#ab21014f0e779cc5e0494fb10ba582afe">NormalViewState::NormalViewState</a></div><div class="ttdeci">NormalViewState()</div><div class="ttdoc">Instances the normal view state.</div><div class="ttdef"><b>Definition</b> NormalViewState.hpp:28</div></div>
 <div class="ttc" id="aclassNormalViewState_html_ab37fee2653a818df9bc2ab373334d866"><div class="ttname"><a href="classNormalViewState.html#ab37fee2653a818df9bc2ab373334d866">NormalViewState::onRender</a></div><div class="ttdeci">virtual void onRender() override</div><div class="ttdoc">This methods contains all the operations executed at every event::loop::LOOP_RENDER if there are any.</div><div class="ttdef"><b>Definition</b> NormalViewState.cpp:533</div></div>
 <div class="ttc" id="aclassState_html_a2abc4950481fbaa59931010dabddffe8"><div class="ttname"><a href="classState.html#a2abc4950481fbaa59931010dabddffe8">State::State</a></div><div class="ttdeci">State(const std::string &amp;name=&quot;State&quot;)</div><div class="ttdoc">Instances a state with the given name.</div><div class="ttdef"><b>Definition</b> State.hpp:85</div></div>
-<div class="ttc" id="aclassogl_1_1Event_html"><div class="ttname"><a href="classogl_1_1Event.html">ogl::Event</a></div><div class="ttdef"><b>Definition</b> Event.hpp:13</div></div>
-<div class="ttc" id="aclassogl_1_1Window_html"><div class="ttname"><a href="classogl_1_1Window.html">ogl::Window</a></div><div class="ttdef"><b>Definition</b> Window.hpp:36</div></div>
-<div class="ttc" id="astructPair_html"><div class="ttname"><a href="structPair.html">Pair</a></div><div class="ttdef"><b>Definition</b> Utils.hpp:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

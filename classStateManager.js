@@ -1,5 +1,6 @@
 var classStateManager =
 [
+    [ "cacheState", "classStateManager.html#ab4012f236f1139d3d518cbcbf3ff33fa", null ],
     [ "cacheState", "classStateManager.html#a1e9db52cdbf77ffe26179fa9f84c8aa7", null ],
     [ "changeState", "classStateManager.html#a050d55c8d5df06aa37097ff98fc9fd04", null ],
     [ "changeState", "classStateManager.html#a80f436c40e46408366937b0bf4d516db", null ],

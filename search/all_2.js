@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cachestate_0',['cacheState',['../classStateManager.html#a1e9db52cdbf77ffe26179fa9f84c8aa7',1,'StateManager']]],
+  ['cachestate_0',['cacheState',['../classStateManager.html#a1e9db52cdbf77ffe26179fa9f84c8aa7',1,'StateManager::cacheState(const std::string &amp;name, const Shared&lt; State &gt; &amp;state)'],['../classStateManager.html#ab4012f236f1139d3d518cbcbf3ff33fa',1,'StateManager::cacheState(const Shared&lt; State &gt; &amp;state)']]],
   ['call_1',['call',['../classRenderComponent.html#aec73235350c3faa59dfe82c8a61bdde6',1,'RenderComponent::call()'],['../classInputComponent.html#aa97fd8f769619d68dacb1bbe113ca6ea',1,'InputComponent::call(const unsigned int &amp;key)']]],
   ['callbacks_2',['callbacks',['../classInputComponent.html#a80908dad35e2f8c32165870294784896',1,'InputComponent']]],
   ['camera_3',['Camera',['../classogl_1_1Camera.html',1,'ogl']]],

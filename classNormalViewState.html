@@ -91,12 +91,17 @@ $(function(){initNavTree('classNormalViewState.html','','classNormalViewState-me
   <div class="headertitle"><div class="title">NormalViewState Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> render an interactive scene with rendered meshes and lights. The user can modify their internal data, stored in components, thanks to ImGui panels and if the mesh has normals thei can be viewed in a panel using framebuffer for rendering.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="NormalViewState_8hpp_source.html">NormalViewState.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NormalViewState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNormalViewState__inherit__graph.png" border="0" usemap="#aNormalViewState_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aNormalViewState_inherit__map" id="aNormalViewState_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,81,141,109"/>
+<area shape="rect" title="This State render an interactive scene with rendered meshes and lights. The user can modify their int..." alt="" coords="5,81,141,109"/>
 <area shape="rect" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="45,5,101,33"/>
 <area shape="poly" title=" " alt="" coords="76,49,76,81,70,81,70,49"/>
 </map>
@@ -106,7 +111,7 @@ Collaboration diagram for NormalViewState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNormalViewState__coll__graph.png" border="0" usemap="#aNormalViewState_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aNormalViewState_coll__map" id="aNormalViewState_coll__map">
-<area shape="rect" title=" " alt="" coords="5,81,141,109"/>
+<area shape="rect" title="This State render an interactive scene with rendered meshes and lights. The user can modify their int..." alt="" coords="5,81,141,109"/>
 <area shape="rect" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="45,5,101,33"/>
 <area shape="poly" title=" " alt="" coords="76,49,76,81,70,81,70,49"/>
 </map>
@@ -124,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab37fee2653a818df9bc2ab373334d866"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any.  <br /></td></tr>
 <tr class="memitem:a1b9dd2ce9779d6f03133d0007bceb1c6" id="r_a1b9dd2ce9779d6f03133d0007bceb1c6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b9dd2ce9779d6f03133d0007bceb1c6">isCurrentStateEnd</a> () override</td></tr>
 <tr class="memdesc:a1b9dd2ce9779d6f03133d0007bceb1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>  <br /></td></tr>
+<tr class="memitem:ab21014f0e779cc5e0494fb10ba582afe" id="r_ab21014f0e779cc5e0494fb10ba582afe"><td class="memItemLeft" align="right" valign="top"><a id="ab21014f0e779cc5e0494fb10ba582afe" name="ab21014f0e779cc5e0494fb10ba582afe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NormalViewState</b> ()</td></tr>
+<tr class="memdesc:ab21014f0e779cc5e0494fb10ba582afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances the normal view state. <br /></td></tr>
 <tr class="inherit_header pub_methods_classState"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classState')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classState.html">State</a></td></tr>
 <tr class="memitem:a7aec8a3796220945cd69224d6980cfe4 inherit pub_methods_classState" id="r_a7aec8a3796220945cd69224d6980cfe4"><td class="memItemLeft" align="right" valign="top">
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
@@ -142,7 +150,10 @@ const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = false</td></tr>
 <tr class="memdesc:a4c7d61a5341721eddfba297b458a0886 inherit pro_attribs_classState"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the state is attached <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> render an interactive scene with rendered meshes and lights. The user can modify their internal data, stored in components, thanks to ImGui panels and if the mesh has normals thei can be viewed in a panel using framebuffer for rendering. </p>
+<p>In this simulation there is no physics but the world camera has a collider so it won't penetrate in meshes inside the scene. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a1b9dd2ce9779d6f03133d0007bceb1c6" name="a1b9dd2ce9779d6f03133d0007bceb1c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b9dd2ce9779d6f03133d0007bceb1c6">&#9670;&#160;</a></span>isCurrentStateEnd()</h2>
 

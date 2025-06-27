@@ -121,8 +121,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clean</b> ()</td></tr
 <tr class="memdesc:a144c32e1bf89abdbfd0d2a35cd242479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves if the current state is defined or not.  <br /></td></tr>
 <tr class="memitem:a1e9db52cdbf77ffe26179fa9f84c8aa7" id="r_a1e9db52cdbf77ffe26179fa9f84c8aa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e9db52cdbf77ffe26179fa9f84c8aa7">cacheState</a> (const std::string &amp;name, const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
 <tr class="memdesc:a1e9db52cdbf77ffe26179fa9f84c8aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method caches the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> given with the given name.  <br /></td></tr>
-<tr class="memitem:ab4012f236f1139d3d518cbcbf3ff33fa" id="r_ab4012f236f1139d3d518cbcbf3ff33fa"><td class="memItemLeft" align="right" valign="top"><a id="ab4012f236f1139d3d518cbcbf3ff33fa" name="ab4012f236f1139d3d518cbcbf3ff33fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cacheState</b> (const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
+<tr class="memitem:ab4012f236f1139d3d518cbcbf3ff33fa" id="r_ab4012f236f1139d3d518cbcbf3ff33fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4012f236f1139d3d518cbcbf3ff33fa">cacheState</a> (const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
+<tr class="memdesc:ab4012f236f1139d3d518cbcbf3ff33fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches the given <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a>, his name will be used in the cached states.  <br /></td></tr>
 <tr class="memitem:a2f26ea9115c8de0af22415074613cc9c" id="r_a2f26ea9115c8de0af22415074613cc9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f26ea9115c8de0af22415074613cc9c">uncacheState</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a2f26ea9115c8de0af22415074613cc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the given name if contained in the cache.  <br /></td></tr>
 <tr class="memitem:a049c5c113127a1847ee80c6fd0a9e08d" id="r_a049c5c113127a1847ee80c6fd0a9e08d"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, Shared&lt; <a class="el" href="classState.html">State</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a049c5c113127a1847ee80c6fd0a9e08d">getCachedStates</a> ()</td></tr>
@@ -134,8 +134,41 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a230d0133553b265647576edaf63bc8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the instance of the <a class="el" href="classStateManager.html">StateManager</a> if it's not created. This function is thread safe using a simple <span class="tt">std::mutex</span>.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ab4012f236f1139d3d518cbcbf3ff33fa" name="ab4012f236f1139d3d518cbcbf3ff33fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4012f236f1139d3d518cbcbf3ff33fa">&#9670;&#160;</a></span>cacheState() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateManager::cacheState </td>
+          <td>(</td>
+          <td class="paramtype">const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Caches the given <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a>, his name will be used in the cached states. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>state to be cached </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1e9db52cdbf77ffe26179fa9f84c8aa7" name="a1e9db52cdbf77ffe26179fa9f84c8aa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e9db52cdbf77ffe26179fa9f84c8aa7">&#9670;&#160;</a></span>cacheState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9db52cdbf77ffe26179fa9f84c8aa7">&#9670;&#160;</a></span>cacheState() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
