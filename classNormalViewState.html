@@ -96,9 +96,9 @@ Inheritance diagram for NormalViewState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNormalViewState__inherit__graph.png" border="0" usemap="#aNormalViewState_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aNormalViewState_inherit__map" id="aNormalViewState_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,129,105"/>
-<area shape="rect" href="classState.html" title=" " alt="" coords="41,5,93,31"/>
-<area shape="poly" title=" " alt="" coords="70,46,70,79,64,79,64,46"/>
+<area shape="rect" title=" " alt="" coords="5,81,141,109"/>
+<area shape="rect" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="45,5,101,33"/>
+<area shape="poly" title=" " alt="" coords="76,49,76,81,70,81,70,49"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -106,33 +106,41 @@ Collaboration diagram for NormalViewState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNormalViewState__coll__graph.png" border="0" usemap="#aNormalViewState_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aNormalViewState_coll__map" id="aNormalViewState_coll__map">
-<area shape="rect" title=" " alt="" coords="5,79,129,105"/>
-<area shape="rect" href="classState.html" title=" " alt="" coords="41,5,93,31"/>
-<area shape="poly" title=" " alt="" coords="70,46,70,79,64,79,64,46"/>
+<area shape="rect" title=" " alt="" coords="5,81,141,109"/>
+<area shape="rect" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="45,5,101,33"/>
+<area shape="poly" title=" " alt="" coords="76,49,76,81,70,81,70,49"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a993fb17ae1f4ec9a6700c1c3017d308d" id="r_a993fb17ae1f4ec9a6700c1c3017d308d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993fb17ae1f4ec9a6700c1c3017d308d">onAttach</a> () override</td></tr>
+<tr class="memdesc:a993fb17ae1f4ec9a6700c1c3017d308d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called after using <span class="tt"><a class="el" href="classStateManager.html#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> (read <span class="tt">StateMnaager::sync()</span> documentation for more info). It should contain all the operations that must be done before you start the execution of a <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>.  <br /></td></tr>
 <tr class="memitem:aa07c28815c224c2cfb99919dfd3492c3" id="r_aa07c28815c224c2cfb99919dfd3492c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa07c28815c224c2cfb99919dfd3492c3">onDetach</a> () override</td></tr>
+<tr class="memdesc:aa07c28815c224c2cfb99919dfd3492c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called while using <span class="tt">sync()</span> (read <span class="tt">sync()</span> documentation for more info). It should contain all the operations that must be done at the end of <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> execution before deleting or changing <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>, it is automatically called by <span class="tt">sync()</span>.  <br /></td></tr>
 <tr class="memitem:a0b10e2b59c5b1d0d4d191c55de0896e0" id="r_a0b10e2b59c5b1d0d4d191c55de0896e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b10e2b59c5b1d0d4d191c55de0896e0">onUpdate</a> () override</td></tr>
+<tr class="memdesc:a0b10e2b59c5b1d0d4d191c55de0896e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_UPDATE</span> if there are any.  <br /></td></tr>
 <tr class="memitem:ab37fee2653a818df9bc2ab373334d866" id="r_ab37fee2653a818df9bc2ab373334d866"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab37fee2653a818df9bc2ab373334d866">onRender</a> () override</td></tr>
+<tr class="memdesc:ab37fee2653a818df9bc2ab373334d866"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any.  <br /></td></tr>
 <tr class="memitem:a1b9dd2ce9779d6f03133d0007bceb1c6" id="r_a1b9dd2ce9779d6f03133d0007bceb1c6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b9dd2ce9779d6f03133d0007bceb1c6">isCurrentStateEnd</a> () override</td></tr>
+<tr class="memdesc:a1b9dd2ce9779d6f03133d0007bceb1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>  <br /></td></tr>
 <tr class="inherit_header pub_methods_classState"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classState')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classState.html">State</a></td></tr>
 <tr class="memitem:a7aec8a3796220945cd69224d6980cfe4 inherit pub_methods_classState" id="r_a7aec8a3796220945cd69224d6980cfe4"><td class="memItemLeft" align="right" valign="top">
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
 <tr class="memitem:a8716aff654dcfc5f6b9a5befb7c927d8 inherit pub_methods_classState" id="r_a8716aff654dcfc5f6b9a5befb7c927d8"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAttached</b> () const</td></tr>
 <tr class="memitem:a2abc4950481fbaa59931010dabddffe8 inherit pub_methods_classState" id="r_a2abc4950481fbaa59931010dabddffe8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a2abc4950481fbaa59931010dabddffe8">State</a> (const std::string &amp;name=&quot;State&quot;)</td></tr>
+<tr class="memdesc:a2abc4950481fbaa59931010dabddffe8 inherit pub_methods_classState"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances a state with the given name.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classState"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classState')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classState.html">State</a></td></tr>
 <tr class="memitem:af10518e09f3ceec5c05044b5fce580a4 inherit pro_attribs_classState" id="r_af10518e09f3ceec5c05044b5fce580a4"><td class="memItemLeft" align="right" valign="top">
 const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="memdesc:af10518e09f3ceec5c05044b5fce580a4 inherit pro_attribs_classState"><td class="mdescLeft">&#160;</td><td class="mdescRight">state's name <br /></td></tr>
 <tr class="memitem:a4c7d61a5341721eddfba297b458a0886 inherit pro_attribs_classState" id="r_a4c7d61a5341721eddfba297b458a0886"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = false</td></tr>
+<tr class="memdesc:a4c7d61a5341721eddfba297b458a0886 inherit pro_attribs_classState"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the state is attached <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a1b9dd2ce9779d6f03133d0007bceb1c6" name="a1b9dd2ce9779d6f03133d0007bceb1c6"></a>
@@ -157,7 +165,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html">State</a></span></p>
+
+<p>Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">bool</span> true if the state is finished </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classState.html#a785c28599f368d0e221958188b978fc5">State</a>.</p>
@@ -186,8 +195,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method is called after using <span class="tt"><a class="el" href="classStateManager.html#af0a5a954f8833a6df72e75daf428b437">StateManager::sync()</a></span> (read <span class="tt">StateMnaager::sync()</span> documentation for more info). It should contain all the operations that must be done before you start the execution of a <span class="tt"><a class="el" href="classState.html">State</a></span>.</p>
-<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="classState.html#ab20d9535987084cb556ad572d46205e4">State::onAttach()</a></span> </p>
+
+<p>This method is called after using <span class="tt"><a class="el" href="classStateManager.html#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> (read <span class="tt">StateMnaager::sync()</span> documentation for more info). It should contain all the operations that must be done before you start the execution of a <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>. </p>
+<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="classState.html#ab20d9535987084cb556ad572d46205e4" title="This method is called after using StateManager::sync() (read StateMnaager::sync() documentation for m...">State::onAttach()</a></span> </p>
 
 <p>Reimplemented from <a class="el" href="classState.html#ab20d9535987084cb556ad572d46205e4">State</a>.</p>
 
@@ -215,8 +225,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method is called while using <span class="tt">sync()</span> (read <span class="tt">sync()</span> documentation for more info). It should contain all the operations that must be done at the end of <span class="tt"><a class="el" href="classState.html">State</a></span> execution before deleting or changing <span class="tt"><a class="el" href="classState.html">State</a></span>, it is automatically called by <span class="tt">sync()</span>.</p>
-<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="classState.html#a6a5223247e9df13792d589606de07d04">State::onDetach()</a></span> </p>
+
+<p>This method is called while using <span class="tt">sync()</span> (read <span class="tt">sync()</span> documentation for more info). It should contain all the operations that must be done at the end of <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> execution before deleting or changing <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>, it is automatically called by <span class="tt">sync()</span>. </p>
+<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="classState.html#a6a5223247e9df13792d589606de07d04" title="This method is called while using sync() (read sync() documentation for more info)....">State::onDetach()</a></span> </p>
 
 <p>Reimplemented from <a class="el" href="classState.html#a6a5223247e9df13792d589606de07d04">State</a>.</p>
 
@@ -244,6 +255,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any. </p>
 
 <p>Reimplemented from <a class="el" href="classState.html#a6e3cd8e93d66af00030af2f49f7538ee">State</a>.</p>
@@ -272,6 +284,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_UPDATE</span> if there are any. </p>
 
 <p>Reimplemented from <a class="el" href="classState.html#afae9ec50bd821e8626f97eb7041ab2e1">State</a>.</p>

@@ -1,9 +1,9 @@
 <map id="VelocitySolver" name="VelocitySolver">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,252,110,278"/>
-<area shape="rect" id="Node000002" href="$classSolver.html" title="A Solver is a." alt="" coords="28,177,87,203"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,218,60,252,55,252,55,218"/>
-<area shape="rect" id="Node000003" href="$classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="11,80,104,106"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="60,121,60,176,55,176,55,121"/>
-<area shape="rect" id="Node000004" href="$classogl_1_1Layer.html" title=" " alt="" coords="19,5,96,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="60,46,60,80,55,80,55,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,260,120,288"/>
+<area shape="rect" id="Node000002" href="$classSolver.html" title="A Solver is a." alt="" coords="31,183,94,211"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,226,65,260,60,260,60,226"/>
+<area shape="rect" id="Node000003" href="$classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="12,82,113,110"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="65,126,65,182,60,182,60,126"/>
+<area shape="rect" id="Node000004" href="$classogl_1_1Layer.html" title=" " alt="" coords="20,5,105,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="65,48,65,82,60,82,60,48"/>
 </map>

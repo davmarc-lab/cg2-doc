@@ -99,23 +99,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adcf3c5dc429994c18b9816a99870d478" id="r_adcf3c5dc429994c18b9816a99870d478"><td class="memItemLeft" align="right" valign="top"><a id="adcf3c5dc429994c18b9816a99870d478" name="adcf3c5dc429994c18b9816a99870d478"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classStateManager.html">StateManager</a> &amp;other)=delete</td></tr>
 <tr class="memitem:a726a44976ac53d19ddc3ceb91b571d7b" id="r_a726a44976ac53d19ddc3ceb91b571d7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a726a44976ac53d19ddc3ceb91b571d7b">shouldExit</a> () const</td></tr>
-<tr class="memitem:ad8db36a3f403f1732b682a774caa56cd" id="r_ad8db36a3f403f1732b682a774caa56cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8db36a3f403f1732b682a774caa56cd">execUpdate</a> ()</td></tr>
-<tr class="memitem:a82a7900fa88e268a3fff6502d02cd4b1" id="r_a82a7900fa88e268a3fff6502d02cd4b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a7900fa88e268a3fff6502d02cd4b1">execRender</a> ()</td></tr>
+<tr class="memdesc:a726a44976ac53d19ddc3ceb91b571d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves <span class="tt">true</span> if the current state should exit. If the current state is detached, this will throw an error.  <br /></td></tr>
+<tr class="memitem:ad8db36a3f403f1732b682a774caa56cd" id="r_ad8db36a3f403f1732b682a774caa56cd"><td class="memItemLeft" align="right" valign="top"><a id="ad8db36a3f403f1732b682a774caa56cd" name="ad8db36a3f403f1732b682a774caa56cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>execUpdate</b> ()</td></tr>
+<tr class="memdesc:ad8db36a3f403f1732b682a774caa56cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute <span class="tt"><a class="el" href="classState.html#afae9ec50bd821e8626f97eb7041ab2e1" title="This methods contains all the operations executed at every event::loop::LOOP_UPDATE if there are any.">State::onUpdate()</a></span> method of the current state. <br /></td></tr>
+<tr class="memitem:a82a7900fa88e268a3fff6502d02cd4b1" id="r_a82a7900fa88e268a3fff6502d02cd4b1"><td class="memItemLeft" align="right" valign="top"><a id="a82a7900fa88e268a3fff6502d02cd4b1" name="a82a7900fa88e268a3fff6502d02cd4b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>execRender</b> ()</td></tr>
+<tr class="memdesc:a82a7900fa88e268a3fff6502d02cd4b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute <span class="tt"><a class="el" href="classState.html#a6e3cd8e93d66af00030af2f49f7538ee" title="This methods contains all the operations executed at every event::loop::LOOP_RENDER if there are any.">State::onRender()</a></span> method of the current state. <br /></td></tr>
 <tr class="memitem:af0a5a954f8833a6df72e75daf428b437" id="r_af0a5a954f8833a6df72e75daf428b437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437">sync</a> ()</td></tr>
-<tr class="memitem:a05684f338241238875cb4a0ed65a06bd" id="r_a05684f338241238875cb4a0ed65a06bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05684f338241238875cb4a0ed65a06bd">clean</a> ()</td></tr>
+<tr class="memdesc:af0a5a954f8833a6df72e75daf428b437"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method works like a barrier: after calling <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053" title="Works as the other StateManager::changeState(const Shared&lt;State&gt;&amp;) but this will use the given name w...">StateManager::changeState()</a></span>, detach the current state; clear the <span class="tt">EventManager</span>, attach the queued <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>, defines new event listeners. It needs to be called after every <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053" title="Works as the other StateManager::changeState(const Shared&lt;State&gt;&amp;) but this will use the given name w...">StateManager::changeState()</a></span> or at the end of a loop before calling <span class="tt"><a class="el" href="#a726a44976ac53d19ddc3ceb91b571d7b" title="Retrieves true if the current state should exit. If the current state is detached,...">StateManager::shouldExit()</a></span>.  <br /></td></tr>
+<tr class="memitem:a05684f338241238875cb4a0ed65a06bd" id="r_a05684f338241238875cb4a0ed65a06bd"><td class="memItemLeft" align="right" valign="top"><a id="a05684f338241238875cb4a0ed65a06bd" name="a05684f338241238875cb4a0ed65a06bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clean</b> ()</td></tr>
+<tr class="memdesc:a05684f338241238875cb4a0ed65a06bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans all the current state cache system. <br /></td></tr>
 <tr class="memitem:aaed8344bcdf2430aa821faa0b185d053" id="r_aaed8344bcdf2430aa821faa0b185d053"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053">changeState</a> (const std::string &amp;name, const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
+<tr class="memdesc:aaed8344bcdf2430aa821faa0b185d053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Works as the other <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053" title="Works as the other StateManager::changeState(const Shared&lt;State&gt;&amp;) but this will use the given name w...">StateManager::changeState</a>(const Shared&lt;<a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a>&gt;&amp;)</span> but this will use the given <span class="tt">name</span> while caching.  <br /></td></tr>
 <tr class="memitem:a050d55c8d5df06aa37097ff98fc9fd04" id="r_a050d55c8d5df06aa37097ff98fc9fd04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a050d55c8d5df06aa37097ff98fc9fd04">changeState</a> (const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
+<tr class="memdesc:a050d55c8d5df06aa37097ff98fc9fd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method queue the given <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> and tells the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> that the current state needs to be changed. If the given <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> is not in the cache system, the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> will cache the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the state's name. To make it work the method <span class="tt"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> needs to be called (read <span class="tt"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> for further informations).  <br /></td></tr>
 <tr class="memitem:a80f436c40e46408366937b0bf4d516db" id="r_a80f436c40e46408366937b0bf4d516db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f436c40e46408366937b0bf4d516db">changeState</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a80f436c40e46408366937b0bf4d516db"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method search in the cache the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the given name. If the name is not found in the cache, the current state will not change.  <br /></td></tr>
 <tr class="memitem:a144c32e1bf89abdbfd0d2a35cd242479" id="r_a144c32e1bf89abdbfd0d2a35cd242479"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a144c32e1bf89abdbfd0d2a35cd242479">isCurrentStateDefined</a> () const</td></tr>
+<tr class="memdesc:a144c32e1bf89abdbfd0d2a35cd242479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves if the current state is defined or not.  <br /></td></tr>
 <tr class="memitem:a1e9db52cdbf77ffe26179fa9f84c8aa7" id="r_a1e9db52cdbf77ffe26179fa9f84c8aa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e9db52cdbf77ffe26179fa9f84c8aa7">cacheState</a> (const std::string &amp;name, const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
+<tr class="memdesc:a1e9db52cdbf77ffe26179fa9f84c8aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method caches the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> given with the given name.  <br /></td></tr>
 <tr class="memitem:ab4012f236f1139d3d518cbcbf3ff33fa" id="r_ab4012f236f1139d3d518cbcbf3ff33fa"><td class="memItemLeft" align="right" valign="top"><a id="ab4012f236f1139d3d518cbcbf3ff33fa" name="ab4012f236f1139d3d518cbcbf3ff33fa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>cacheState</b> (const Shared&lt; <a class="el" href="classState.html">State</a> &gt; &amp;state)</td></tr>
 <tr class="memitem:a2f26ea9115c8de0af22415074613cc9c" id="r_a2f26ea9115c8de0af22415074613cc9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f26ea9115c8de0af22415074613cc9c">uncacheState</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a2f26ea9115c8de0af22415074613cc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the given name if contained in the cache.  <br /></td></tr>
 <tr class="memitem:a049c5c113127a1847ee80c6fd0a9e08d" id="r_a049c5c113127a1847ee80c6fd0a9e08d"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, Shared&lt; <a class="el" href="classState.html">State</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a049c5c113127a1847ee80c6fd0a9e08d">getCachedStates</a> ()</td></tr>
+<tr class="memdesc:a049c5c113127a1847ee80c6fd0a9e08d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current cache of the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a230d0133553b265647576edaf63bc8d1" id="r_a230d0133553b265647576edaf63bc8d1"><td class="memItemLeft" align="right" valign="top">static Shared&lt; <a class="el" href="classStateManager.html">StateManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a230d0133553b265647576edaf63bc8d1">instance</a> ()</td></tr>
+<tr class="memdesc:a230d0133553b265647576edaf63bc8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the instance of the <a class="el" href="classStateManager.html">StateManager</a> if it's not created. This function is thread safe using a simple <span class="tt">std::mutex</span>.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a1e9db52cdbf77ffe26179fa9f84c8aa7" name="a1e9db52cdbf77ffe26179fa9f84c8aa7"></a>
@@ -136,11 +152,12 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method caches the <span class="tt"><a class="el" href="classState.html">State</a></span> given with the given name.</p>
+
+<p>This method caches the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> given with the given name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>state's name </td></tr>
-    <tr><td class="paramname"><a class="el" href="classState.html">State</a></td><td>a shared pointer to the <span class="tt"><a class="el" href="classState.html">State</a></span> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></td><td>a shared pointer to the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> </td></tr>
   </table>
   </dd>
 </dl>
@@ -169,10 +186,11 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method queue the given <span class="tt"><a class="el" href="classState.html">State</a></span> and tells the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> that the current state needs to be changed. If the given <span class="tt"><a class="el" href="classState.html">State</a></span> is not in the cache system, the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> will cache the <span class="tt"><a class="el" href="classState.html">State</a></span> with the state's name. To make it work the method <span class="tt"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437">StateManager::sync()</a></span> needs to be called (read <span class="tt"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437">StateManager::sync()</a></span> for further informations).</p>
+
+<p>This method queue the given <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> and tells the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> that the current state needs to be changed. If the given <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> is not in the cache system, the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> will cache the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the state's name. To make it work the method <span class="tt"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> needs to be called (read <span class="tt"><a class="el" href="#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> for further informations). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classState.html">State</a></td><td>a shared pointer to the <span class="tt"><a class="el" href="classState.html">State</a></span> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></td><td>a shared pointer to the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,7 +211,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method search in the cache the <span class="tt"><a class="el" href="classState.html">State</a></span> with the given name. If the name is not found in the cache, the current state will not change.</p>
+
+<p>This method search in the cache the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the given name. If the name is not found in the cache, the current state will not change. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>the state's name </td></tr>
@@ -221,85 +240,16 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Works as the other <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053">StateManager::changeState</a>(const Shared&lt;<a class="el" href="classState.html">State</a>&gt;&amp;)</span> but this will use the given <span class="tt">name</span> while caching.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a050d55c8d5df06aa37097ff98fc9fd04">StateManager::changeState(const Shared&lt;State&gt;&amp;)</a></dd></dl>
+
+<p>Works as the other <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053" title="Works as the other StateManager::changeState(const Shared&lt;State&gt;&amp;) but this will use the given name w...">StateManager::changeState</a>(const Shared&lt;<a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a>&gt;&amp;)</span> but this will use the given <span class="tt">name</span> while caching. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a050d55c8d5df06aa37097ff98fc9fd04" title="This method queue the given State and tells the StateManager that the current state needs to be chang...">StateManager::changeState(const Shared&lt;State&gt;&amp;)</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>state's name </td></tr>
-    <tr><td class="paramname"><a class="el" href="classState.html">State</a></td><td>a shared pointer to the <span class="tt"><a class="el" href="classState.html">State</a></span> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></td><td>a shared pointer to the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a05684f338241238875cb4a0ed65a06bd" name="a05684f338241238875cb4a0ed65a06bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05684f338241238875cb4a0ed65a06bd">&#9670;&#160;</a></span>clean()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateManager::clean </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Cleans all the current state cache system. </p>
-
-</div>
-</div>
-<a id="a82a7900fa88e268a3fff6502d02cd4b1" name="a82a7900fa88e268a3fff6502d02cd4b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82a7900fa88e268a3fff6502d02cd4b1">&#9670;&#160;</a></span>execRender()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateManager::execRender </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Execute <span class="tt"><a class="el" href="classState.html#a6e3cd8e93d66af00030af2f49f7538ee">State::onRender()</a></span> method of the current state. </p>
-
-</div>
-</div>
-<a id="ad8db36a3f403f1732b682a774caa56cd" name="ad8db36a3f403f1732b682a774caa56cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8db36a3f403f1732b682a774caa56cd">&#9670;&#160;</a></span>execUpdate()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StateManager::execUpdate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Execute <span class="tt"><a class="el" href="classState.html#afae9ec50bd821e8626f97eb7041ab2e1">State::onUpdate()</a></span> method of the current state. </p>
 
 </div>
 </div>
@@ -325,8 +275,9 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves the current cache of the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span>.</p>
-<dl class="section return"><dt>Returns</dt><dd>cachedStates map of (<span class="tt">std::string</span>, <span class="tt">Shared&lt;<a class="el" href="classState.html">State</a>&gt;</span>) </dd></dl>
+
+<p>Retrieves the current cache of the <span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span>. </p>
+<dl class="section return"><dt>Returns</dt><dd>cachedStates map of (<span class="tt">std::string</span>, <span class="tt">Shared&lt;<a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a>&gt;</span>) </dd></dl>
 
 </div>
 </div>
@@ -352,7 +303,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves the instance of the <a class="el" href="classStateManager.html">StateManager</a> if it's not created. This function is thread safe using a simple <span class="tt">std::mutex</span>.</p>
+
+<p>Retrieves the instance of the <a class="el" href="classStateManager.html">StateManager</a> if it's not created. This function is thread safe using a simple <span class="tt">std::mutex</span>. </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt"><a class="el" href="classStateManager.html">StateManager</a></span> unique object. </dd></dl>
 
 </div>
@@ -379,7 +331,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves if the current state is defined or not.</p>
+
+<p>Retrieves if the current state is defined or not. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the current state is initialized </dd></dl>
 
 </div>
@@ -406,7 +359,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves <span class="tt">true</span> if the current state should exit. If the current state is detached, this will throw an error.</p>
+
+<p>Retrieves <span class="tt">true</span> if the current state should exit. If the current state is detached, this will throw an error. </p>
 <p>@reutrn <span class="tt">bool</span> </p>
 
 </div>
@@ -425,8 +379,9 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This method works like a barrier: after calling <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053">StateManager::changeState()</a></span>, detach the current state; clear the <span class="tt">EventManager</span>, attach the queued <span class="tt"><a class="el" href="classState.html">State</a></span>, defines new event listeners. It needs to be called after every <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053">StateManager::changeState()</a></span> or at the end of a loop before calling <span class="tt"><a class="el" href="#a726a44976ac53d19ddc3ceb91b571d7b">StateManager::shouldExit()</a></span>.</p>
-<dl class="section note"><dt>Note</dt><dd>It uses a <span class="tt">bool</span> variable to check if there is a new <span class="tt"><a class="el" href="classState.html">State</a></span> in the queue. </dd></dl>
+
+<p>This method works like a barrier: after calling <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053" title="Works as the other StateManager::changeState(const Shared&lt;State&gt;&amp;) but this will use the given name w...">StateManager::changeState()</a></span>, detach the current state; clear the <span class="tt">EventManager</span>, attach the queued <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>, defines new event listeners. It needs to be called after every <span class="tt"><a class="el" href="#aaed8344bcdf2430aa821faa0b185d053" title="Works as the other StateManager::changeState(const Shared&lt;State&gt;&amp;) but this will use the given name w...">StateManager::changeState()</a></span> or at the end of a loop before calling <span class="tt"><a class="el" href="#a726a44976ac53d19ddc3ceb91b571d7b" title="Retrieves true if the current state should exit. If the current state is detached,...">StateManager::shouldExit()</a></span>. </p>
+<dl class="section note"><dt>Note</dt><dd>It uses a <span class="tt">bool</span> variable to check if there is a new <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> in the queue. </dd></dl>
 
 </div>
 </div>
@@ -444,7 +399,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Removes the <span class="tt"><a class="el" href="classState.html">State</a></span> with the given name if contained in the cache.</p>
+
+<p>Removes the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> with the given name if contained in the cache. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>state's name </td></tr>

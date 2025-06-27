@@ -53,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AppGui_8hpp_source.html",
-"classogl_1_1ImGuiManager.html"
+"classogl_1_1EventManager.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

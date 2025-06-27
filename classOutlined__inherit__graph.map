@@ -1,5 +1,5 @@
 <map id="Outlined" name="Outlined">
-<area shape="rect" id="Node000001" title="Component used to query all meshes that needs to be outlined using a simple stencil buffer." alt="" coords="14,79,84,105"/>
-<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,93,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,46,52,79,46,79,46,46"/>
+<area shape="rect" id="Node000001" title="Component used to query all meshes that needs to be outlined using a simple stencil buffer." alt="" coords="15,81,92,109"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,102,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,49,56,81,51,81,51,49"/>
 </map>

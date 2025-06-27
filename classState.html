@@ -91,40 +91,58 @@ $(function(){initNavTree('classState.html','','classState-members'); });
   <div class="headertitle"><div class="title">State Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class allow to create a state to be attached to the <a class="el" href="classStateManager.html">StateManager</a>. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> works like a scene: defines all the meshes that will be rendered or not, defines custom behaviour while updating mesh data or while rendering meshes.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="State_8hpp_source.html">State.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for State:</div>
 <div class="dyncontent">
 <div class="center"><img src="classState__inherit__graph.png" border="0" usemap="#aState_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aState_inherit__map" id="aState_inherit__map">
-<area shape="rect" title=" " alt="" coords="103,5,155,31"/>
-<area shape="rect" href="classBootstrapState.html" title=" " alt="" coords="5,79,114,105"/>
-<area shape="poly" title=" " alt="" coords="109,44,73,80,69,77,105,40"/>
-<area shape="rect" href="classNormalViewState.html" title=" " alt="" coords="138,79,261,105"/>
-<area shape="poly" title=" " alt="" coords="153,40,189,77,186,80,149,44"/>
+<area shape="rect" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="112,5,167,33"/>
+<area shape="rect" href="classBootstrapState.html" title=" " alt="" coords="5,81,124,109"/>
+<area shape="poly" title=" " alt="" coords="117,46,80,82,76,79,113,42"/>
+<area shape="rect" href="classNormalViewState.html" title=" " alt="" coords="148,81,283,109"/>
+<area shape="poly" title=" " alt="" coords="165,42,204,79,200,82,162,46"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab20d9535987084cb556ad572d46205e4" id="r_ab20d9535987084cb556ad572d46205e4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20d9535987084cb556ad572d46205e4">onAttach</a> ()</td></tr>
+<tr class="memdesc:ab20d9535987084cb556ad572d46205e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called after using <span class="tt"><a class="el" href="classStateManager.html#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> (read <span class="tt">StateMnaager::sync()</span> documentation for more info). It should contain all the operations that must be done before you start the execution of a <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>.  <br /></td></tr>
 <tr class="memitem:a6a5223247e9df13792d589606de07d04" id="r_a6a5223247e9df13792d589606de07d04"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a5223247e9df13792d589606de07d04">onDetach</a> ()</td></tr>
+<tr class="memdesc:a6a5223247e9df13792d589606de07d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called while using <span class="tt">sync()</span> (read <span class="tt">sync()</span> documentation for more info). It should contain all the operations that must be done at the end of <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> execution before deleting or changing <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>, it is automatically called by <span class="tt">sync()</span>.  <br /></td></tr>
 <tr class="memitem:afae9ec50bd821e8626f97eb7041ab2e1" id="r_afae9ec50bd821e8626f97eb7041ab2e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afae9ec50bd821e8626f97eb7041ab2e1">onUpdate</a> ()</td></tr>
+<tr class="memdesc:afae9ec50bd821e8626f97eb7041ab2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_UPDATE</span> if there are any.  <br /></td></tr>
 <tr class="memitem:a6e3cd8e93d66af00030af2f49f7538ee" id="r_a6e3cd8e93d66af00030af2f49f7538ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e3cd8e93d66af00030af2f49f7538ee">onRender</a> ()</td></tr>
+<tr class="memdesc:a6e3cd8e93d66af00030af2f49f7538ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any.  <br /></td></tr>
 <tr class="memitem:a785c28599f368d0e221958188b978fc5" id="r_a785c28599f368d0e221958188b978fc5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a785c28599f368d0e221958188b978fc5">isCurrentStateEnd</a> ()</td></tr>
+<tr class="memdesc:a785c28599f368d0e221958188b978fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>  <br /></td></tr>
 <tr class="memitem:a7aec8a3796220945cd69224d6980cfe4" id="r_a7aec8a3796220945cd69224d6980cfe4"><td class="memItemLeft" align="right" valign="top"><a id="a7aec8a3796220945cd69224d6980cfe4" name="a7aec8a3796220945cd69224d6980cfe4"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
 <tr class="memitem:a8716aff654dcfc5f6b9a5befb7c927d8" id="r_a8716aff654dcfc5f6b9a5befb7c927d8"><td class="memItemLeft" align="right" valign="top"><a id="a8716aff654dcfc5f6b9a5befb7c927d8" name="a8716aff654dcfc5f6b9a5befb7c927d8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAttached</b> () const</td></tr>
 <tr class="memitem:a2abc4950481fbaa59931010dabddffe8" id="r_a2abc4950481fbaa59931010dabddffe8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abc4950481fbaa59931010dabddffe8">State</a> (const std::string &amp;name=&quot;State&quot;)</td></tr>
+<tr class="memdesc:a2abc4950481fbaa59931010dabddffe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances a state with the given name.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:af10518e09f3ceec5c05044b5fce580a4" id="r_af10518e09f3ceec5c05044b5fce580a4"><td class="memItemLeft" align="right" valign="top"><a id="af10518e09f3ceec5c05044b5fce580a4" name="af10518e09f3ceec5c05044b5fce580a4"></a>
 const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+<tr class="memdesc:af10518e09f3ceec5c05044b5fce580a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">state's name <br /></td></tr>
 <tr class="memitem:a4c7d61a5341721eddfba297b458a0886" id="r_a4c7d61a5341721eddfba297b458a0886"><td class="memItemLeft" align="right" valign="top"><a id="a4c7d61a5341721eddfba297b458a0886" name="a4c7d61a5341721eddfba297b458a0886"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = false</td></tr>
+<tr class="memdesc:a4c7d61a5341721eddfba297b458a0886"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if the state is attached <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class allow to create a state to be attached to the <a class="el" href="classStateManager.html">StateManager</a>. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> works like a scene: defines all the meshes that will be rendered or not, defines custom behaviour while updating mesh data or while rendering meshes. </p>
+<p>This is an abstract class it needs to be extended and override the methods that the child <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> will use.</p>
+<p>It can be used to create scenes with meshes, lights, skybox etc. A <a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a> can have custom behaviour while updating and rendering, every "static" mesh must be initialized in <a class="el" href="#ab20d9535987084cb556ad572d46205e4" title="This method is called after using StateManager::sync() (read StateMnaager::sync() documentation for m...">State::onAttach()</a> implementation.</p>
+<dl class="section note"><dt>Note</dt><dd>This application when executed will load a state loader (scene picker), where the user choose which state (scene) will be loaded. </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2abc4950481fbaa59931010dabddffe8" name="a2abc4950481fbaa59931010dabddffe8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2abc4950481fbaa59931010dabddffe8">&#9670;&#160;</a></span>State()</h2>
 
@@ -147,7 +165,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>It needs a name for each <a class="el" href="classState.html">State</a> in case you want to use <a class="el" href="classState.html">State</a> caching.</p>
+
+<p>Instances a state with the given name. </p>
+<dl class="section note"><dt>Note</dt><dd>Each state need a name to be cached in the <a class="el" href="classStateManager.html">StateManager</a>.</dd></dl>
 <p>@params name the state's name </p>
 
 </div>
@@ -175,7 +195,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html">State</a></span></p>
+
+<p>Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> </p>
 <dl class="section return"><dt>Returns</dt><dd><span class="tt">bool</span> true if the state is finished </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classBootstrapState.html#ade3b69251af5e4ad70e704e51f80efc9">BootstrapState</a>, and <a class="el" href="classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6">NormalViewState</a>.</p>
@@ -204,8 +225,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method is called after using <span class="tt"><a class="el" href="classStateManager.html#af0a5a954f8833a6df72e75daf428b437">StateManager::sync()</a></span> (read <span class="tt">StateMnaager::sync()</span> documentation for more info). It should contain all the operations that must be done before you start the execution of a <span class="tt"><a class="el" href="classState.html">State</a></span>.</p>
-<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="#ab20d9535987084cb556ad572d46205e4">State::onAttach()</a></span> </p>
+
+<p>This method is called after using <span class="tt"><a class="el" href="classStateManager.html#af0a5a954f8833a6df72e75daf428b437" title="This method works like a barrier: after calling StateManager::changeState(), detach the current state...">StateManager::sync()</a></span> (read <span class="tt">StateMnaager::sync()</span> documentation for more info). It should contain all the operations that must be done before you start the execution of a <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>. </p>
+<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="#ab20d9535987084cb556ad572d46205e4" title="This method is called after using StateManager::sync() (read StateMnaager::sync() documentation for m...">State::onAttach()</a></span> </p>
 
 <p>Reimplemented in <a class="el" href="classBootstrapState.html#a212526b5c09be18008a4398ce3d29d32">BootstrapState</a>, and <a class="el" href="classNormalViewState.html#a993fb17ae1f4ec9a6700c1c3017d308d">NormalViewState</a>.</p>
 
@@ -233,8 +255,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This method is called while using <span class="tt">sync()</span> (read <span class="tt">sync()</span> documentation for more info). It should contain all the operations that must be done at the end of <span class="tt"><a class="el" href="classState.html">State</a></span> execution before deleting or changing <span class="tt"><a class="el" href="classState.html">State</a></span>, it is automatically called by <span class="tt">sync()</span>.</p>
-<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="#a6a5223247e9df13792d589606de07d04">State::onDetach()</a></span> </p>
+
+<p>This method is called while using <span class="tt">sync()</span> (read <span class="tt">sync()</span> documentation for more info). It should contain all the operations that must be done at the end of <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> execution before deleting or changing <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>, it is automatically called by <span class="tt">sync()</span>. </p>
+<p>Also this method need to be called in child class implementation using <span class="tt"><a class="el" href="#a6a5223247e9df13792d589606de07d04" title="This method is called while using sync() (read sync() documentation for more info)....">State::onDetach()</a></span> </p>
 
 <p>Reimplemented in <a class="el" href="classBootstrapState.html#a0dd820487cdf47616f173615667abf05">BootstrapState</a>, and <a class="el" href="classNormalViewState.html#aa07c28815c224c2cfb99919dfd3492c3">NormalViewState</a>.</p>
 
@@ -262,6 +285,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any. </p>
 
 <p>Reimplemented in <a class="el" href="classBootstrapState.html#a7439fdc533e8f7e5fe20adae9b62a4b6">BootstrapState</a>, and <a class="el" href="classNormalViewState.html#ab37fee2653a818df9bc2ab373334d866">NormalViewState</a>.</p>
@@ -290,6 +314,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_UPDATE</span> if there are any. </p>
 
 <p>Reimplemented in <a class="el" href="classBootstrapState.html#afd3a6cecff8eda4f6117d27aae1afaa3">BootstrapState</a>, and <a class="el" href="classNormalViewState.html#a0b10e2b59c5b1d0d4d191c55de0896e0">NormalViewState</a>.</p>
