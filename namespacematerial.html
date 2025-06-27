@@ -94,7 +94,7 @@ $(function(){initNavTree('namespacematerial.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a4fdb58e5618657564d8acb601d2665bb" id="r_a4fdb58e5618657564d8acb601d2665bb"><td class="memItemLeft" align="right" valign="top"><a id="a4fdb58e5618657564d8acb601d2665bb" name="a4fdb58e5618657564d8acb601d2665bb"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fdb58e5618657564d8acb601d2665bb">MaterialType</a> : unsigned int { <br />
+<tr class="memitem:a4fdb58e5618657564d8acb601d2665bb" id="r_a4fdb58e5618657564d8acb601d2665bb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fdb58e5618657564d8acb601d2665bb">MaterialType</a> : unsigned int { <br />
 &#160;&#160;<b>MATERIAL_NONE</b> = 0
 , <b>MATERIAL_RPLASTIC</b>
 , <b>MATERIAL_YPLASTIC</b>
@@ -104,7 +104,7 @@ Enumerations</h2></td></tr>
 , <b>MATERIAL_EMERALD</b>
 <br />
  }</td></tr>
-<tr class="memdesc:a4fdb58e5618657564d8acb601d2665bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">In this enum each value is an <span class="tt">unsigned int</span> so it can be used like index to select an element from materials pool. <br /></td></tr>
+<tr class="memdesc:a4fdb58e5618657564d8acb601d2665bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for materials declared as <span class="tt">unsigned int</span>.  <a href="#a4fdb58e5618657564d8acb601d2665bb">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -116,11 +116,29 @@ Variables</h2></td></tr>
 <tr class="memitem:a6fc3433eabbfeb20a74fbcda67dd6789" id="r_a6fc3433eabbfeb20a74fbcda67dd6789"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc3433eabbfeb20a74fbcda67dd6789">materialTypes</a> {MATERIAL_NONE, MATERIAL_RPLASTIC, MATERIAL_YPLASTIC, MATERIAL_SLATE, MATERIAL_BRASS, MATERIAL_EMERALD}</td></tr>
 <tr class="memdesc:a6fc3433eabbfeb20a74fbcda67dd6789"><td class="mdescLeft">&#160;</td><td class="mdescRight">initial material types  <br /></td></tr>
 <tr class="memitem:a18afc202ba64f9f07d416272fb8c88a0" id="r_a18afc202ba64f9f07d416272fb8c88a0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classMaterial.html">Material</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18afc202ba64f9f07d416272fb8c88a0">defaultMaterials</a></td></tr>
-<tr class="memdesc:a18afc202ba64f9f07d416272fb8c88a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector containing defaults start materials  <br /></td></tr>
+<tr class="memdesc:a18afc202ba64f9f07d416272fb8c88a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector containing default start materials  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace containing all material utilities. </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a4fdb58e5618657564d8acb601d2665bb" name="a4fdb58e5618657564d8acb601d2665bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fdb58e5618657564d8acb601d2665bb">&#9670;&#160;</a></span>MaterialType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a4fdb58e5618657564d8acb601d2665bb">material::MaterialType</a> : unsigned int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum for materials declared as <span class="tt">unsigned int</span>. </p>
+<p>In this enum each value is an <span class="tt">unsigned int</span> so it can be used like index to select an element from materials pool. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a0c7d14ebdbdcddbf67066b4ae866694c" name="a0c7d14ebdbdcddbf67066b4ae866694c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c7d14ebdbdcddbf67066b4ae866694c">&#9670;&#160;</a></span>getMaterialFromPool()</h2>
 
@@ -147,11 +165,11 @@ Variables</h2></td></tr>
 <p>Retrieves the material by the given type or from a simple index from the defaultMaterials vector. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>the index or <a class="el" href="#a4fdb58e5618657564d8acb601d2665bb" title="In this enum each value is an unsigned int so it can be used like index to select an element from mat...">MaterialType</a></td></tr>
+    <tr><td class="paramname">index</td><td>the index or <a class="el" href="#a4fdb58e5618657564d8acb601d2665bb" title="Enum for materials declared as unsigned int.">MaterialType</a></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4fdb58e5618657564d8acb601d2665bb" title="In this enum each value is an unsigned int so it can be used like index to select an element from mat...">MaterialType</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4fdb58e5618657564d8acb601d2665bb" title="Enum for materials declared as unsigned int.">MaterialType</a> </dd></dl>
 
 </div>
 </div>
@@ -185,7 +203,7 @@ Variables</h2></td></tr>
 <div class="line">    }</div>
 <div class="ttc" id="aclassMaterial_html"><div class="ttname"><a href="classMaterial.html">Material</a></div><div class="ttdoc">Basic class to store material information for texturing and light computation.</div><div class="ttdef"><b>Definition</b> Component.hpp:635</div></div>
 </div><!-- fragment -->
-<p>vector containing defaults start materials </p>
+<p>vector containing default start materials </p>
 
 </div>
 </div>
@@ -210,7 +228,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>initial material types </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4fdb58e5618657564d8acb601d2665bb" title="In this enum each value is an unsigned int so it can be used like index to select an element from mat...">MaterialType</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a4fdb58e5618657564d8acb601d2665bb" title="Enum for materials declared as unsigned int.">MaterialType</a> </dd></dl>
 
 </div>
 </div>
