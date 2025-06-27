@@ -98,49 +98,32 @@ $(function(){initNavTree('namespacesystems_1_1collision.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2cd0a558361270488a5f6d73256a458f" id="r_a2cd0a558361270488a5f6d73256a458f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cd0a558361270488a5f6d73256a458f">updateParentCollider</a> (const unsigned int &amp;id)</td></tr>
+<tr class="memdesc:a2cd0a558361270488a5f6d73256a458f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the collider of a parent mesh.  <br /></td></tr>
 <tr class="memitem:ad3fa11eaa3e20e5f06c7a0aa68810e35" id="r_ad3fa11eaa3e20e5f06c7a0aa68810e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3fa11eaa3e20e5f06c7a0aa68810e35">updateCollider</a> (const unsigned int &amp;id)</td></tr>
-<tr class="memitem:a9f761403cabb21e6d404935a8d80109c" id="r_a9f761403cabb21e6d404935a8d80109c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f761403cabb21e6d404935a8d80109c">updateAllColliders</a> ()</td></tr>
+<tr class="memdesc:ad3fa11eaa3e20e5f06c7a0aa68810e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the collider of the given entity. If this entity is a parent entity (an entity with a <a class="el" href="classParentComponent.html" title="This Component is used like MultiMesh, but it create a sort of tree structure where each mesh has chi...">ParentComponent</a>), it will call <a class="el" href="#a2cd0a558361270488a5f6d73256a458f" title="Updates the collider of a parent mesh.">systems::collision::updateParentCollider()</a> instead.  <br /></td></tr>
+<tr class="memitem:a9f761403cabb21e6d404935a8d80109c" id="r_a9f761403cabb21e6d404935a8d80109c"><td class="memItemLeft" align="right" valign="top"><a id="a9f761403cabb21e6d404935a8d80109c" name="a9f761403cabb21e6d404935a8d80109c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateAllColliders</b> ()</td></tr>
+<tr class="memdesc:a9f761403cabb21e6d404935a8d80109c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all the entities collider by calling <a class="el" href="#ad3fa11eaa3e20e5f06c7a0aa68810e35" title="Updates the collider of the given entity. If this entity is a parent entity (an entity with a ParentC...">systems::collision::updateCollider()</a>. <br /></td></tr>
 <tr class="memitem:a8b81c51c4f0503fb71cd83020a87963d" id="r_a8b81c51c4f0503fb71cd83020a87963d"><td class="memItemLeft" align="right" valign="top">ColliderType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b81c51c4f0503fb71cd83020a87963d">getColliderType</a> (const unsigned int &amp;id)</td></tr>
+<tr class="memdesc:a8b81c51c4f0503fb71cd83020a87963d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the type of the entity collider.  <br /></td></tr>
 <tr class="memitem:a4893a0cf9acbe29d7ddd613f3678052f" id="r_a4893a0cf9acbe29d7ddd613f3678052f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4893a0cf9acbe29d7ddd613f3678052f">updateColliderType</a> (const unsigned int &amp;id, const ColliderType &amp;type)</td></tr>
+<tr class="memdesc:a4893a0cf9acbe29d7ddd613f3678052f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the collider type of the given entity.  <br /></td></tr>
 <tr class="memitem:a488e2d2daff8d376df8b08d18408dbe8" id="r_a488e2d2daff8d376df8b08d18408dbe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a488e2d2daff8d376df8b08d18408dbe8">updateSimulated</a> (const unsigned int &amp;id, const bool &amp;simulated)</td></tr>
-<tr class="memitem:a60c54825d62b3a89cc1677179b5dbad7" id="r_a60c54825d62b3a89cc1677179b5dbad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60c54825d62b3a89cc1677179b5dbad7">compressBoundingBox</a> ()</td></tr>
-<tr class="memitem:a1766aa6fd705a73cc2da444cd7a5b20d" id="r_a1766aa6fd705a73cc2da444cd7a5b20d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1766aa6fd705a73cc2da444cd7a5b20d">getEnemyLastHit</a> (const unsigned int &amp;id)</td></tr>
-<tr class="memitem:a3a99abfe0fe20a550776334203a7bea6" id="r_a3a99abfe0fe20a550776334203a7bea6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a99abfe0fe20a550776334203a7bea6">getPlayerLastHit</a> (const unsigned int &amp;id)</td></tr>
+<tr class="memdesc:a488e2d2daff8d376df8b08d18408dbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the simulation of the entity in a <a class="el" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene.">PhysicWorld</a>.  <br /></td></tr>
+<tr class="memitem:a60c54825d62b3a89cc1677179b5dbad7" id="r_a60c54825d62b3a89cc1677179b5dbad7"><td class="memItemLeft" align="right" valign="top"><a id="a60c54825d62b3a89cc1677179b5dbad7" name="a60c54825d62b3a89cc1677179b5dbad7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>compressBoundingBox</b> ()</td></tr>
+<tr class="memdesc:a60c54825d62b3a89cc1677179b5dbad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method optimize children bounding box of all parent entities in a single square/cube bounding box. <br /></td></tr>
 <tr class="memitem:a5eaf15e4dc6491af8778acfde8496cf8" id="r_a5eaf15e4dc6491af8778acfde8496cf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPair.html">Pair</a>&lt; glm::vec3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eaf15e4dc6491af8778acfde8496cf8">getCollider</a> (const unsigned int &amp;id)</td></tr>
-<tr class="memitem:a5d6a85e2a137a1f38911dbdd84219d02" id="r_a5d6a85e2a137a1f38911dbdd84219d02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d6a85e2a137a1f38911dbdd84219d02">updateEnemyLastHit</a> (const unsigned int &amp;id, const float &amp;time)</td></tr>
-<tr class="memitem:a4f4dc7fcc0a1e7dfe9682cbd1c59ce86" id="r_a4f4dc7fcc0a1e7dfe9682cbd1c59ce86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f4dc7fcc0a1e7dfe9682cbd1c59ce86">updatePlayerLastHit</a> (const unsigned int &amp;id, const float &amp;time)</td></tr>
+<tr class="memdesc:a5eaf15e4dc6491af8778acfde8496cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the collider corners of the entity given.  <br /></td></tr>
+<tr class="memitem:acec9b8bb7e3e54dc2edc28a2b8c12100" id="r_acec9b8bb7e3e54dc2edc28a2b8c12100"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acec9b8bb7e3e54dc2edc28a2b8c12100">isColliding</a> (const unsigned int &amp;first, const unsigned int &amp;second)</td></tr>
+<tr class="memdesc:acec9b8bb7e3e54dc2edc28a2b8c12100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate if two entities are colliding or not.  <br /></td></tr>
 <tr class="memitem:ab735738e8714cb3eb98f21294afb8ce1" id="r_ab735738e8714cb3eb98f21294afb8ce1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structPair.html">Pair</a>&lt; unsigned int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab735738e8714cb3eb98f21294afb8ce1">getCollisions</a> ()</td></tr>
 <tr class="memdesc:ab735738e8714cb3eb98f21294afb8ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all entities overlapping each other using simple AABB detection.  <br /></td></tr>
-<tr class="memitem:acec9b8bb7e3e54dc2edc28a2b8c12100" id="r_acec9b8bb7e3e54dc2edc28a2b8c12100"><td class="memItemLeft" align="right" valign="top"><a id="acec9b8bb7e3e54dc2edc28a2b8c12100" name="acec9b8bb7e3e54dc2edc28a2b8c12100"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (const unsigned int &amp;first, const unsigned int &amp;second)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>It contains all utilities to retrieve, handle and update mesh <a class="el" href="classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld.">ColliderComponent</a>. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld.">ColliderComponent</a> </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a60c54825d62b3a89cc1677179b5dbad7" name="a60c54825d62b3a89cc1677179b5dbad7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60c54825d62b3a89cc1677179b5dbad7">&#9670;&#160;</a></span>compressBoundingBox()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void systems::collision::compressBoundingBox </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a5eaf15e4dc6491af8778acfde8496cf8" name="a5eaf15e4dc6491af8778acfde8496cf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5eaf15e4dc6491af8778acfde8496cf8">&#9670;&#160;</a></span>getCollider()</h2>
 
@@ -155,13 +138,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the collider corners of the entity given. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">id</td><td>the entity id </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a pair of (botLeft, topRight) corner </dd></dl>
 
 </div>
 </div>
@@ -179,12 +164,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves the type of the entity collider. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">id</td><td>the entity id </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>the collider type </dd></dl>
 
 </div>
 </div>
@@ -208,74 +196,34 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
 
 </div>
 </div>
-<a id="a1766aa6fd705a73cc2da444cd7a5b20d" name="a1766aa6fd705a73cc2da444cd7a5b20d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1766aa6fd705a73cc2da444cd7a5b20d">&#9670;&#160;</a></span>getEnemyLastHit()</h2>
+<a id="acec9b8bb7e3e54dc2edc28a2b8c12100" name="acec9b8bb7e3e54dc2edc28a2b8c12100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec9b8bb7e3e54dc2edc28a2b8c12100">&#9670;&#160;</a></span>isColliding()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float systems::collision::getEnemyLastHit </td>
+          <td class="memname">bool systems::collision::isColliding </td>
           <td>(</td>
-          <td class="paramtype">const unsigned int &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const unsigned int &amp;</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a id="a3a99abfe0fe20a550776334203a7bea6" name="a3a99abfe0fe20a550776334203a7bea6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a99abfe0fe20a550776334203a7bea6">&#9670;&#160;</a></span>getPlayerLastHit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">float systems::collision::getPlayerLastHit </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const unsigned int &amp;</td>          <td class="paramname"><span class="paramname"><em>second</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculate if two entities are colliding or not. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">first</td><td>the first entity id </td></tr>
+    <tr><td class="paramname">second</td><td>the second entity id </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a id="a9f761403cabb21e6d404935a8d80109c" name="a9f761403cabb21e6d404935a8d80109c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f761403cabb21e6d404935a8d80109c">&#9670;&#160;</a></span>updateAllColliders()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void systems::collision::updateAllColliders </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the two entities are colliding </dd></dl>
 
 </div>
 </div>
@@ -293,9 +241,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the collider of the given entity. If this entity is a parent entity (an entity with a <a class="el" href="classParentComponent.html" title="This Component is used like MultiMesh, but it create a sort of tree structure where each mesh has chi...">ParentComponent</a>), it will call <a class="el" href="#a2cd0a558361270488a5f6d73256a458f" title="Updates the collider of a parent mesh.">systems::collision::updateParentCollider()</a> instead. </p>
+<p>In the other case it will normally update the collider using an Optimized Bounding Box.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classColliderComponent.html" title="Component to store mesh collider data to solve collision in a PhysicWorld.">ColliderComponent</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">id</td><td>the entity id </td></tr>
   </table>
   </dd>
 </dl>
@@ -320,36 +272,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the collider type of the given entity. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5d6a85e2a137a1f38911dbdd84219d02" name="a5d6a85e2a137a1f38911dbdd84219d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d6a85e2a137a1f38911dbdd84219d02">&#9670;&#160;</a></span>updateEnemyLastHit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void systems::collision::updateEnemyLastHit </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">id</td><td>the entity id </td></tr>
+    <tr><td class="paramname">type</td><td>the collider type </td></tr>
   </table>
   </dd>
 </dl>
@@ -370,36 +298,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the collider of a parent mesh. </p>
+<dl class="section note"><dt>Note</dt><dd>This method only updates the collider of the father entity and not his children.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a4f4dc7fcc0a1e7dfe9682cbd1c59ce86" name="a4f4dc7fcc0a1e7dfe9682cbd1c59ce86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f4dc7fcc0a1e7dfe9682cbd1c59ce86">&#9670;&#160;</a></span>updatePlayerLastHit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void systems::collision::updatePlayerLastHit </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned int &amp;</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float &amp;</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">id</td><td>the parent entity id </td></tr>
   </table>
   </dd>
 </dl>
@@ -424,9 +328,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isColliding</b> (cons
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the simulation of the entity in a <a class="el" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene.">PhysicWorld</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>If an entity is not simulated means that it's a static entity.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>entity id </td></tr>
+    <tr><td class="paramname">id</td><td>the entity id </td></tr>
+    <tr><td class="paramname">simulated</td><td>if true the entity is simulated </td></tr>
   </table>
   </dd>
 </dl>
