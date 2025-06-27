@@ -15,12 +15,13 @@ var searchData=
   ['instancedata_12',['InstanceData',['../structInstanceData.html',1,'']]],
   ['instancedcomponent_13',['InstancedComponent',['../classInstancedComponent.html',1,'InstancedComponent'],['../classInstancedComponent.html#acaf4fce1c84d7c40a5407aa464a0a7ca',1,'InstancedComponent::InstancedComponent()']]],
   ['intensity_14',['intensity',['../classLightComponent.html#a9f90a93fd09511fd414e77e153d87678',1,'LightComponent']]],
-  ['iscolliding_15',['isColliding',['../classColliderComponent.html#ac48e4669de3b5dc46e36d32a35264b8b',1,'ColliderComponent::isColliding()'],['../namespacesystems_1_1collision.html#acec9b8bb7e3e54dc2edc28a2b8c12100',1,'systems::collision::isColliding()']]],
-  ['iscurrentstatedefined_16',['isCurrentStateDefined',['../classStateManager.html#a144c32e1bf89abdbfd0d2a35cd242479',1,'StateManager']]],
-  ['iscurrentstateend_17',['isCurrentStateEnd',['../classBootstrapState.html#ade3b69251af5e4ad70e704e51f80efc9',1,'BootstrapState::isCurrentStateEnd()'],['../classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6',1,'NormalViewState::isCurrentStateEnd()'],['../classState.html#a785c28599f368d0e221958188b978fc5',1,'State::isCurrentStateEnd()']]],
-  ['isdirty_18',['isDirty',['../classTransform.html#a60f1a0bca87372df84e761cf3274e98d',1,'Transform']]],
-  ['isentityvalid_19',['isEntityValid',['../classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93',1,'EntityManager']]],
-  ['ismeshreflective_20',['isMeshReflective',['../namespacesystems_1_1texture.html#af5140cfaf63973fcafc07da5213ca6d3',1,'systems::texture']]],
-  ['ismodelmatrixenable_21',['isModelMatrixEnable',['../classTransform.html#a23d870470f4f5ef2c2580b6cd2381c82',1,'Transform']]],
-  ['isstatic_22',['isStatic',['../classColliderComponent.html#a370aab3c5a0291fc1f96ab2199fda28b',1,'ColliderComponent']]]
+  ['isattached_15',['isAttached',['../classState.html#a8716aff654dcfc5f6b9a5befb7c927d8',1,'State']]],
+  ['iscolliding_16',['isColliding',['../classColliderComponent.html#ac48e4669de3b5dc46e36d32a35264b8b',1,'ColliderComponent::isColliding()'],['../namespacesystems_1_1collision.html#acec9b8bb7e3e54dc2edc28a2b8c12100',1,'systems::collision::isColliding()']]],
+  ['iscurrentstatedefined_17',['isCurrentStateDefined',['../classStateManager.html#a144c32e1bf89abdbfd0d2a35cd242479',1,'StateManager']]],
+  ['iscurrentstateend_18',['isCurrentStateEnd',['../classBootstrapState.html#ade3b69251af5e4ad70e704e51f80efc9',1,'BootstrapState::isCurrentStateEnd()'],['../classNormalViewState.html#a1b9dd2ce9779d6f03133d0007bceb1c6',1,'NormalViewState::isCurrentStateEnd()'],['../classState.html#a785c28599f368d0e221958188b978fc5',1,'State::isCurrentStateEnd()']]],
+  ['isdirty_19',['isDirty',['../classTransform.html#a60f1a0bca87372df84e761cf3274e98d',1,'Transform']]],
+  ['isentityvalid_20',['isEntityValid',['../classEntityManager.html#aec5c2f2128cef0b685f2e240ffc0cf93',1,'EntityManager']]],
+  ['ismeshreflective_21',['isMeshReflective',['../namespacesystems_1_1texture.html#af5140cfaf63973fcafc07da5213ca6d3',1,'systems::texture']]],
+  ['ismodelmatrixenable_22',['isModelMatrixEnable',['../classTransform.html#a23d870470f4f5ef2c2580b6cd2381c82',1,'Transform']]],
+  ['isstatic_23',['isStatic',['../classColliderComponent.html#a370aab3c5a0291fc1f96ab2199fda28b',1,'ColliderComponent']]]
 ];

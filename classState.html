@@ -121,10 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6e3cd8e93d66af00030af2f49f7538ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This methods contains all the operations executed at every <span class="tt">event::loop::LOOP_RENDER</span> if there are any.  <br /></td></tr>
 <tr class="memitem:a785c28599f368d0e221958188b978fc5" id="r_a785c28599f368d0e221958188b978fc5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a785c28599f368d0e221958188b978fc5">isCurrentStateEnd</a> ()</td></tr>
 <tr class="memdesc:a785c28599f368d0e221958188b978fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current binary state of the current <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span>  <br /></td></tr>
-<tr class="memitem:a7aec8a3796220945cd69224d6980cfe4" id="r_a7aec8a3796220945cd69224d6980cfe4"><td class="memItemLeft" align="right" valign="top"><a id="a7aec8a3796220945cd69224d6980cfe4" name="a7aec8a3796220945cd69224d6980cfe4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
-<tr class="memitem:a8716aff654dcfc5f6b9a5befb7c927d8" id="r_a8716aff654dcfc5f6b9a5befb7c927d8"><td class="memItemLeft" align="right" valign="top"><a id="a8716aff654dcfc5f6b9a5befb7c927d8" name="a8716aff654dcfc5f6b9a5befb7c927d8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAttached</b> () const</td></tr>
+<tr class="memitem:a7aec8a3796220945cd69224d6980cfe4" id="r_a7aec8a3796220945cd69224d6980cfe4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aec8a3796220945cd69224d6980cfe4">getName</a> () const</td></tr>
+<tr class="memdesc:a7aec8a3796220945cd69224d6980cfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> name.  <br /></td></tr>
+<tr class="memitem:a8716aff654dcfc5f6b9a5befb7c927d8" id="r_a8716aff654dcfc5f6b9a5befb7c927d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8716aff654dcfc5f6b9a5befb7c927d8">isAttached</a> () const</td></tr>
+<tr class="memdesc:a8716aff654dcfc5f6b9a5befb7c927d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves if the state is attached.  <br /></td></tr>
 <tr class="memitem:a2abc4950481fbaa59931010dabddffe8" id="r_a2abc4950481fbaa59931010dabddffe8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abc4950481fbaa59931010dabddffe8">State</a> (const std::string &amp;name=&quot;State&quot;)</td></tr>
 <tr class="memdesc:a2abc4950481fbaa59931010dabddffe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances a state with the given name.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -173,6 +173,62 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7aec8a3796220945cd69224d6980cfe4" name="a7aec8a3796220945cd69224d6980cfe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aec8a3796220945cd69224d6980cfe4">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string State::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the <span class="tt"><a class="el" href="classState.html" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de...">State</a></span> name. </p>
+<dl class="section return"><dt>Returns</dt><dd>a strng with the state's name </dd></dl>
+
+</div>
+</div>
+<a id="a8716aff654dcfc5f6b9a5befb7c927d8" name="a8716aff654dcfc5f6b9a5befb7c927d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8716aff654dcfc5f6b9a5befb7c927d8">&#9670;&#160;</a></span>isAttached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool State::isAttached </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves if the state is attached. </p>
+<dl class="section return"><dt>Returns</dt><dd><span class="tt">true</span> if the state is attached </dd></dl>
+
+</div>
+</div>
 <a id="a785c28599f368d0e221958188b978fc5" name="a785c28599f368d0e221958188b978fc5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a785c28599f368d0e221958188b978fc5">&#9670;&#160;</a></span>isCurrentStateEnd()</h2>
 

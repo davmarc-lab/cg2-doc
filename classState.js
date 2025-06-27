@@ -1,6 +1,8 @@
 var classState =
 [
     [ "State", "classState.html#a2abc4950481fbaa59931010dabddffe8", null ],
+    [ "getName", "classState.html#a7aec8a3796220945cd69224d6980cfe4", null ],
+    [ "isAttached", "classState.html#a8716aff654dcfc5f6b9a5befb7c927d8", null ],
     [ "isCurrentStateEnd", "classState.html#a785c28599f368d0e221958188b978fc5", null ],
     [ "onAttach", "classState.html#ab20d9535987084cb556ad572d46205e4", null ],
     [ "onDetach", "classState.html#a6a5223247e9df13792d589606de07d04", null ],
