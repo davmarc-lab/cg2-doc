@@ -1,7 +1,7 @@
 <map id="Solver" name="Solver">
-<area shape="rect" id="Node000001" title="A Solver defines behaviour." alt="" coords="23,177,81,203"/>
-<area shape="rect" id="Node000002" href="$classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,80,99,106"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,121,55,176,49,176,49,121"/>
-<area shape="rect" id="Node000003" href="$classogl_1_1Layer.html" title=" " alt="" coords="14,5,90,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="55,46,55,80,49,80,49,46"/>
+<area shape="rect" id="Node000001" title="A Solver defines a generic behaviour in a Physic World." alt="" coords="24,183,87,211"/>
+<area shape="rect" id="Node000002" href="$classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,82,106,110"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,126,58,182,53,182,53,126"/>
+<area shape="rect" id="Node000003" href="$classogl_1_1Layer.html" title=" " alt="" coords="13,5,98,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,48,58,82,53,82,53,48"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="ShaderComponent" name="ShaderComponent">
-<area shape="rect" id="Node000001" title="Component to store mesh shader data and some mesh information like light computation and the capabili..." alt="" coords="5,79,134,105"/>
-<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="26,5,113,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,46,72,79,67,79,67,46"/>
+<area shape="rect" id="Node000001" title="Component to store mesh shader data and some mesh information like light computation and the capabili..." alt="" coords="5,81,147,109"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="28,5,124,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,49,79,81,73,81,73,49"/>
 </map>

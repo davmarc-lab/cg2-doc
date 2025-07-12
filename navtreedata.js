@@ -53,7 +53,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AppGui_8hpp_source.html",
-"classTransform.html#afd495f41e78f685e3b17c8fce01af3a8"
+"classTransform.html#acf6ab53778448fd2f2d8a367c14e7f95",
+"structogl_1_1CameraInfo.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

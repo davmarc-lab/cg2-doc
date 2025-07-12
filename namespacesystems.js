@@ -61,7 +61,21 @@ var namespacesystems =
       [ "addChild", "namespacesystems_1_1parent.html#a1dfa3966bb89a844daa4a9a7014c1a04", null ],
       [ "removeChild", "namespacesystems_1_1parent.html#ad0f1e153a5bdc7597d2b98c1cfc58e37", null ]
     ] ],
-    [ "physic", "namespacesystems_1_1physic.html", null ],
+    [ "physic", "namespacesystems_1_1physic.html", [
+      [ "addAcceleration", "namespacesystems_1_1physic.html#abef632fc811957b689c957e4ad2ae443", null ],
+      [ "addForce", "namespacesystems_1_1physic.html#a6540ad8106733aa4201756456ab96c7e", null ],
+      [ "addVelocity", "namespacesystems_1_1physic.html#a6454a24b890e3428d0d88497f45101c5", null ],
+      [ "getAcceleration", "namespacesystems_1_1physic.html#acfd49ae34e9a4371b05d9bac72f87865", null ],
+      [ "getForce", "namespacesystems_1_1physic.html#aaea5a27021f322da075f2f880ba74ca2", null ],
+      [ "getMass", "namespacesystems_1_1physic.html#aa6811fca37c84ca807bcaaeb40cb67eb", null ],
+      [ "getVelocity", "namespacesystems_1_1physic.html#a4028da29ffcd493bb94cec5749716f47", null ],
+      [ "resetGravitySolver", "namespacesystems_1_1physic.html#a4ea8484de3e24f763634db4d7294a28c", null ],
+      [ "updateAcceleration", "namespacesystems_1_1physic.html#a6b4bb11c7282f370b1c260c5b278ffc1", null ],
+      [ "updateForce", "namespacesystems_1_1physic.html#a640ec25c1c7761a39a6cccb9510fce03", null ],
+      [ "updateMass", "namespacesystems_1_1physic.html#af1602eddc861bee26b2708aa3a13dc59", null ],
+      [ "updateRestitutionFactor", "namespacesystems_1_1physic.html#a8cae7f1f0a3b42b467d97f5e724c9a66", null ],
+      [ "updateVelocity", "namespacesystems_1_1physic.html#a072cca71d3cf0d5ef76b942997fcdf97", null ]
+    ] ],
     [ "render", "namespacesystems_1_1render.html", [
       [ "getBoxLines", "namespacesystems_1_1render.html#a3f2b48a98c5fb17fb54eb711f2a1d5c0", null ],
       [ "getOtherLightData", "namespacesystems_1_1render.html#a2642f6e40b7d410af97fdb2075d332cb", null ],

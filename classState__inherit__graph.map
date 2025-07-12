@@ -1,7 +1,7 @@
 <map id="State" name="State">
-<area shape="rect" id="Node000001" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="103,5,155,31"/>
-<area shape="rect" id="Node000002" href="$classBootstrapState.html" title="This State allows to load one State in an ImGui window from cached states in the StateManager." alt="" coords="5,79,114,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,44,73,80,69,77,105,40"/>
-<area shape="rect" id="Node000003" href="$classNormalViewState.html" title="This State render an interactive scene with rendered meshes and lights. The user can modify their int..." alt="" coords="138,79,261,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,40,189,77,186,80,149,44"/>
+<area shape="rect" id="Node000001" title="This class allow to create a state to be attached to the StateManager. A State works like a scene: de..." alt="" coords="112,5,167,33"/>
+<area shape="rect" id="Node000002" href="$classBootstrapState.html" title="This State allows to load one State in an ImGui window from cached states in the StateManager." alt="" coords="5,81,124,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,46,80,82,76,79,113,42"/>
+<area shape="rect" id="Node000003" href="$classNormalViewState.html" title="This State render an interactive scene with rendered meshes and lights. The user can modify their int..." alt="" coords="148,81,283,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,42,204,79,200,82,162,46"/>
 </map>

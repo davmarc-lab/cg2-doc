@@ -101,9 +101,9 @@ Inheritance diagram for PhysicWorld:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPhysicWorld__inherit__graph.png" border="0" usemap="#aPhysicWorld_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aPhysicWorld_inherit__map" id="aPhysicWorld_inherit__map">
-<area shape="rect" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,79,99,105"/>
-<area shape="rect" href="classogl_1_1Layer.html" title=" " alt="" coords="14,5,90,31"/>
-<area shape="poly" title=" " alt="" coords="55,46,55,79,49,79,49,46"/>
+<area shape="rect" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,81,106,109"/>
+<area shape="rect" href="classogl_1_1Layer.html" title=" " alt="" coords="13,5,98,33"/>
+<area shape="poly" title=" " alt="" coords="58,49,58,81,53,81,53,49"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -111,9 +111,9 @@ Collaboration diagram for PhysicWorld:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPhysicWorld__coll__graph.png" border="0" usemap="#aPhysicWorld_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aPhysicWorld_coll__map" id="aPhysicWorld_coll__map">
-<area shape="rect" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,79,99,105"/>
-<area shape="rect" href="classogl_1_1Layer.html" title=" " alt="" coords="14,5,90,31"/>
-<area shape="poly" title=" " alt="" coords="55,46,55,79,49,79,49,46"/>
+<area shape="rect" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,81,106,109"/>
+<area shape="rect" href="classogl_1_1Layer.html" title=" " alt="" coords="13,5,98,33"/>
+<area shape="poly" title=" " alt="" coords="58,49,58,81,53,81,53,49"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -123,7 +123,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bc8bf55e13069dae210b3bebfaa3d5b" id="r_a5bc8bf55e13069dae210b3bebfaa3d5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bc8bf55e13069dae210b3bebfaa3d5b">onUpdate</a> () override</td></tr>
 <tr class="memitem:abf72d119d44218c17b9303b7e364c641" id="r_abf72d119d44218c17b9303b7e364c641"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:abf72d119d44218c17b9303b7e364c641 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf72d119d44218c17b9303b7e364c641">addSolver</a> (Args &amp;&amp;...args)</td></tr>
-<tr class="memdesc:abf72d119d44218c17b9303b7e364c641"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method add a <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a></span> to physics simulation.  <br /></td></tr>
+<tr class="memdesc:abf72d119d44218c17b9303b7e364c641"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method add a <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a></span> to physics simulation.  <br /></td></tr>
 <tr class="memitem:af4a2d699698d4dfef08eb32820426c67" id="r_af4a2d699698d4dfef08eb32820426c67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4a2d699698d4dfef08eb32820426c67">addEntity</a> (const unsigned int &amp;id)</td></tr>
 <tr class="memdesc:af4a2d699698d4dfef08eb32820426c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given entity to the simulation.  <br /></td></tr>
 <tr class="memitem:a08bb18433253815353bb5e271de3317e" id="r_a08bb18433253815353bb5e271de3317e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08bb18433253815353bb5e271de3317e">removeEntity</a> (const unsigned int &amp;id)</td></tr>
@@ -162,8 +162,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_attached</b> = fals
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <span class="tt"><a class="el" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene.">PhysicWorld</a></span> is a <span class="tt">Layer</span> that simulates physic objects in the scene. </p>
 <dl class="section warning"><dt>Warning</dt><dd>It needs to be attached, detached, and at every loop iteration should be called <span class="tt"><a class="el" href="#a5bc8bf55e13069dae210b3bebfaa3d5b">PhysicWorld::onUpdate()</a></span>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>By default it contains some <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a></span> to simulate gravity and collision response.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a> </dd>
+<dl class="section note"><dt>Note</dt><dd>By default it contains some <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a></span> to simulate gravity and collision response.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a> </dd>
 <dd>
 <span class="tt"><a class="el" href="classogl_1_1Layer.html">ogl::Layer</a></span> </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -252,15 +252,15 @@ template&lt;typename T, typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This method add a <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a></span> to physics simulation. </p>
+<p>This method add a <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a></span> to physics simulation. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td><span class="tt"><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a></span> solver's class to instance </td></tr>
-    <tr><td class="paramname">Args</td><td>list of parameters for <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a></span> constructor</td></tr>
+    <tr><td class="paramname">T</td><td><span class="tt"><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a></span> solver's class to instance </td></tr>
+    <tr><td class="paramname">Args</td><td>list of parameters for <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a></span> constructor</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Everytime a <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a></span> is added to the simulation it will create a shared pointer of type <span class="tt">T</span> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Everytime a <span class="tt"><a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a></span> is added to the simulation it will create a shared pointer of type <span class="tt">T</span> </dd></dl>
 
 </div>
 </div>

@@ -78,10 +78,8 @@ var hierarchy =
     [ "ogl::ShaderProgram", "classogl_1_1ShaderProgram.html", null ],
     [ "Solver", "classSolver.html", [
       [ "CollisionSolver", "classCollisionSolver.html", null ],
-      [ "ForceSolver", "classForceSolver.html", null ],
       [ "GravitySolver", "classGravitySolver.html", null ],
-      [ "PositionSolver", "classPositionSolver.html", null ],
-      [ "VelocitySolver", "classVelocitySolver.html", null ]
+      [ "PositionSolver", "classPositionSolver.html", null ]
     ] ],
     [ "State", "classState.html", [
       [ "BootstrapState", "classBootstrapState.html", null ],

@@ -92,7 +92,7 @@ $(function(){initNavTree('classSolver.html','','classSolver-members'); });
 </div><!--header-->
 <div class="contents">
 
-<p>A <a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a> defines behaviour.  
+<p>A <a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a> defines a generic behaviour in a Physic World.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="PhysicWorld_8hpp_source.html">PhysicWorld.hpp</a>&gt;</code></p>
@@ -101,17 +101,13 @@ Inheritance diagram for Solver:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSolver__inherit__graph.png" border="0" usemap="#aSolver_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
 <map name="aSolver_inherit__map" id="aSolver_inherit__map">
-<area shape="rect" title="A Solver defines behaviour." alt="" coords="274,5,332,31"/>
-<area shape="rect" href="classCollisionSolver.html" title=" " alt="" coords="5,79,113,105"/>
-<area shape="poly" title=" " alt="" coords="260,35,102,81,100,76,259,30"/>
-<area shape="rect" href="classForceSolver.html" title=" " alt="" coords="137,79,229,105"/>
-<area shape="poly" title=" " alt="" coords="271,42,205,81,202,76,268,37"/>
-<area shape="rect" href="classGravitySolver.html" title=" " alt="" coords="253,79,353,105"/>
-<area shape="poly" title=" " alt="" coords="306,46,306,79,300,79,300,46"/>
-<area shape="rect" href="classPositionSolver.html" title=" " alt="" coords="377,79,482,105"/>
-<area shape="poly" title=" " alt="" coords="339,37,409,76,407,81,336,41"/>
-<area shape="rect" href="classVelocitySolver.html" title=" " alt="" coords="507,79,611,105"/>
-<area shape="poly" title=" " alt="" coords="347,29,516,76,515,81,346,34"/>
+<area shape="rect" title="A Solver defines a generic behaviour in a Physic World." alt="" coords="172,5,234,33"/>
+<area shape="rect" href="classCollisionSolver.html" title=" " alt="" coords="5,81,124,109"/>
+<area shape="poly" title=" " alt="" coords="166,43,90,83,88,78,164,38"/>
+<area shape="rect" href="classGravitySolver.html" title="Simulate gravity force towards the negative y world axis." alt="" coords="148,81,258,109"/>
+<area shape="poly" title=" " alt="" coords="206,49,206,81,200,81,200,49"/>
+<area shape="rect" href="classPositionSolver.html" title="It calculates all the entities position from the current velocity." alt="" coords="282,81,396,109"/>
+<area shape="poly" title=" " alt="" coords="242,38,316,78,314,83,240,43"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -119,29 +115,98 @@ Collaboration diagram for Solver:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSolver__coll__graph.png" border="0" usemap="#aSolver_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aSolver_coll__map" id="aSolver_coll__map">
-<area shape="rect" title="A Solver defines behaviour." alt="" coords="23,177,81,203"/>
-<area shape="rect" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,80,99,106"/>
-<area shape="poly" title=" " alt="" coords="55,121,55,176,49,176,49,121"/>
-<area shape="rect" href="classogl_1_1Layer.html" title=" " alt="" coords="14,5,90,31"/>
-<area shape="poly" title=" " alt="" coords="55,46,55,80,49,80,49,46"/>
+<area shape="rect" title="A Solver defines a generic behaviour in a Physic World." alt="" coords="24,183,87,211"/>
+<area shape="rect" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="5,82,106,110"/>
+<area shape="poly" title=" " alt="" coords="58,126,58,182,53,182,53,126"/>
+<area shape="rect" href="classogl_1_1Layer.html" title=" " alt="" coords="13,5,98,33"/>
+<area shape="poly" title=" " alt="" coords="58,48,58,82,53,82,53,48"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a654df74f914e891f54654756c0897409" id="r_a654df74f914e891f54654756c0897409"><td class="memItemLeft" align="right" valign="top"><a id="a654df74f914e891f54654756c0897409" name="a654df74f914e891f54654756c0897409"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>solve</b> ()</td></tr>
-<tr class="memitem:a63e9cbf8770e5e207ed754842ea852ed" id="r_a63e9cbf8770e5e207ed754842ea852ed"><td class="memItemLeft" align="right" valign="top"><a id="a63e9cbf8770e5e207ed754842ea852ed" name="a63e9cbf8770e5e207ed754842ea852ed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Solver</b> (<a class="el" href="classPhysicWorld.html">PhysicWorld</a> &amp;world)</td></tr>
+<tr class="memitem:a654df74f914e891f54654756c0897409" id="r_a654df74f914e891f54654756c0897409"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a654df74f914e891f54654756c0897409">solve</a> ()</td></tr>
+<tr class="memdesc:a654df74f914e891f54654756c0897409"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is executed at every physic simulation step.  <br /></td></tr>
+<tr class="memitem:a63e9cbf8770e5e207ed754842ea852ed" id="r_a63e9cbf8770e5e207ed754842ea852ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63e9cbf8770e5e207ed754842ea852ed">Solver</a> (<a class="el" href="classPhysicWorld.html">PhysicWorld</a> &amp;<a class="el" href="#a455b46905d662c12d9855893f293b436">world</a>)</td></tr>
+<tr class="memdesc:a63e9cbf8770e5e207ed754842ea852ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instances basic <a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a455b46905d662c12d9855893f293b436" id="r_a455b46905d662c12d9855893f293b436"><td class="memItemLeft" align="right" valign="top"><a id="a455b46905d662c12d9855893f293b436" name="a455b46905d662c12d9855893f293b436"></a>
 <a class="el" href="classPhysicWorld.html">PhysicWorld</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>world</b></td></tr>
+<tr class="memdesc:a455b46905d662c12d9855893f293b436"><td class="mdescLeft">&#160;</td><td class="mdescRight">the reference to the <a class="el" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene.">PhysicWorld</a> <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A <a class="el" href="classSolver.html" title="A Solver defines behaviour.">Solver</a> defines behaviour. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>A <a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a> defines a generic behaviour in a Physic World. </p>
+<p>It manipulates the <a class="el" href="classPhysicComponent.html" title="This Component stores all the mesh data regarding basic physics like velocity, force,...">PhysicComponent</a> of an entity during the simulation.</p>
+<p>A <a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a> need to be attached to a <a class="el" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene.">PhysicWorld</a> to work.</p>
+<dl class="section note"><dt>Note</dt><dd>This class needs to be extended by a specific solver. </dd></dl>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a63e9cbf8770e5e207ed754842ea852ed" name="a63e9cbf8770e5e207ed754842ea852ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63e9cbf8770e5e207ed754842ea852ed">&#9670;&#160;</a></span>Solver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Solver::Solver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPhysicWorld.html">PhysicWorld</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>world</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instances basic <a class="el" href="classSolver.html" title="A Solver defines a generic behaviour in a Physic World.">Solver</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>reference of the <a class="el" href="classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene.">PhysicWorld</a> where this solver operates </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a654df74f914e891f54654756c0897409" name="a654df74f914e891f54654756c0897409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654df74f914e891f54654756c0897409">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Solver::solve </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method is executed at every physic simulation step. </p>
+<dl class="section note"><dt>Note</dt><dd>This method must be overrided in the child class. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classCollisionSolver.html#a7476331b2bd18e49e3cb9ffe12eea022">CollisionSolver</a>, <a class="el" href="classGravitySolver.html#a1a0990bed71d69c683f72e0bbd40229e">GravitySolver</a>, and <a class="el" href="classPositionSolver.html#a76d620a541e1c83df05bf6662f1cf833">PositionSolver</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>App/include/<a class="el" href="PhysicWorld_8hpp_source.html">PhysicWorld.hpp</a></li>
 </ul>
 </div><!-- contents -->

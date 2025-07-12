@@ -1,13 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classogl_1_1Layer.html" title=" " alt="" coords="5,104,82,130"/>
-<area shape="rect" id="Node000001" href="$classCustomLayer.html" title=" " alt="" coords="145,5,244,31"/>
-<area shape="poly" id="edge30_Node000000_Node000001" title=" " alt="" coords="66,91,94,65,128,40,150,29,152,34,131,44,98,69,69,95"/>
-<area shape="rect" id="Node000002" href="$classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="148,55,241,80"/>
-<area shape="poly" id="edge31_Node000000_Node000002" title=" " alt="" coords="96,97,152,78,153,84,97,102"/>
-<area shape="rect" id="Node000003" href="$classogl_1_1ImGuiManager.html" title=" " alt="" coords="130,104,259,130"/>
-<area shape="poly" id="edge32_Node000000_Node000003" title=" " alt="" coords="97,114,129,114,129,120,97,120"/>
-<area shape="rect" id="Node000004" href="$classogl_1_1TextManager.html" title=" " alt="" coords="135,153,254,179"/>
-<area shape="poly" id="edge33_Node000000_Node000004" title=" " alt="" coords="97,131,153,150,152,155,96,137"/>
-<area shape="rect" id="Node000005" href="$classogl_1_1Window.html" title=" " alt="" coords="149,203,240,228"/>
-<area shape="poly" id="edge34_Node000000_Node000005" title=" " alt="" coords="69,139,98,165,131,189,152,200,150,204,128,194,94,169,66,143"/>
+<area shape="rect" id="Node000000" href="$classogl_1_1Layer.html" title=" " alt="" coords="5,109,91,137"/>
+<area shape="rect" id="Node000001" href="$classCustomLayer.html" title=" " alt="" coords="158,5,265,33"/>
+<area shape="poly" id="edge30_Node000000_Node000001" title=" " alt="" coords="71,96,102,69,137,44,163,31,165,36,140,48,105,73,75,100"/>
+<area shape="rect" id="Node000002" href="$classPhysicWorld.html" title="The PhysicWorld is a Layer that simulates physic objects in the scene." alt="" coords="161,57,262,85"/>
+<area shape="poly" id="edge31_Node000000_Node000002" title=" " alt="" coords="105,102,165,83,166,88,106,107"/>
+<area shape="rect" id="Node000003" href="$classogl_1_1ImGuiManager.html" title=" " alt="" coords="139,109,284,137"/>
+<area shape="poly" id="edge32_Node000000_Node000003" title=" " alt="" coords="106,120,139,120,139,126,106,126"/>
+<area shape="rect" id="Node000004" href="$classogl_1_1TextManager.html" title=" " alt="" coords="145,161,278,189"/>
+<area shape="poly" id="edge33_Node000000_Node000004" title=" " alt="" coords="106,139,166,158,165,163,105,144"/>
+<area shape="rect" id="Node000005" href="$classogl_1_1Window.html" title=" " alt="" coords="161,213,262,241"/>
+<area shape="poly" id="edge34_Node000000_Node000005" title=" " alt="" coords="75,146,105,173,140,198,165,210,163,215,137,203,102,177,71,150"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="LightComponent" name="LightComponent">
-<area shape="rect" id="Node000001" title="Component to store light data. A light is an emitting mesh, rendered or not, that for each ogl::Shade..." alt="" coords="107,102,223,128"/>
-<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,93,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,39,152,99,148,103,74,43"/>
-<area shape="rect" id="Node000003" href="$structLightVectors.html" title="Light vectors for light component." alt="" coords="117,5,213,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,46,168,101,162,101,162,46"/>
-<area shape="rect" id="Node000004" href="$structLightConstraint.html" title="Lights attenuation data structure." alt="" coords="237,5,346,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="269,43,223,80,187,104,184,99,219,76,265,39"/>
+<area shape="rect" id="Node000001" title="Component to store light data. A light is an emitting mesh, rendered or not, that for each ogl::Shade..." alt="" coords="112,106,240,134"/>
+<area shape="rect" id="Node000002" href="$classComponent.html" title="Base class for every entity component." alt="" coords="5,5,102,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,40,161,103,158,107,79,45"/>
+<area shape="rect" id="Node000003" href="$structLightVectors.html" title="Light vectors for light component." alt="" coords="126,5,227,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,49,179,105,174,105,174,49"/>
+<area shape="rect" id="Node000004" href="$structLightConstraint.html" title="Lights attenuation data structure." alt="" coords="251,5,371,33"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="287,46,239,84,201,108,199,103,236,80,284,42"/>
 </map>

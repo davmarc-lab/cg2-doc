@@ -1,5 +1,5 @@
 <map id="GravitySolver" name="GravitySolver">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,105,105"/>
-<area shape="rect" id="Node000002" href="$classSolver.html" title="A Solver defines behaviour." alt="" coords="26,5,84,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,46,58,79,52,79,52,46"/>
+<area shape="rect" id="Node000001" title="Simulate gravity force towards the negative y world axis." alt="" coords="5,81,116,109"/>
+<area shape="rect" id="Node000002" href="$classSolver.html" title="A Solver defines a generic behaviour in a Physic World." alt="" coords="29,5,92,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,49,63,81,58,81,58,49"/>
 </map>

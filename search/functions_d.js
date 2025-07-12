@@ -20,6 +20,8 @@ var searchData=
   ['shadercomponent_17',['ShaderComponent',['../classShaderComponent.html#af8bd212e3b2c281e50e76c97a4f34c4b',1,'ShaderComponent::ShaderComponent()=delete'],['../classShaderComponent.html#a7b90e996b6da2e661672ff43d3e1ce96',1,'ShaderComponent::ShaderComponent(const LightComputation &amp;comp, const std::string &amp;vert, const std::string &amp;frag, const bool &amp;reflective=false, const std::string &amp;geom=&quot;&quot;)']]],
   ['shouldexit_18',['shouldExit',['../classStateManager.html#a726a44976ac53d19ddc3ceb91b571d7b',1,'StateManager']]],
   ['skyboxcomponent_19',['SkyboxComponent',['../classSkyboxComponent.html#add0c224dd0ac01d7dfd9d1c727b408dd',1,'SkyboxComponent']]],
-  ['state_20',['State',['../classState.html#a2abc4950481fbaa59931010dabddffe8',1,'State']]],
-  ['sync_21',['sync',['../classStateManager.html#af0a5a954f8833a6df72e75daf428b437',1,'StateManager']]]
+  ['solve_20',['solve',['../classSolver.html#a654df74f914e891f54654756c0897409',1,'Solver::solve()'],['../classCollisionSolver.html#a7476331b2bd18e49e3cb9ffe12eea022',1,'CollisionSolver::solve()'],['../classPositionSolver.html#a76d620a541e1c83df05bf6662f1cf833',1,'PositionSolver::solve()'],['../classGravitySolver.html#a1a0990bed71d69c683f72e0bbd40229e',1,'GravitySolver::solve()']]],
+  ['solver_21',['Solver',['../classSolver.html#a63e9cbf8770e5e207ed754842ea852ed',1,'Solver']]],
+  ['state_22',['State',['../classState.html#a2abc4950481fbaa59931010dabddffe8',1,'State']]],
+  ['sync_23',['sync',['../classStateManager.html#af0a5a954f8833a6df72e75daf428b437',1,'StateManager']]]
 ];

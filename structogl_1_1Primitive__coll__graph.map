@@ -1,13 +1,13 @@
 <map id="ogl::Primitive" name="ogl::Primitive">
-<area shape="rect" id="Node000001" title=" " alt="" coords="151,279,246,304"/>
-<area shape="rect" id="Node000002" href="$classogl_1_1VertexArray.html" title=" " alt="" coords="5,80,117,106"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,118,115,181,166,253,188,276,184,280,162,256,111,184,73,121"/>
-<area shape="rect" id="Node000003" href="$classogl_1_1Buffer.html" title=" " alt="" coords="159,5,238,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,41,85,82,82,78,161,36"/>
-<area shape="rect" id="Node000004" href="$classogl_1_1VertexBuffer.html" title=" " alt="" coords="141,80,256,106"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="201,46,201,80,196,80,196,46"/>
-<area shape="rect" id="Node000005" href="$classogl_1_1ElementBuffer.html" title=" " alt="" coords="280,80,405,106"/>
-<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="237,36,320,77,317,82,234,41"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="201,121,201,278,196,278,196,121"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="334,122,302,186,279,223,252,257,222,280,219,276,248,253,275,220,298,184,329,119"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="166,295,275,322"/>
+<area shape="rect" id="Node000002" href="$classogl_1_1VertexArray.html" title=" " alt="" coords="5,82,132,110"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,122,128,190,185,269,208,292,204,296,181,272,124,193,81,125"/>
+<area shape="rect" id="Node000003" href="$classogl_1_1Buffer.html" title=" " alt="" coords="176,5,265,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,43,96,84,94,79,179,38"/>
+<area shape="rect" id="Node000004" href="$classogl_1_1VertexBuffer.html" title=" " alt="" coords="155,82,286,110"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="223,48,223,82,218,82,218,48"/>
+<area shape="rect" id="Node000005" href="$classogl_1_1ElementBuffer.html" title=" " alt="" coords="309,82,452,110"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="263,38,354,79,351,84,261,42"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="223,126,223,294,218,294,218,126"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="372,126,337,196,311,236,281,273,249,296,245,292,277,269,307,233,332,193,367,123"/>
 </map>
