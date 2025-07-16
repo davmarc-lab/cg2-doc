@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['path_0',['path',['../classTextureComponent.html#a62fc8e48c189b649492086f1a217aeda',1,'TextureComponent::path'],['../structImportedTexture.html#a4cbb4a73de2de172e8f97f65acd6ebb5',1,'ImportedTexture::path']]],
-  ['position_1',['position',['../classTransform.html#aa357f8eb780f4ef195027d1c636baa36',1,'Transform::position'],['../classLightComponent.html#a666f3ca89bd729ff10e3d675ea6172c2',1,'LightComponent::position'],['../classColliderComponent.html#a66e8f596f8a11cd31480038e73377406',1,'ColliderComponent::position']]],
-  ['program_2',['program',['../structBoundingBox.html#ac76598ce5943a0c4b1527e0a0883153b',1,'BoundingBox']]]
+  ['operation_0',['operation',['../structFBConfig.html#acb52c6f8e0fd10e16a85b5531a4c2d22',1,'FBConfig']]],
+  ['outercutoff_1',['outerCutoff',['../classLightComponent.html#a43f4aad78c6ad840d9191b103eed7057',1,'LightComponent']]]
 ];

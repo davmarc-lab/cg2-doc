@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['reflective_0',['reflective',['../classShaderComponent.html#a96a3adc66fbf8226e2aa46d530781c6e',1,'ShaderComponent']]],
-  ['restitution_1',['restitution',['../classPhysicComponent.html#ae9b4507b6e882b79ec72319396658808',1,'PhysicComponent']]],
-  ['rotation_2',['rotation',['../classTransform.html#aefd4a6bf41e01cf5898fd57430d93dea',1,'Transform']]]
+  ['quadratic_0',['quadratic',['../structLightConstraint.html#a86e8219f2eeab44dfdd008345a1a8d88',1,'LightConstraint']]],
+  ['quaternion_1',['quaternion',['../classTransform.html#a08d4916d513228933ca722369c315beb',1,'Transform']]]
 ];

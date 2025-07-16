@@ -1,5 +1,5 @@
 <map id="CollisionSolver" name="CollisionSolver">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,124,109"/>
+<area shape="rect" id="Node000001" title="Solves all collision between entities in the given PhysicWorld." alt="" coords="5,81,124,109"/>
 <area shape="rect" id="Node000002" href="$classSolver.html" title="A Solver defines a generic behaviour in a Physic World." alt="" coords="33,5,96,33"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,49,67,81,62,81,62,49"/>
 </map>

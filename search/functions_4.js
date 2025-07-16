@@ -36,5 +36,6 @@ var searchData=
   ['gettexturepath_33',['getTexturePath',['../namespacesystems_1_1texture.html#ac8a94b23acbaab64a763655c3887d47f',1,'systems::texture']]],
   ['getvelocity_34',['getVelocity',['../namespacesystems_1_1physic.html#a4028da29ffcd493bb94cec5749716f47',1,'systems::physic']]],
   ['getvertexcoords_35',['getVertexCoords',['../classVertexComponent.html#a83f6df50ea9c5207156a271304ccdd7f',1,'VertexComponent']]],
-  ['getworlddeltatime_36',['getWorldDeltaTime',['../classPhysicWorld.html#a26cbae3193ed29db32a0ddcf77b00740',1,'PhysicWorld']]]
+  ['getworlddeltatime_36',['getWorldDeltaTime',['../classPhysicWorld.html#a26cbae3193ed29db32a0ddcf77b00740',1,'PhysicWorld']]],
+  ['gravitysolver_37',['GravitySolver',['../classGravitySolver.html#ac1411b0093bca27b483e8d98b0f7e33c',1,'GravitySolver']]]
 ];

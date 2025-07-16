@@ -17,7 +17,7 @@ var searchData=
   ['collidercomponent_14',['ColliderComponent',['../classColliderComponent.html',1,'ColliderComponent'],['../classColliderComponent.html#a6e21e17f300546392268cf01c068d1ab',1,'ColliderComponent::ColliderComponent()=default'],['../classColliderComponent.html#adcc3f7d5af0ae4e14831335a90c0caad',1,'ColliderComponent::ColliderComponent(const glm::vec3 &amp;position, const glm::vec3 &amp;size)']]],
   ['colliding_15',['colliding',['../structCollisionPoints.html#aa366254674ec21ebda2d2079aee497e4',1,'CollisionPoints']]],
   ['collisionpoints_16',['CollisionPoints',['../structCollisionPoints.html',1,'']]],
-  ['collisionsolver_17',['CollisionSolver',['../classCollisionSolver.html',1,'']]],
+  ['collisionsolver_17',['CollisionSolver',['../classCollisionSolver.html',1,'CollisionSolver'],['../classCollisionSolver.html#a49c52dff3ad363cb5f76f9a9d1fd2ad9',1,'CollisionSolver::CollisionSolver()']]],
   ['color_18',['Color',['../structColor.html',1,'']]],
   ['color_19',['color',['../classLightComponent.html#ab4e30f508c22ba93012df33a98f3dc6a',1,'LightComponent']]],
   ['colors_20',['colors',['../structBoundingBox.html#a4c4d9d4aa4abf39ff703f22e26fd3478',1,'BoundingBox']]],
